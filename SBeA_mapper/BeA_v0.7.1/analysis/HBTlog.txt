@@ -1,0 +1,10 @@
+00:01:23: Decomposing poses, time elapse: 6.1909seconds
+00:01:23: Calculating kernel matrix, time elapse: 0.014384seconds
+00:01:24: Decomposing movements and ethograms, time elapse: 1.3097seconds
+00:01:46: Decomposing poses, time elapse: 5.8676seconds
+00:01:46: Calculating kernel matrix, time elapse: 0.007564seconds
+00:01:47: Decomposing movements and ethograms, time elapse: 1.191seconds
+00:02:41: Decomposing poses, time elapse: 5.8482seconds
+00:02:41: Calculating kernel matrix, time elapse: 0.008125seconds
+00:02:42: Decomposing movements and ethograms, time elapse: 1.156seconds
+00:02:45: Decomposing completed, time elapse: 10.094seconds

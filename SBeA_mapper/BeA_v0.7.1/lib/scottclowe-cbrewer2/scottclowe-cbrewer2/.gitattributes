@@ -1,0 +1,55 @@
+# Auto detect text files and perform LF normalization
+*           text=auto
+
+#
+# The above will handle all files NOT found below
+#
+
+##---------------------------------------------------
+# Common .gitattributes
+##---------------------------------------------------
+
+# Documents
+# ============
+*.txt       text
+*.md        text
+
+# Graphics
+# ============
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.tif       binary
+*.tiff      binary
+*.ico       binary
+*.svg       text
+*.eps       binary
+
+
+##---------------------------------------------------
+# MATLAB .gitattributes
+##---------------------------------------------------
+
+# Source files
+# ============
+*.m             text
+*.mu            text
+
+# Caution: *.m also matches Mathematica packages.
+
+# Binary files
+# ============
+*.p             binary
+*.mex*          binary
+*.fig           binary
+*.mat           binary
+*.mdl           binary
+*.slx           binary
+*.mdlp          binary
+*.slxp          binary
+*.sldd          binary
+*.mltbx         binary
+*.mlappinstall  binary
+*.mlpkginstall  binary
+*.mn            binary

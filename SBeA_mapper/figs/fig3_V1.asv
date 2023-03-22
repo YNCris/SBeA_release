@@ -1,0 +1,671 @@
+%{
+    fig3, the flowchart of behavioral segmentation and mapping
+%}
+clear all
+close all
+addpath(genpath(pwd))
+%% plot canvas
+h1 = figure(1);
+set(h1,'Position',[900,100,800,800])
+set(h1,'color','white');
+%% plot
+rootpath = 'Z:\hanyaning\multi_mice_test\Social_analysis\data\figs\fig3';
+%% 1. 3D 2 mice
+dataname = 'Black_White_207_social_struct.mat';
+load([rootpath,'\panel_1\',dataname]);
+%%
+centtraj1 = SBeA.RawData.centered{1,1};
+centtraj2 = SBeA.RawData.centered{2,1};
+tempmouse1 = SBeA.RawData.traj{1,1};
+tempmouse2 = SBeA.RawData.traj{2,1};
+mouse1 = tempmouse1;
+mouse2 = tempmouse2;
+mouse1(:,1:3:end) = tempmouse1(:,1:16);
+mouse1(:,2:3:end) = tempmouse1(:,17:32);
+mouse1(:,3:3:end) = tempmouse1(:,33:end);
+mouse2(:,1:3:end) = tempmouse2(:,1:16);
+mouse2(:,2:3:end) = tempmouse2(:,17:32);
+mouse2(:,3:3:end) = tempmouse2(:,33:end);
+showtraj1 = centtraj1(:,4000:5000);
+showtraj2 = centtraj2(:,4000:5000);
+sel_frame = 5000;
+nfeatures = 16;
+dotsize = 15;
+
+drawline = [ 1 2; 1 3;2 3; 4 5;4 6;5 7;6 8;7 14;8 14;...
+    5 9;7 11;6 10; 8 12;14 15; 15 16];
+
+h1 = subplot('Position',[0.05,0.79,0.18,0.18]);
+setcolor = cbrewer2('Spectral',11);
+mouse1_c = setcolor(3,:);
+mouse2_c = setcolor(9,:);
+colorclass = ones(256,1)*mouse1_c; %jet is default in DLC
+color_map_self=colorclass(ceil(linspace(1,256,nfeatures)),:);
+mesh_mouse(mouse1, sel_frame)
+hold on
+temp = reshape(mouse1(sel_frame,:,1),3,nfeatures);
+scatter3(temp(1,:),temp(2,:),temp(3,:),dotsize*ones(1,nfeatures),color_map_self(1:nfeatures,:),'filled','Parent', h1);
+hold on;
+for l = 1:size(drawline,1)
+    pts = [temp(:,drawline(l,1))'; temp(:,drawline(l,2))']; %line btw elbow and shoulder
+    line(pts(:,1), pts(:,2), pts(:,3),'color','k','linewidth',1,'Parent', h1)
+end
+hold on
+colorclass = ones(256,1)*mouse2_c; %jet is default in DLC
+color_map_self=colorclass(ceil(linspace(1,256,nfeatures)),:);
+mesh_mouse(mouse2, sel_frame)
+hold on
+temp = reshape(mouse2(sel_frame,:,1),3,nfeatures);
+scatter3(temp(1,:),temp(2,:),temp(3,:),dotsize*ones(1,nfeatures),color_map_self(1:nfeatures,:),'filled','Parent', h1);
+hold on;
+for l = 1:size(drawline,1)
+    pts = [temp(:,drawline(l,1))'; temp(:,drawline(l,2))']; %line btw elbow and shoulder
+    line(pts(:,1), pts(:,2), pts(:,3),'color','k','linewidth',1,'Parent', h1)
+end
+hold off
+set(gca,'XTickLabel',[])
+set(gca,'YTickLabel',[])
+set(gca,'ZTickLabel',[])
+grid on
+view(-20,37)
+% axis off
+
+
+bias = 50;
+
+subplot('Position',[0.3,0.89,0.6,0.08])
+for k = 1:6
+    plot(showtraj1(k,:)+k*bias,'-','Color',mouse1_c)
+    hold on
+end
+hold on
+
+for k = 43:48
+    plot(showtraj1(k,:)+(k-30)*bias,'-','Color',mouse1_c)
+    hold on
+end
+hold off
+axis([0,size(showtraj1,2),0,1000])
+axis off
+text(-70,900,'nose')
+text(-60,100,'tail')
+text(10,350,'...','Rotation',90,'FontSize',15)
+text(950,350,'...','Rotation',90,'FontSize',15)
+annotation('arrow',[0.275,0.275],[0.95,0.905])
+
+
+
+subplot('Position',[0.3,0.79,0.6,0.08])
+for k = 1:6
+    plot(showtraj2(k,:)+k*bias,'-','Color',mouse2_c)
+    hold on
+end
+hold on
+
+for k = 43:48
+    plot(showtraj2(k,:)+(k-30)*bias,'-','Color',mouse2_c)
+    hold on
+end
+hold off
+axis([0,size(showtraj2,2),0,1000])
+axis off
+text(-70,900,'nose')
+text(-60,100,'tail')
+text(10,350,'...','Rotation',90,'FontSize',15)
+text(950,350,'...','Rotation',90,'FontSize',15)
+annotation('arrow',[0.275,0.275],[0.85,0.805])
+annotation('line',[0.85,0.9],[0.78,0.78])
+text(940,-250,'3 s')
+%% 2. non-locomotor movement
+dataname = 'SBeA_data_sample_cell_20220623.mat';
+load([rootpath,'\panel_2\',dataname]);
+%%
+dotsize = 5;
+sel_frame = 5000;
+cent_mouse1 = centtraj1(:,sel_frame);
+cent_mouse2 = centtraj2(:,sel_frame);
+h21 = subplot('Position',[0.06,0.63,0.1,0.1]);
+colorclass = ones(256,1)*mouse1_c; %jet is default in DLC
+color_map_self=colorclass(ceil(linspace(1,256,nfeatures)),:);
+% hold on
+temp = reshape(cent_mouse1,3,nfeatures);
+scatter3(temp(1,:),temp(2,:),temp(3,:),dotsize*ones(1,nfeatures),color_map_self(1:nfeatures,:),'filled','Parent', h21);
+hold on;
+for l = 1:size(drawline,1)
+    pts = [temp(:,drawline(l,1))'; temp(:,drawline(l,2))']; %line btw elbow and shoulder
+    line(pts(:,1), pts(:,2), pts(:,3),'color',mouse1_c,'linewidth',1,'Parent', h21)
+end
+hold on
+colorclass = ones(256,1)*mouse2_c; %jet is default in DLC
+color_map_self=colorclass(ceil(linspace(1,256,nfeatures)),:);
+hold on
+temp = reshape(cent_mouse2,3,nfeatures);
+scatter3(temp(1,:),temp(2,:),temp(3,:),dotsize*ones(1,nfeatures),color_map_self(1:nfeatures,:),'filled','Parent', h21);
+hold on;
+for l = 1:size(drawline,1)
+    pts = [temp(:,drawline(l,1))'; temp(:,drawline(l,2))']; %line btw elbow and shoulder
+    line(pts(:,1), pts(:,2), pts(:,3),'color',mouse2_c,'linewidth',1,'Parent', h21)
+end
+hold off
+set(gca,'XTickLabel',[])
+set(gca,'YTickLabel',[])
+set(gca,'ZTickLabel',[])
+set(gca,'ZLim',[-30,20])
+title('                                Non-locomotor movement')
+% xlabel('x')
+ylabel('x-y')
+% zlabel('z')
+view(90,90)
+
+h22 = subplot('Position',[0.19,0.63,0.1,0.1]);
+colorclass = ones(256,1)*mouse1_c; %jet is default in DLC
+color_map_self=colorclass(ceil(linspace(1,256,nfeatures)),:);
+% hold on
+temp = reshape(cent_mouse1,3,nfeatures);
+scatter3(temp(1,:),temp(2,:),temp(3,:),dotsize*ones(1,nfeatures),color_map_self(1:nfeatures,:),'filled','Parent', h22);
+hold on;
+for l = 1:size(drawline,1)
+    pts = [temp(:,drawline(l,1))'; temp(:,drawline(l,2))']; %line btw elbow and shoulder
+    line(pts(:,1), pts(:,2), pts(:,3),'color',mouse1_c,'linewidth',1,'Parent', h22)
+end
+hold on
+colorclass = ones(256,1)*mouse2_c; %jet is default in DLC
+color_map_self=colorclass(ceil(linspace(1,256,nfeatures)),:);
+hold on
+temp = reshape(cent_mouse2,3,nfeatures);
+scatter3(temp(1,:),temp(2,:),temp(3,:),dotsize*ones(1,nfeatures),color_map_self(1:nfeatures,:),'filled','Parent', h22);
+hold on;
+for l = 1:size(drawline,1)
+    pts = [temp(:,drawline(l,1))'; temp(:,drawline(l,2))']; %line btw elbow and shoulder
+    line(pts(:,1), pts(:,2), pts(:,3),'color',mouse2_c,'linewidth',1,'Parent', h22)
+end
+hold off
+set(gca,'XTickLabel',[])
+set(gca,'YTickLabel',[])
+set(gca,'ZTickLabel',[])
+set(gca,'ZLim',[-30,20])
+% title('x-z')
+% xlabel('x')
+ylabel('x-z')
+% zlabel('z')
+view(90,0)
+%% 3. locomotion
+lo_bias = 200;
+dotsize = 5;
+lo_mouse1 = mouse1(sel_frame,:);
+lo_mouse2 = mouse2(sel_frame,:);
+lo_traj_mouse1 = mouse1((sel_frame-lo_bias):(sel_frame+lo_bias),:);
+lo_traj_mouse2 = mouse2((sel_frame-lo_bias):(sel_frame+lo_bias),:);
+h31 = subplot('Position',[0.36,0.63,0.1,0.1]);
+colorclass = ones(256,1)*mouse1_c; %jet is default in DLC
+color_map_self=colorclass(ceil(linspace(1,256,nfeatures)),:);
+% hold on
+temp = reshape(lo_mouse1,3,nfeatures);
+scatter3(temp(1,:),temp(2,:),temp(3,:),dotsize*ones(1,nfeatures),color_map_self(1:nfeatures,:),'filled','Parent', h31);
+hold on;
+for l = 1:size(drawline,1)
+    pts = [temp(:,drawline(l,1))'; temp(:,drawline(l,2))']; %line btw elbow and shoulder
+    line(pts(:,1), pts(:,2), pts(:,3),'color',mouse1_c,'linewidth',1,'Parent', h31)
+end
+hold on
+tempx1 = lo_traj_mouse1(:,1:3:end);
+tempy1 = lo_traj_mouse1(:,2:3:end);
+tempz1 = lo_traj_mouse1(:,3:3:end);
+colorclass = ones(256,1)*mouse2_c; %jet is default in DLC
+color_map_self=colorclass(ceil(linspace(1,256,nfeatures)),:);
+hold on
+temp = reshape(lo_mouse2,3,nfeatures);
+scatter3(temp(1,:),temp(2,:),temp(3,:),dotsize*ones(1,nfeatures),color_map_self(1:nfeatures,:),'filled','Parent', h31);
+hold on;
+for l = 1:size(drawline,1)
+    pts = [temp(:,drawline(l,1))'; temp(:,drawline(l,2))']; %line btw elbow and shoulder
+    line(pts(:,1), pts(:,2), pts(:,3),'color',mouse2_c,'linewidth',1,'Parent', h31)
+end
+hold on
+tempx2 = lo_traj_mouse2(:,1:3:end);
+tempy2 = lo_traj_mouse2(:,2:3:end);
+tempz2 = lo_traj_mouse2(:,3:3:end);
+sigma1 = 100;
+prec1 = 0.1;
+hold on
+embedding1 = [[reshape(tempx1,[],1),reshape(tempy1,[],1)];[reshape(tempx2,[],1),reshape(tempy2,[],1)]];
+[image1,XX1,YY1,embed_img1] = data_density(embedding1, sigma1, prec1);
+warp_mouse1 = warp(XX1,YY1,50*ones(size(YY1)),image1);
+
+cmaploco = [ones(256,1)*[1,1,1];cbrewer2('YlOrRd',256)];
+% cmaploco = [ones(64,1)*[1,1,1];jet(64)];
+colormap(h31,cmaploco)
+
+alpha(warp_mouse1,0.4)
+
+hold off
+set(gca,'XTickLabel',[])
+set(gca,'YTickLabel',[])
+set(gca,'ZTickLabel',[])
+set(gca,'ZLim',[-10,100])
+tempx = [lo_mouse1(1,1:3:end);lo_mouse2(1,1:3:end)];
+tempy = [lo_mouse1(1,2:3:end);lo_mouse2(1,2:3:end)];
+set(gca,'YLim',[min(tempy,[],'all'),max(tempy,[],'all')])
+set(gca,'XLim',[min(tempx,[],'all'),max(tempx,[],'all')])
+title('                                Locomotion')
+% xlabel('x')
+ylabel('x-y')
+% zlabel('z')
+view(-90,-90)
+
+h32 = subplot('Position',[0.49,0.63,0.1,0.1]);
+colorclass = ones(256,1)*mouse1_c; %jet is default in DLC
+color_map_self=colorclass(ceil(linspace(1,256,nfeatures)),:);
+% hold on
+temp = reshape(lo_mouse1,3,nfeatures);
+scatter3(temp(1,:),temp(2,:),temp(3,:),dotsize*ones(1,nfeatures),color_map_self(1:nfeatures,:),'filled','Parent', h32);
+hold on;
+for l = 1:size(drawline,1)
+    pts = [temp(:,drawline(l,1))'; temp(:,drawline(l,2))']; %line btw elbow and shoulder
+    line(pts(:,1), pts(:,2), pts(:,3),'color',mouse1_c,'linewidth',1,'Parent', h32)
+end
+colorclass = ones(256,1)*mouse2_c; %jet is default in DLC
+color_map_self=colorclass(ceil(linspace(1,256,nfeatures)),:);
+hold on
+temp = reshape(lo_mouse2,3,nfeatures);
+scatter3(temp(1,:),temp(2,:),temp(3,:),dotsize*ones(1,nfeatures),color_map_self(1:nfeatures,:),'filled','Parent', h32);
+hold on;
+for l = 1:size(drawline,1)
+    pts = [temp(:,drawline(l,1))'; temp(:,drawline(l,2))']; %line btw elbow and shoulder
+    line(pts(:,1), pts(:,2), pts(:,3),'color',mouse2_c,'linewidth',1,'Parent', h32)
+end
+sigma2 = 100;
+prec2 = 0.1;
+hold on
+embedding2 = [[reshape(tempy1,[],1),reshape(tempz1,[],1)];[reshape(tempy2,[],1),reshape(tempz2,[],1)]];
+[image2,XX2,YY2,embed_img2] = data_density(embedding2, sigma2, prec2);
+warp_mouse2 = warp(-200*ones(size(YY2)),XX2,YY2,image2);
+
+colormap(h32,cmaploco)
+
+alpha(warp_mouse2,0.4)
+
+hold off
+set(gca,'XTickLabel',[])
+set(gca,'YTickLabel',[])
+set(gca,'ZTickLabel',[])
+set(gca,'ZLim',[-10,40])
+set(gca,'YLim',[min(tempy,[],'all'),max(tempy,[],'all')])
+set(gca,'XLim',[min(tempx,[],'all'),max(tempx,[],'all')])
+% title('x-z')
+% xlabel('x')
+ylabel('x-z')
+% zlabel('z')
+view(-90,0)
+%% 4. distance
+dotsize = 5;
+di_mouse1 = mouse1(sel_frame,:);
+di_mouse2 = mouse2(sel_frame,:);
+h41 = subplot('Position',[0.67,0.63,0.1,0.1]);
+colorclass = ones(256,1)*mouse1_c; %jet is default in DLC
+color_map_self=colorclass(ceil(linspace(1,256,nfeatures)),:);
+% hold on
+di_x1 = di_mouse1(1,1:3:end);
+di_y1 = di_mouse1(1,2:3:end);
+di_z1 = di_mouse1(1,3:3:end);
+di_x2 = di_mouse2(1,1:3:end);
+di_y2 = di_mouse2(1,2:3:end);
+di_z2 = di_mouse2(1,3:3:end);
+dist_clist = 0*ones(size(di_x1,2),1)*ones(1,3);
+for k = 1:size(di_x1,2)
+    temph = plot3([di_x1(1,k),di_x2(1,k)],[di_y1(1,k),di_y2(1,k)],[di_z1(1,k),di_z2(1,k)],...
+        '-','Color',dist_clist(k,:),'LineWidth',2);
+    temph.Color(4) = 0.1;
+    hold on
+end
+temp = reshape(di_mouse1,3,nfeatures);
+scatter3(temp(1,:),temp(2,:),temp(3,:),dotsize*ones(1,nfeatures),color_map_self(1:nfeatures,:),'filled','Parent', h41);
+hold on;
+for l = 1:size(drawline,1)
+    pts = [temp(:,drawline(l,1))'; temp(:,drawline(l,2))']; %line btw elbow and shoulder
+    line(pts(:,1), pts(:,2), pts(:,3),'color',mouse1_c,'linewidth',1,'Parent', h41)
+end
+hold on
+colorclass = ones(256,1)*mouse2_c; %jet is default in DLC
+color_map_self=colorclass(ceil(linspace(1,256,nfeatures)),:);
+hold on
+temp = reshape(di_mouse2,3,nfeatures);
+scatter3(temp(1,:),temp(2,:),temp(3,:),dotsize*ones(1,nfeatures),color_map_self(1:nfeatures,:),'filled','Parent', h41);
+hold on;
+for l = 1:size(drawline,1)
+    pts = [temp(:,drawline(l,1))'; temp(:,drawline(l,2))']; %line btw elbow and shoulder
+    line(pts(:,1), pts(:,2), pts(:,3),'color',mouse2_c,'linewidth',1,'Parent', h41)
+end
+hold off
+set(gca,'XTickLabel',[])
+set(gca,'YTickLabel',[])
+set(gca,'ZTickLabel',[])
+set(gca,'ZLim',[-10,40])
+title('x-y')
+grid on
+title('                                Distance')
+% xlabel('x')
+ylabel('x-y')
+% zlabel('z')
+view(90,90)
+
+h42 = subplot('Position',[0.8,0.63,0.1,0.1]);
+colorclass = ones(256,1)*mouse1_c; %jet is default in DLC
+color_map_self=colorclass(ceil(linspace(1,256,nfeatures)),:);
+% hold on
+di_x1 = di_mouse1(1,1:3:end);
+di_y1 = di_mouse1(1,2:3:end);
+di_z1 = di_mouse1(1,3:3:end);
+di_x2 = di_mouse2(1,1:3:end);
+di_y2 = di_mouse2(1,2:3:end);
+di_z2 = di_mouse2(1,3:3:end);
+dist_clist = 0*ones(size(di_x1,2),1)*ones(1,3);
+for k = 1:size(di_x1,2)
+    temph = plot3([di_x1(1,k),di_x2(1,k)],[di_y1(1,k),di_y2(1,k)],[di_z1(1,k),di_z2(1,k)],...
+        '-','Color',dist_clist(k,:),'LineWidth',2);
+    temph.Color(4) = 0.1;
+    hold on
+end
+temp = reshape(di_mouse1,3,nfeatures);
+scatter3(temp(1,:),temp(2,:),temp(3,:),dotsize*ones(1,nfeatures),color_map_self(1:nfeatures,:),'filled','Parent', h42);
+hold on;
+for l = 1:size(drawline,1)
+    pts = [temp(:,drawline(l,1))'; temp(:,drawline(l,2))']; %line btw elbow and shoulder
+    line(pts(:,1), pts(:,2), pts(:,3),'color',mouse1_c,'linewidth',1,'Parent', h42)
+end
+hold on
+colorclass = ones(256,1)*mouse2_c; %jet is default in DLC
+color_map_self=colorclass(ceil(linspace(1,256,nfeatures)),:);
+hold on
+temp = reshape(di_mouse2,3,nfeatures);
+scatter3(temp(1,:),temp(2,:),temp(3,:),dotsize*ones(1,nfeatures),color_map_self(1:nfeatures,:),'filled','Parent', h42);
+hold on;
+for l = 1:size(drawline,1)
+    pts = [temp(:,drawline(l,1))'; temp(:,drawline(l,2))']; %line btw elbow and shoulder
+    line(pts(:,1), pts(:,2), pts(:,3),'color',mouse2_c,'linewidth',1,'Parent', h42)
+end
+hold off
+grid on
+set(gca,'XTickLabel',[])
+set(gca,'YTickLabel',[])
+set(gca,'ZTickLabel',[])
+set(gca,'ZLim',[-10,40])
+% title('x-z')
+% xlabel('x')
+ylabel('x-z')
+% zlabel('z')
+view(90,0)
+%% 5. seg traj and label of non-locomotor movement
+range_seg = 1:900;
+nm_umap = SBeA.SBeA_DecData.DP_X(:,range_seg);
+nm_seg = SBeA.SBeA_DecData.L2.Seglist(:,range_seg);
+nm_diff_seg = imbinarize([0,diff(nm_seg)],0);
+nm_seg_pos = find(nm_diff_seg==1);
+subplot('Position',[0.06,0.55,0.23,0.05])
+for k = 1:size(nm_umap,1)
+    plot(nm_umap(k,:),'Color',0.7*[1,1,1])
+    hold on
+end
+box off
+set(gca,'XTick',0:150:900)
+set(gca,'XLim',[0,size(nm_umap,2)])
+set(gca,'XTickLabel',[])
+set(gca,'YTick',[])
+set(gca,'TickDir','out')
+ylabel('UMAP')
+hold off
+h51 = subplot('Position',[0.06,0.53,0.23,0.01]);
+imagesc(range_seg)
+hold on
+colormap(h51,0.7*[1,1,1])
+for k = 1:size(nm_seg_pos,2)
+    plot([nm_seg_pos(k),nm_seg_pos(k)],[-10,10],'-w','LineWidth',2)
+    hold on
+end
+hold off
+set(gca,'XTick',[1,900])
+set(gca,'XTickLabel',{0,'30 s'})
+set(gca,'YTick',[])
+% axis off
+%% 6. seg traj and label of locomotion
+l_umap = SBeA.SBeA_DecData_speed.DP_X(:,range_seg);
+l_seg = SBeA.SBeA_DecData_speed.L2.Seglist(:,range_seg);
+l_diff_seg = imbinarize([0,diff(l_seg)],0);
+l_seg_pos = find(l_diff_seg==1);
+subplot('Position',[0.36,0.55,0.23,0.05])
+for k = 1:size(l_umap,1)
+    plot(l_umap(k,:),'Color',0.7*[1,1,1])
+    hold on
+end
+box off
+set(gca,'xTick',0:150:900)
+set(gca,'XLim',[0,size(l_umap,2)])
+set(gca,'XTickLabel',[])
+set(gca,'YTick',[])
+set(gca,'TickDir','out')
+hold off
+h61 = subplot('Position',[0.36,0.53,0.23,0.01]);
+imagesc(range_seg)
+hold on
+colormap(h61,0.7*[1,1,1])
+for k = 1:size(l_seg_pos,2)
+    plot([l_seg_pos(k),l_seg_pos(k)],[-10,10],'-w','LineWidth',2)
+    hold on
+end
+hold off
+set(gca,'XTick',[1,900])
+set(gca,'XTickLabel',{0,'30 s'})
+set(gca,'YTick',[])
+% axis off
+%% 7. seg traj and label of distance
+D_umap = SBeA.SBeA_DecData_dist.DP_X(:,range_seg);
+D_seg = SBeA.SBeA_DecData_dist.L2.Seglist(:,range_seg);
+D_diff_seg = imbinarize([0,diff(D_seg)],0);
+D_seg_pos = find(D_diff_seg==1);
+subplot('Position',[0.67,0.55,0.23,0.05])
+for k = 1:size(D_umap,1)
+    plot(D_umap(k,:),'Color',0.7*[1,1,1])
+    hold on
+end
+box off
+set(gca,'XTick',0:150:900)
+set(gca,'XLim',[0,size(D_umap,2)])
+set(gca,'XTickLabel',[])
+set(gca,'YTick',[])
+set(gca,'TickDir','out')
+hold off
+h71 = subplot('Position',[0.67,0.53,0.23,0.01]);
+imagesc(range_seg)
+hold on
+colormap(h71,0.7*[1,1,1])
+for k = 1:size(D_seg_pos,2)
+    plot([D_seg_pos(k),D_seg_pos(k)],[-10,10],'-w','LineWidth',2)
+    hold on
+end
+hold off
+set(gca,'XTick',[1,900])
+set(gca,'XTickLabel',{0,'30 s'})
+set(gca,'YTick',[])
+% axis off
+%% 8. merge label
+merge_label_diff = nm_diff_seg|l_diff_seg|D_diff_seg;
+merge_label = find(merge_label_diff==1);
+h81 = subplot('Position',[0.12,0.48,0.2,0.01]);
+imagesc(range_seg)
+hold on
+colormap(h81,0.7*[1,1,1])
+for k = 1:size(merge_label,2)
+    plot([merge_label(k),merge_label(k)],[-10,10],'-w','LineWidth',2)
+    hold on
+end
+hold off
+set(gca,'XTick',[])
+set(gca,'YTick',[])
+axis off
+h82 = subplot('Position',[0.04,0.21,0.01,0.2]);
+imagesc(range_seg')
+hold on
+colormap(h82,0.7*[1,1,1])
+for k = 1:size(merge_label,2)
+    plot([-10,10],[merge_label(k),merge_label(k)],'-w','LineWidth',2)
+    hold on
+end
+hold off
+set(gca,'XTick',[])
+set(gca,'YTick',[])
+axis off
+subplot('Position',[0.06,0.21,0.05,0.2])
+for k = 1:size(D_umap,1)
+    plot(D_umap(k,:),1:length(D_umap(k,:)),'Color',0.7*[1,1,1])
+    hold on
+end
+hold off
+box off
+set(gca,'YLim',[0,size(D_umap,2)])
+set(gca,'YTickLabel',[])
+set(gca,'XTickLabel',[])
+set(gca,'TickDir','out')
+set(gca,'YDir','reverse')
+set(gca,'XAxisLocation','top')
+
+subplot('Position',[0.12,0.42,0.2,0.05])
+for k = 1:size(D_umap,1)
+    plot(D_umap(k,:),'Color',0.7*[1,1,1])
+    hold on
+end
+box off
+set(gca,'XLim',[0,size(D_umap,2)])
+set(gca,'XTickLabel',[])
+set(gca,'TickDir','out')
+hold off
+set(gca,'YTickLabel',[])
+set(gca,'XTickLabel',[])
+set(gca,'TickDir','out')
+set(gca,'XAxisLocation','top')
+%% 9. DTAK
+cellidx = cellfun(@(x) size(x,2),data_sample_cell(:,1));
+cumsumidx = cumsum(cellidx);
+selidx = find(max(range_seg)>cumsumidx,1,'last');
+sel_data_sample_cell = data_sample_cell(1:selidx,1);
+sigma = 1;
+dist_mat_all = calculate_dtak_distance(sel_data_sample_cell,sigma);
+h91 = subplot('Position',[0.12,0.21,0.2,0.2]);
+imagesc(dist_mat_all)
+colormap(h91,mat2gray(imresize(redbluecmap,[256,3])))
+axis off
+h92 = subplot('Position',[0.27,0.195,0.05,0.01]);
+imagesc(1:100)
+colormap(h92,mat2gray(imresize(redbluecmap,[256,3])))
+axis off
+box on
+set(gca,'YTick',[])
+set(gca,'XTick',[])
+text(-60,1,'min')
+text(110,1,'max')
+%% 10. low dimensional embedding
+templde = cell2mat(data_sample_cell(:,9));
+lde = templde(1:4:end,:);
+subplot('Position',[0.38,0.21,0.23,0.23])
+cmap = 0.7*ones(size(lde(:,1),1),3);
+scatter(lde(:,1),lde(:,2),ones(size(lde(:,1),1),1),cmap)
+set(gca,'XTick',[])
+set(gca,'YTick',[])
+set(gca,'XLim',[min(lde(:,1)),max(lde(:,1))])
+set(gca,'YLim',[min(lde(:,2)),max(lde(:,2))])
+set(gca,'XTickLabel',[])
+set(gca,'YTickLabel',[])
+xlabel('UMAP 1')
+ylabel('UMAP 2')
+set(gca,'TickDir','out')
+title('Behavioral embedding')
+%% 11. watershed clustering
+wcname = [rootpath,'\panel_11\SBeA_wc_struct_20220623.mat'];
+load(wcname);
+%%
+subplot('Position',[0.915,0.265,0.01,0.23])
+cmap_length = length(unique(wc_struct.L_ittie))-1;
+showlabel = labeloverlay(ones(cmap_length,1),(1:cmap_length)','Transparency',0.5,...
+    'Colormap',cbrewer2('Set3',12));
+imshow(showlabel)
+subplot('Position',[0.68,0.21,0.23,0.23])
+cmap = cbrewer2('OrRd',256);
+coloredImage = ind2rgb(round(mat2gray(wc_struct.image_much)*255), cmap);
+showimg = labeloverlay(coloredImage,wc_struct.L_ittie,'Transparency',0.8,...
+    'Colormap',cbrewer2('Set3',12));
+showimg1 = showimg(:,:,1);
+showimg2 = showimg(:,:,2);
+showimg3 = showimg(:,:,3);
+showimg1(wc_struct.L_much==0) = 150;
+showimg2(wc_struct.L_much==0) = 150;
+showimg3(wc_struct.L_much==0) = 150;
+allshowimg = showimg;
+allshowimg(:,:,1) = showimg1;
+allshowimg(:,:,2) = showimg2;
+allshowimg(:,:,3) = showimg3;
+imshow(imresize(allshowimg,[150,150]))
+axis square
+axis on
+box off
+set(gca,'XTick',[])
+set(gca,'YTick',[])
+xlabel('UMAP 1')
+ylabel('UMAP 2')
+title('Watershed clustering')
+%% 12. ethogram
+tempethogram = cell2mat(data_sample_cell(:,8));
+ethogram = tempethogram(:,1);
+unique_etho = unique(ethogram);
+temp_etho_G = zeros(size(unique_etho,1),size(ethogram,1));
+for k = 1:size(temp_etho_G,1)
+    temp_etho_G(k,ethogram==k) = 1;
+end
+etho_G = temp_etho_G(:,1:10:(180*90));
+subplot('Position',[0.06,0.05,0.85,0.1])
+cmap = cbrewer2('Set3',12);
+for m = 1:size(etho_G,1)
+    for n = 2:size(etho_G,2)
+        if etho_G(m,n) == 1
+            tempp = plot([n,n],[m-0.25,m+0.25],'Color',cmap(m,:),'LineWidth',2);
+            tempp.Color(4) = 1;
+            hold on
+        end
+    end
+end
+hold off
+xlabel('Social ethogram')
+set(gca,'TickDir','out')
+set(gca,'YLim',[0.5,12])
+set(gca,'XLim',[0,size(etho_G,2)])
+set(gca,'YTick',1:12)
+set(gca,'YTickLabel',{1,[],[],[],[],6,[],[],[],[],[],12})
+set(gca,'XTick',0:180:(180*90))
+set(gca,'XTickLabel',)
+ylabel('Classes')
+box off
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

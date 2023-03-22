@@ -1,0 +1,94 @@
+##---------------------------------------------------
+# Continuous Integration .gitignore files
+##---------------------------------------------------
+
+# Ignore test result XML files
+testresults.xml
+coverage.xml
+
+
+##---------------------------------------------------
+# MATLAB default .gitignore
+##---------------------------------------------------
+
+# Editor autosave files
+*~
+*.asv
+# Compiled MEX binaries (all platforms)
+*.mex*
+
+
+##---------------------------------------------------
+# Windows default .gitignore
+##---------------------------------------------------
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+
+##---------------------------------------------------
+# Linux default .gitignore
+##---------------------------------------------------
+
+# Editor backup files
+*~
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+
+##---------------------------------------------------
+# Mac OSX default .gitignore
+##---------------------------------------------------
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk

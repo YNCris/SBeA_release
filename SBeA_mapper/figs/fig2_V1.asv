@@ -1,0 +1,780 @@
+%{
+    fig2, the framework of social mice tracking
+%}
+clear all
+close all
+addpath(genpath(pwd))
+%% plot canvas
+h1 = figure(1);
+set(h1,'Position',[900,100,800,800])
+set(h1,'color','white');
+% h1.Renderer = 'Painters';
+%% plot
+rootpath = 'Z:\hanyaning\multi_mice_test\Social_analysis\data\figs\fig2';
+%% set color
+setcolor = cbrewer2('Spectral',11);
+mouse1_c = setcolor(3,:);
+mouse2_c = setcolor(9,:);
+%% 1. open field, two mice, four cameras
+mousename = [rootpath,'\panel_1\mouse_2d.png'];
+cameraname = [rootpath,'\panel_1\camera_4.png'];
+[mouse_img,~,mouse_alpha] = imread(mousename);
+[camera_img,~,camera_alpha] = imread(cameraname);
+[X,Y] = meshgrid(1:size(mouse_img,1),1:size(mouse_img,2));
+subplot('Position',[0.05,0.55,0.17,0.1])
+warp_mouse1 = warp(X-200,Y-300,ones(size(Y)),mouse_img);
+hold on
+warp_mouse2 = warp(X+50,Y+50-300,ones(size(Y)),mouse_img);
+hold on
+[X,Y] = meshgrid(1:size(camera_img,1),1:size(camera_img,2));
+warp_camera = warp((X-76.5)*14,ones(size(Y))*200-1000,-1*Y*4+2000,camera_img);
+hold on
+r = 600;
+[Xbox, Ybox, Zbox] = cylinder(r, 50);
+surf(Xbox, Ybox, Zbox*2000,'FaceAlpha',0.05,'FaceColor',[.1,.1,.1],'EdgeColor','none');
+hold off
+xlabel('x')
+ylabel('y')
+zlabel('z')
+% himg = imshow(mouse_img);
+% alpha(warp_mouse1,mouse_alpha)
+view(0,53)
+title('Behavioral Video Capture','Position',[0,1200],'Color','blue')
+axis off
+annotation('arrow',0.135*[1,1],[0.65,0.68])
+%% 2. data from four cameras
+start_frame = 1;
+end_frame = start_frame+4;
+vidobj = VideoReader([rootpath,'\panel_2\rec1-group-20211207-camera-0.avi']);
+frame_cell = cell(end_frame-start_frame+1,1);
+for k = start_frame:end_frame
+    frame_cell{k,1} = flipud(read(vidobj,k));
+end
+[X,Y] = meshgrid(1:size(frame_cell{1,1},1),1:size(frame_cell{1,1},2));
+subplot('Position',[0.08,0.73,0.1,0.1])
+bias = 0;
+for k = 1:size(frame_cell,1)
+    warp(X,ones(size(Y))+bias,Y,frame_cell{k,1});
+    bias = bias+100;
+    hold on
+end
+hold off
+xlabel('x')
+ylabel('y')
+zlabel('z')
+title('Frame Sequences','Color','blue')
+view(40,15)
+axis off
+text(850,1100,'......','Rotation',90)
+text(930,1100,' × n cameras')
+text(550,0,350,'......')
+text(-650,0,100,'......')
+annotation('line',[0.23,0.28],[0.78,0.78],'Color','k')
+annotation('line',[0.28,0.28],[0.56,0.8],'Color','k')
+%% 3. backgrounds
+subplot('Position',[0.35,0.75,0.1,0.1])
+bkframe = imread([rootpath,'\panel_3\videos1_view1.png']);
+imshow(bkframe)
+title('Backgrounds Extraction','Color','blue')
+text(640,480,' × n')
+annotation('arrow',[0.28,0.34],[0.8,0.8])
+annotation('line',[0.46,0.5],[0.8,0.8])
+%% 4. trajectories
+trajdata = readNPY([rootpath,'\panel_4\videos1_view1.npy']);
+seltrajdata = trajdata(150:650,[1,2,4,5]);
+subplot('Position',[0.35,0.63,0.1,0.1])
+imshow(read(vidobj,150))
+hold on
+plot(seltrajdata(:,1),seltrajdata(:,2),'Color',mouse1_c)
+hold on
+plot(seltrajdata(:,3),seltrajdata(:,4),'Color',mouse2_c)
+hold off
+% axis([0,640,0,480])
+title('Trajectories Extraction','Color','blue')
+text(640,480,' × n')
+annotation('arrow',[0.28,0.34],[0.68,0.68])
+annotation('line',[0.46,0.5],[0.68,0.68])
+%% 5. label frames
+subplot('Position',[0.35,0.51,0.1,0.1])
+imgname = [rootpath,'\panel_5\videos2_view1_1633_251.png'];
+jsonname = [rootpath,'\panel_5\videos2_view1_1633_251.json'];
+jsontext = fileread(jsonname);
+jsonvalue = jsondecode(jsontext);
+img = imread(imgname);
+mouse1p = jsonvalue.shapes(1).points;
+mouse2p = jsonvalue.shapes(2).points;
+imshow(img)
+hold on
+plot(mouse1p(:,1),mouse1p(:,2),'-y')
+hold on
+plot(mouse2p(:,1),mouse2p(:,2),'-y')
+hold off
+start_x = 250;
+end_x = 500;
+start_y = 250;
+end_y = start_y+(end_x-start_x)*(480/640);
+axis([start_x,end_x,start_y,end_y])
+% text(end_x,end_y,' × m')
+title('Label Frames','Color','blue')
+annotation('arrow',[0.28,0.34],[0.56,0.56])
+annotation('arrow',[0.46,0.56],[0.56,0.56])
+%% 6. self training YOLACT
+% close all
+netcolorlist = cbrewer2('Set3',12);
+cov1_c = netcolorlist(11,:);
+cov2_c = netcolorlist(4,:);
+att1_c = netcolorlist(10,:);
+att2_c = netcolorlist(1,:);
+bias1 = 80;
+bias2 = 10;
+bias3 = 4;
+thick = 0.5;
+shrscale = 1;
+subplot('Position',[0.57,0.51,0.15,0.12])
+plotcube([thick 70 70]/shrscale,[0  0  0]/shrscale,.8,cov1_c)
+plotcube([thick 60 60]/shrscale,[2  5  5]/shrscale,.8,cov1_c)
+plotcube([thick 50 50]/shrscale,[4  10  10]/shrscale,.8,cov1_c)
+plotcube([thick 40 40]/shrscale,[6  15  15]/shrscale,.8,cov1_c)
+plotcube([thick 30 30]/shrscale,[8  20 20]/shrscale,.8,cov1_c)
+plotcube([thick 50 50]/shrscale,[0+bias3 0+bias2 0+bias1]/shrscale,.8,cov2_c)
+plotcube([thick 40 40]/shrscale,[2+bias3  5+bias2  5+bias1]/shrscale,.8,cov2_c)
+plotcube([thick 30 30]/shrscale,[4+bias3  10+bias2  10+bias1]/shrscale,.8,cov2_c)
+plotcube([thick 20 20]/shrscale,[6+bias3  15+bias2  15+bias1]/shrscale,.8,cov2_c)
+plotcube([thick 10 10]/shrscale,[8+bias3  20+bias2 20+bias1]/shrscale,.8,cov2_c)
+hold on
+plot3([0+thick,2]/shrscale,[35,35]/shrscale,[35,35]/shrscale,'k')
+hold on
+plot3([2+thick,4]/shrscale,[35,35]/shrscale,[35,35]/shrscale,'k')
+hold on
+plot3([4+thick,6]/shrscale,[35,35]/shrscale,[35,35]/shrscale,'k')
+hold on
+plot3([6+thick,8]/shrscale,[35,35]/shrscale,[35,35]/shrscale,'k')
+hold on
+plot3([0+bias3+thick,2+bias3]/shrscale,[25+bias2,25+bias2]/shrscale,[25+bias1,25+bias1]/shrscale,'k')
+hold on
+plot3([2+bias3+thick,4+bias3]/shrscale,[25+bias2,25+bias2]/shrscale,[25+bias1,25+bias1]/shrscale,'k')
+hold on
+plot3([4+bias3+thick,6+bias3]/shrscale,[25+bias2,25+bias2]/shrscale,[25+bias1,25+bias1]/shrscale,'k')
+hold on
+plot3([6+bias3+thick,8+bias3]/shrscale,[25+bias2,25+bias2]/shrscale,[25+bias1,25+bias1]/shrscale,'k')
+hold on
+plot3([0.5*thick+4,0.5*thick+4]/shrscale,[35,35]/shrscale,[10+50,0+bias1]/shrscale,'k')
+hold on
+plot3([0.5*thick+6,0.5*thick+6]/shrscale,[35,35]/shrscale,[15+40,5+bias1]/shrscale,'k')
+hold on
+plot3([0.5*thick+8,0.5*thick+8]/shrscale,[35,35]/shrscale,[20+30,10+bias1]/shrscale,'k')
+hold on
+plot3([-2,0],[35,35],[35,35],'k')
+hold on
+plot3([-2,-2],[35,35],[35,25+0+bias1],'k')
+hold on
+plot3([-2,0+bias3],[35,35],[25+bias1,25+bias1],'k')
+hold off
+view(9,4)
+axis off
+% view(2)
+title({'Self-Training','Instance Segmentation'},'Color','blue')
+%% 7. Synthetic Data
+subplot('Position',[0.54,0.72,0.1,0.1])
+sel_name = 'zone_3_16_19_0';
+sel_frame_num = 12;
+imgname = [rootpath,'\panel_7\',sel_name,'\',num2str(sel_frame_num),'.jpg'];
+jsonname = [rootpath,'\panel_7\instances_valid_sub.json'];
+jsontext = fileread(jsonname);
+jsonvalue = jsondecode(jsontext);
+img = imread(imgname);
+for k = 1:size(jsonvalue.videos,1)
+    %%
+    tempnamecell = jsonvalue.videos(k).file_names;
+    for m = 1:size(tempnamecell,1)
+        %%
+        tempname = tempnamecell{m,1};
+        splname = split(tempname,'/');
+        if strcmp(splname{1},sel_name)
+            sel_num = k;
+            break
+        end
+    end
+end
+sel_anno_idx = [jsonvalue.annotations.video_id]==sel_num;
+anno_cell = jsonvalue.annotations(sel_anno_idx);
+mask_traj_1 = [anno_cell(1).bboxes(:,1)+anno_cell(1).bboxes(:,3)/2,...
+    anno_cell(1).bboxes(:,2)+anno_cell(1).bboxes(:,4)/2];
+mask_traj_2 = [anno_cell(2).bboxes(:,1)+anno_cell(2).bboxes(:,3)/2,...
+    anno_cell(2).bboxes(:,2)+anno_cell(2).bboxes(:,4)/2];
+
+img_anno_1 = anno_cell(1).segmentations(sel_frame_num);
+img_anno_2 = anno_cell(2).segmentations(sel_frame_num);
+masks_1 = MaskApi.decode(img_anno_1);
+masks_2 = MaskApi.decode(img_anno_2);
+show_mask = double(masks_1)+2*double(masks_2);
+imshow(img)
+hold on
+plot(mask_traj_1(:,1),mask_traj_1(:,2),'Color',mouse1_c)
+hold on
+plot(mask_traj_2(:,1),mask_traj_2(:,2),'Color',mouse2_c)
+hold off
+start_x = 350;
+end_x = 550;
+start_y = 250;
+end_y = start_y+(end_x-start_x)*(480/640);
+axis([start_x,end_x,start_y,end_y])
+title('Synthetic Data','Color','blue')
+annotation('arrow',[0.5,0.53],[0.77,0.77])
+annotation('line',[0.5,0.5],[0.68,0.8])
+annotation('arrow',[0.59,0.59],[0.69,0.725])
+%% 7.5. Synthetic Label
+h75 = subplot('Position',[0.66,0.732,0.1,0.1*480/640]);
+imagesc(show_mask)
+start_x = 350;
+end_x = 550;
+start_y = 250;
+end_y = start_y+(end_x-start_x)*(480/640);
+axis([start_x,end_x,start_y,end_y])
+% axis equal
+% axis off
+box on
+set(gca,'XTick',[])
+set(gca,'YTick',[])
+title('Synthetic Label','Color','blue')
+annotation('arrow',[0.71,0.71],[0.69,0.725])
+annotation('line',[0.59,0.71],[0.69,0.69])
+annotation('line',[0.65,0.65],[0.67,0.69])
+annotation('line',[0.77,0.875],[0.77,0.77])
+annotation('arrow',[0.875,0.875],[0.77,0.725])
+colormap(h75,[1,1,1;...
+        mouse1_c;...
+        mouse2_c])
+%% 8. ViSTR
+% close all
+subplot('Position',[0.8,0.5,0.15,0.2])
+bias1 = 80;
+bias2 = 10;
+bias3 = 4;
+thick = 0.5;
+shrscale = 1;
+inter1 = 10;
+plotcube([70 70 thick],[-35  -35  4*inter1],.8,cov1_c)
+plotcube([60 60 thick],[-30  -30  3*inter1],.8,cov1_c)
+plotcube([50 50 thick],[-25  -25  2*inter1],.8,cov1_c)
+plotcube([40 40 thick],[-20  -20  inter1],.8,cov1_c)
+plotcube([30 30 thick],[-15  -15  0*inter1],.8,cov1_c)
+
+plotcube([10 10 10],[5  -5  -20],.8,att1_c)
+plotcube([10 10 10],[25  -5  -20],.8,att1_c)
+plotcube([10 10 10],[45  -5  -20],.8,att1_c)
+plotcube([-10 10 10],[-5  -5  -20],.8,att1_c)
+plotcube([-10 10 10],[-25  -5  -20],.8,att1_c)
+plotcube([-10 10 10],[-45  -5  -20],.8,att1_c)
+
+plotcube([10 10 10],[5  -5  -40],.8,att2_c)
+plotcube([10 10 10],[25  -5  -40],.8,att2_c)
+plotcube([10 10 10],[45  -5  -40],.8,att2_c)
+plotcube([-10 10 10],[-5  -5  -40],.8,att2_c)
+plotcube([-10 10 10],[-25  -5  -40],.8,att2_c)
+plotcube([-10 10 10],[-45  -5  -40],.8,att2_c)
+
+plotcube([30 10 10],[-15  -5  -60],.8,att2_c)
+
+hold on
+plot3([0,0],[0,0],[0+thick,inter1],'k')
+hold on
+plot3([0,0],[0,0],[inter1+thick,2*inter1],'k')
+hold on
+plot3([0,0],[0,0],[2*inter1+thick,3*inter1],'k')
+hold on
+plot3([0,0],[0,0],[3*inter1+thick,4*inter1],'k')
+
+hold on
+plot3([0,10],[0,0],[0,-10],'k')
+hold on
+plot3([0,30],[0,0],[0,-10],'k')
+hold on
+plot3([0,50],[0,0],[0,-10],'k')
+hold on
+plot3([0,-10],[0,0],[0,-10],'k')
+hold on
+plot3([0,-30],[0,0],[0,-10],'k')
+hold on
+plot3([0,-50],[0,0],[0,-10],'k')
+
+hold on
+plot3([10,10],[0,0],[-20,-40],'k')
+hold on
+plot3([30,30],[0,0],[-20,-40],'k')
+hold on
+plot3([50,50],[0,0],[-20,-40],'k')
+hold on
+plot3([-10,-10],[0,0],[-20,-40],'k')
+hold on
+plot3([-30,-30],[0,0],[-20,-40],'k')
+hold on
+plot3([-50,-50],[0,0],[-20,-40],'k')
+
+hold on
+plot3([10,0],[0,0],[-40,-50],'k')
+hold on
+plot3([30,0],[0,0],[-40,-50],'k')
+hold on
+plot3([50,0],[0,0],[-40,-50],'k')
+hold on
+plot3([-10,0],[0,0],[-40,-50],'k')
+hold on
+plot3([-30,0],[0,0],[-40,-50],'k')
+hold on
+plot3([-50,0],[0,0],[-40,-50],'k')
+hold off
+% axis equal
+view(-35,15)
+title('Spatio-temporal Learning','Color','blue')
+axis off
+annotation('arrow',[0.875,0.875],[0.51,0.48])
+%% 9. mask frames
+start_frame = 30;
+end_frame = start_frame+4;
+start_x = 100;
+end_x = 550;
+start_y = 0;
+end_y = start_y+(end_x-start_x)*(480/640);
+vidname1 = [rootpath,'\panel_9\rec2-group-20211207-camera-0-masked-1.avi'];
+vidname2 = [rootpath,'\panel_9\rec2-group-20211207-camera-0-masked-2.avi'];
+vidobj1 = VideoReader(vidname1);
+vidobj2 = VideoReader(vidname2);
+frame_cell_1 = cell(end_frame-start_frame+1,1);
+frame_cell_2 = cell(end_frame-start_frame+1,1);
+for k = start_frame:end_frame
+    frame_cell_1{k-start_frame+1,1} = flipud(read(vidobj1,k));
+    frame_cell_2{k-start_frame+1,1} = flipud(read(vidobj2,k));
+end
+[X,Y] = meshgrid(1:size(frame_cell_1{1,1},1),1:size(frame_cell_1{1,1},2));
+subplot('Position',[0.81,0.35,0.14,0.1])
+bias = 0;
+for k = 1:size(frame_cell_1,1)
+    warp(X,ones(size(Y))+bias,Y,frame_cell_1{k,1});
+    bias = bias+100;
+    hold on
+end
+hold off
+view(25,15)
+xlabel('x')
+ylabel('y')
+axis([start_x,end_x,0,500,start_y,end_y])
+axis off
+title('Masked Videos','Color','blue')
+subplot('Position',[0.81,0.25,0.14,0.1])
+bias = 0;
+for k = 1:size(frame_cell_2,1)
+    warp(X,ones(size(Y))+bias,Y,frame_cell_2{k,1});
+    bias = bias+100;
+    hold on
+end
+hold off
+view(25,15)
+axis([start_x,end_x,0,500,start_y,end_y])
+axis off
+annotation('line',[0.81,0.8],[0.4,0.4])
+annotation('line',[0.81,0.8],[0.3,0.3])
+annotation('line',[0.8,0.8],[0.4,0.3])
+annotation('arrow',[0.8,0.75],[0.35,0.35])
+%% 10. calibration files
+sel_cb_idx = 2;
+
+startx1 = 250;
+starty1 = 100;
+bias_1 = 300;
+
+startx2 = 250;
+starty2 = 100;
+bias_2 = 300;
+
+startx3 = 100;
+starty3 = 150;
+bias_3 = 300;
+
+startx4 = 150;
+starty4 = 50;
+bias_4 = 300;
+
+endx1 = startx1+bias_1;
+endy1 = starty1+bias_1;
+endx2 = startx2+bias_2;
+endy2 = starty2+bias_2;
+endx3 = startx3+bias_3;
+endy3 = starty3+bias_3;
+endx4 = startx4+bias_4;
+endy4 = starty4+bias_4;
+cbimg1 = imread([rootpath,'\panel_10\Imagesforcalibration\PrimarySecondary1\Primary\frame',...
+    num2str(sel_cb_idx),'.png']);
+cbimg2 = imread([rootpath,'\panel_10\Imagesforcalibration\PrimarySecondary1\Secondary1\frame',...
+    num2str(sel_cb_idx),'.png']);
+cbimg3 = imread([rootpath,'\panel_10\Imagesforcalibration\PrimarySecondary2\Secondary2\frame',...
+    num2str(sel_cb_idx),'.png']);
+cbimg4 = imread([rootpath,'\panel_10\Imagesforcalibration\PrimarySecondary3\Secondary3\frame',...
+    num2str(sel_cb_idx),'.png']);
+cali1 = load([rootpath,'\panel_10\CalibSessionFiles\PrimarySecondary1\calibrationSession.mat']);
+cali2 = load([rootpath,'\panel_10\CalibSessionFiles\PrimarySecondary2\calibrationSession.mat']);
+cali3 = load([rootpath,'\panel_10\CalibSessionFiles\PrimarySecondary3\calibrationSession.mat']);
+for k = 1:size(cali1.calibrationSession.PatternSet.FullPathNames,2)
+    tempname = cali1.calibrationSession.PatternSet.FullPathNames{1,k};
+    tempsplname = split(tempname,'\');
+    if strcmp(tempsplname{end},['frame',num2str(sel_cb_idx),'.png'])
+        selnum1 = k;
+        break;
+    end
+end
+for k = 1:size(cali1.calibrationSession.PatternSet.FullPathNames,2)
+    tempname = cali1.calibrationSession.PatternSet.FullPathNames{2,k};
+    tempsplname = split(tempname,'\');
+    if strcmp(tempsplname{end},['frame',num2str(sel_cb_idx),'.png'])
+        selnum2 = k;
+        break;
+    end
+end
+for k = 1:size(cali2.calibrationSession.PatternSet.FullPathNames,2)
+    tempname = cali2.calibrationSession.PatternSet.FullPathNames{2,k};
+    tempsplname = split(tempname,'\');
+    if strcmp(tempsplname{end},['frame',num2str(sel_cb_idx),'.png'])
+        selnum3 = k;
+        break;
+    end
+end
+for k = 1:size(cali3.calibrationSession.PatternSet.FullPathNames,2)
+    tempname = cali3.calibrationSession.PatternSet.FullPathNames{2,k};
+    tempsplname = split(tempname,'\');
+    if strcmp(tempsplname{end},['frame',num2str(sel_cb_idx),'.png'])
+        selnum4 = k;
+        break;
+    end
+end
+calip1 = cali1.calibrationSession.PatternSet.PatternPoints(:,:,selnum1,1);
+calip2 = cali1.calibrationSession.PatternSet.PatternPoints(:,:,selnum2,2);
+calip3 = cali2.calibrationSession.PatternSet.PatternPoints(:,:,selnum3,2);
+calip4 = cali3.calibrationSession.PatternSet.PatternPoints(:,:,selnum4,2);
+first_fig_pos = [0.65,0.15,0.05,0.05];
+subplot('Position',first_fig_pos)
+imshow(cbimg1)
+hold on
+plot(calip1(:,1),calip1(:,2),'go','MarkerSize',1)
+hold off
+axis([startx1,endx1,starty1,endy1])
+title('             Calibration Files','Color','blue')
+subplot('Position',[first_fig_pos(1)+0.05,first_fig_pos(2:end)])
+imshow(cbimg2)
+hold on
+plot(calip2(:,1),calip2(:,2),'go','MarkerSize',1)
+hold off
+axis([startx2,endx2,starty2,endy2])
+subplot('Position',[first_fig_pos(1),first_fig_pos(2)-0.05,first_fig_pos(3:end)])
+imshow(cbimg3)
+hold on
+plot(calip3(:,1),calip3(:,2),'go','MarkerSize',1)
+hold off
+axis([startx3,endx3,starty3,endy3])
+subplot('Position',[first_fig_pos(1)+0.05,first_fig_pos(2)-0.05,first_fig_pos(3:end)])
+imshow(cbimg4)
+hold on
+plot(calip4(:,1),calip4(:,2),'go','MarkerSize',1)
+hold off
+axis([startx4,endx4,starty4,endy4])
+% annotation('arrow',[0.54,0.25],[0.38,0.38])
+annotation('arrow',[0.63,0.51],[0.15,0.15])
+annotation('arrow',[0.875,0.51],[0.24,0.24])
+annotation('line',[0.875,0.875],[0.25,0.24])
+%% 11. DLC
+% close all
+bias1 = 80;
+bias2 = 10;
+bias3 = 4;
+thick = 0.5;
+shrscale = 1;
+bias4 = 0.5;
+subplot('Position',[0.65,0.315,0.1,0.1])
+plotcube([thick 70 70]/shrscale,[0  0  0]/shrscale,.8,cov1_c)
+plotcube([thick 60 60]/shrscale,[2  5  5]/shrscale,.8,cov1_c)
+plotcube([thick 50 50]/shrscale,[4  10  10]/shrscale,.8,cov1_c)
+plotcube([thick 60 60]/shrscale,[6  5  5]/shrscale,.8,cov1_c)
+plotcube([thick 70 70]/shrscale,[8  0  0]/shrscale,.8,cov1_c)
+
+hold on
+plot3([0+thick,2]/shrscale,[35,35]/shrscale,[35,35]/shrscale,'k')
+hold on
+plot3([2+thick,4]/shrscale,[35,35]/shrscale,[35,35]/shrscale,'k')
+hold on
+plot3([4+thick,6]/shrscale,[35,35]/shrscale,[35,35]/shrscale,'k')
+hold on
+plot3([6+thick,8]/shrscale,[35,35]/shrscale,[35,35]/shrscale,'k')
+
+hold on
+plot3([2-bias4,2-bias4]/shrscale,[35,35]/shrscale,[35,90]/shrscale,'k')
+hold on
+plot3([4-bias4,4-bias4]/shrscale,[35,35]/shrscale,[35,90]/shrscale,'k')
+hold on
+plot3([6-bias4,6-bias4]/shrscale,[35,35]/shrscale,[35,90]/shrscale,'k')
+
+hold on
+plot3([2+thick+bias4,2+thick+bias4]/shrscale,[35,35]/shrscale,[35,90]/shrscale,'k')
+hold on
+plot3([4+thick+bias4,4+thick+bias4]/shrscale,[35,35]/shrscale,[35,90]/shrscale,'k')
+hold on
+plot3([6+thick+bias4,6+thick+bias4]/shrscale,[35,35]/shrscale,[35,90]/shrscale,'k')
+
+hold on
+plot3([2-bias4,2+thick+bias4]/shrscale,[35,35]/shrscale,[90,90]/shrscale,'k')
+hold on
+plot3([4-bias4,4+thick+bias4]/shrscale,[35,35]/shrscale,[90,90]/shrscale,'k')
+hold on
+plot3([6-bias4,6+thick+bias4]/shrscale,[35,35]/shrscale,[90,90]/shrscale,'k')
+
+hold off
+title({'Single Animal','Pose Estimation'},'Color','blue')
+view(-10,12)
+axis off
+annotation('arrow',[0.64,0.59],[0.35,0.35])
+annotation('arrow',[0.47,0.43],[0.35,0.35])
+annotation('arrow',[0.2,0.25],[0.35,0.35])
+%% 12. 3D mask reid
+sel_frame_id = 500;
+z_s = -30;
+z_e = 10;
+camnum = 4;
+res_len = 500;
+caliparamname = [rootpath,'\panel_12\rec1-group-20211207-caliParas.mat'];
+caliparam = load(caliparamname);
+x_s_cell = cell(camnum,2);
+x_e_cell = cell(camnum,2);
+y_s_cell = cell(camnum,2);
+y_e_cell = cell(camnum,2);
+z_s_cell = cell(camnum,2);
+z_e_cell = cell(camnum,2);
+frames_cell = cell(camnum,2);
+masks_cell = cell(camnum,2);
+framesize = [640,480];
+[X,Y] = meshgrid(1:framesize(1),1:framesize(2));
+XY = [reshape(X-framesize(1)/2,[],1),reshape(Y-framesize(2)/2,[],1)];
+% campos = [-50,0,0;50,0,0;0,-50,0;0,50,0;0,0,0;0,0,100]';
+campos_frame = [XY,0*ones(size(XY,1),1)]';
+campos_mask = [XY,-100*ones(size(XY,1),1)]';
+tic
+for camidx = 1:camnum
+    %%
+    E0 = caliparam.caliParams.single_cam_mat{camidx,1};
+    R0 = caliparam.caliParams.single_rotation{camidx,1};
+    T0 = caliparam.caliParams.single_translation{camidx,1};
+    %%
+    jsonname = [rootpath,'\panel_12\',num2str(camidx),'.json'];
+    jsontext = fileread(jsonname);
+    jsonvalue = jsondecode(jsontext);
+    %%
+    img_anno_1 = jsonvalue.annotations.segmentations(sel_frame_id,1);
+    img_anno_2 = jsonvalue.annotations.segmentations(sel_frame_id,2);
+    reid_1 = jsonvalue.annotations.reidlist(sel_frame_id,1)+1;
+    reid_2 = jsonvalue.annotations.reidlist(sel_frame_id,2)+1;
+    masks_1 = MaskApi.decode(img_anno_1);
+    masks_2 = MaskApi.decode(img_anno_2);
+    all_masks = reid_1*double(masks_1)+reid_2*double(masks_2);
+    
+    vidobj = VideoReader([rootpath,'\panel_12\',num2str(camidx),'.avi']);
+    
+%     disp(camidx)
+%     disp(R0)
+%     disp(T0)
+    XYZ_frame  = cam2world(R0, T0, campos_frame);
+    XYZ_mask  = cam2world(R0, T0, campos_mask);
+%     tempXY = pixel2cam(E0, campos(1:2,:));
+%     XYZ = cam2world(R0, T0, [tempXY;zeros(1,size(tempXY,2))]);
+%     XYZ = cam2spacepoints(E0, R0, T0, campos(1:2,:));
+    frames_cell{camidx,1} = XYZ_frame;
+    frames_cell{camidx,2} = imrotate(read(vidobj,sel_frame_id),90);
+    masks_cell{camidx,1} = XYZ_mask;
+%     all_masks(all_masks==0) = NaN;
+    masks_cell{camidx,2} = imrotate(all_masks,90);
+%     figure
+%     subplot(121)
+%     title(camidx)
+%     imagesc(masks_1)
+%     subplot(122)
+%     imagesc(masks_2)
+    [y1,x1] = find(masks_1==1);
+    [y2,x2] = find(masks_2==1);
+    point2d_1 = [x1,y1];
+    point2d_2 = [x2,y2];
+    randnum_1 = randperm(size(point2d_1,1));
+    randnum_2 = randperm(size(point2d_2,1));
+    res_point2d_1 = point2d_1(randnum_1(1:res_len),:);
+    res_point2d_2 = point2d_2(randnum_2(1:res_len),:);
+    [dir_vec, p0] = ertp2kd(E0, R0, T0, res_point2d_1);
+    [x_s, x_e, y_s, y_e] = kp2tp(dir_vec,p0,z_s,z_e);
+    x_s_cell{camidx,reid_1} = x_s;
+    x_e_cell{camidx,reid_1} = x_e;
+    y_s_cell{camidx,reid_1} = y_s;
+    y_e_cell{camidx,reid_1} = y_e;
+    z_s_cell{camidx,reid_1} = z_s*ones(size(x_s));
+    z_e_cell{camidx,reid_1} = z_e*ones(size(x_e));
+    [dir_vec, p0] = ertp2kd(E0, R0, T0, res_point2d_2);
+    [x_s, x_e, y_s, y_e] = kp2tp(dir_vec,p0,z_s,z_e);
+    x_s_cell{camidx,reid_2} = x_s;
+    x_e_cell{camidx,reid_2} = x_e;
+    y_s_cell{camidx,reid_2} = y_s;
+    y_e_cell{camidx,reid_2} = y_e;
+    z_s_cell{camidx,reid_2} = z_s*ones(size(x_s));
+    z_e_cell{camidx,reid_2} = z_e*ones(size(x_e));
+
+    
+%     plot3(XYZ(1,:),XYZ(2,:),XYZ(3,:),'o')
+
+%     plot(XY(1,:),XY(2,:),'o');
+end
+%
+% relativeCameraPose
+cmap = [1,1,1;...
+        mouse1_c;...
+        mouse2_c];
+subplot('Position',[0.32,0.07,0.18,0.18])
+% figure(3)
+for camidx = 1:camnum
+    plot3([x_s_cell{camidx,1},x_e_cell{camidx,1}]',...
+        [y_s_cell{camidx,1},y_e_cell{camidx,1}]',...
+        [z_s_cell{camidx,1},z_e_cell{camidx,1}]','Color',mouse1_c)
+    hold on
+    plot3([x_s_cell{camidx,2},x_e_cell{camidx,2}]',...
+        [y_s_cell{camidx,2},y_e_cell{camidx,2}]',...
+        [z_s_cell{camidx,2},z_e_cell{camidx,2}]','Color',mouse2_c)
+    hold on
+    warp(reshape(frames_cell{camidx,1}(1,:),fliplr(framesize))',...
+     reshape(frames_cell{camidx,1}(2,:),fliplr(framesize))',...
+     reshape(frames_cell{camidx,1}(3,:),fliplr(framesize))',...
+     imresize(frames_cell{camidx,2},framesize));
+    hold on
+    hw = warp(reshape(masks_cell{camidx,1}(1,:),fliplr(framesize))',...
+     reshape(masks_cell{camidx,1}(2,:),fliplr(framesize))',...
+     reshape(masks_cell{camidx,1}(3,:),fliplr(framesize))',...
+     uint8(imresize(masks_cell{camidx,2},framesize)),cmap);
+    alpha(hw,0.5)
+    hold on
+end
+hold off
+axis equal
+view(-64,65)
+% axis([100,500,-300,100,0,500])
+xlabel('x')
+ylabel('y')
+zlabel('z')
+set(gca,'XTickLabel',[])
+set(gca,'YTickLabel',[])
+set(gca,'ZTickLabel',[])
+set(gca,'Tickdir','none')
+grid on
+title('3D Mask Re-ID','Color','blue')
+toc
+annotation('line',[0.3,0.15],[0.15,0.15])
+annotation('arrow',[0.15,0.15],[0.15,0.25])
+%% 13. single animal pose estimation
+sel_frame_idx = 40;
+start_x = 250;
+end_x = 510;
+start_y = 280;
+end_y = start_y+(end_x-start_x)*(480/640);
+vidobj = VideoReader([rootpath,'\panel_13\rec2-group-20211207-camera-0.avi']);
+vidname1 = [rootpath,'\panel_9\rec2-group-20211207-camera-0-masked-1.avi'];
+vidname2 = [rootpath,'\panel_9\rec2-group-20211207-camera-0-masked-2.avi'];
+vidobj1 = VideoReader(vidname1);
+vidobj2 = VideoReader(vidname2);
+tempdata1 = importdata([rootpath,'\panel_13\rec2-group-20211207-camera-0-masked-1DLC_resnet50_HYN_projectDec17shuffle1_1030000.csv']);
+tempdata2 = importdata([rootpath,'\panel_13\rec2-group-20211207-camera-0-masked-2DLC_resnet50_HYN_projectDec17shuffle1_1030000.csv']);
+pos1 = tempdata1.data;
+pos2 = tempdata2.data;
+pos1(:,1:3:end) = [];
+pos2(:,1:3:end) = [];
+selpos1 = pos1(sel_frame_idx,:);
+selpos2 = pos2(sel_frame_idx,:);
+subplot('Position',[0.48,0.35,0.1,0.08])
+selframe1 = read(vidobj1,sel_frame_idx);
+imshow(selframe1)
+hold on
+plot(selpos1(1:2:end),selpos1(2:2:end),'o','Color',mouse1_c,'MarkerSize',1)
+hold off
+axis([start_x,end_x,start_y,end_y])
+title('Single animal poses','Color','blue')
+subplot('Position',[0.48,0.27,0.1,0.08])
+selframe2 = read(vidobj2,sel_frame_idx);
+imshow(selframe2)
+hold on
+plot(selpos2(1:2:end),selpos2(2:2:end),'o','Color',mouse2_c,'MarkerSize',1)
+hold off
+axis([start_x,end_x,start_y,end_y])
+subplot('Position',[0.3,0.29,0.12,0.12])
+selframe = read(vidobj,sel_frame_idx);
+imshow(selframe)
+hold on
+plot(selpos1(1:2:end),selpos1(2:2:end),'o','Color',mouse1_c,'MarkerSize',1)
+hold on
+plot(selpos2(1:2:end),selpos2(2:2:end),'o','Color',mouse2_c,'MarkerSize',1)
+hold off
+axis([start_x,end_x,start_y,end_y])
+title('Merge poses','Color','blue')
+%% 14. 3D poses
+sel_frame = 40;
+dotsize = 10;
+temppos = load([rootpath,'\panel_14\rec1-group-20211207-reid3d.mat']);
+mouse1 = reshape(temppos.coords3d(1,:,:),[1800,48]);
+mouse2 = reshape(temppos.coords3d(2,:,:),[1800,48]);
+drawline = [ 1 2; 1 3;2 3; 4 5;4 6;5 7;6 8;7 14;8 14;...
+    5 9;7 11;6 10; 8 12;14 15; 15 16];
+nfeatures = 16;
+colorclass = ones(256,1)*mouse1_c; %jet is default in DLC
+color_map_self=colorclass(ceil(linspace(1,256,nfeatures)),:);
+h14 = subplot('Position',[0.06,0.28,0.17,0.17]);
+mesh_mouse(mouse1, sel_frame)
+hold on
+temp = reshape(mouse1(sel_frame,:,1),3,nfeatures);
+scatter3(temp(1,:),temp(2,:),temp(3,:),dotsize*ones(1,nfeatures),color_map_self(1:nfeatures,:),'filled','Parent', h14);
+hold on;
+for l = 1:size(drawline,1)
+    pts = [temp(:,drawline(l,1))'; temp(:,drawline(l,2))']; %line btw elbow and shoulder
+    line(pts(:,1), pts(:,2), pts(:,3),'color','k','linewidth',1,'Parent', h14)
+end
+hold on
+colorclass = ones(256,1)*mouse2_c; %jet is default in DLC
+color_map_self=colorclass(ceil(linspace(1,256,nfeatures)),:);
+mesh_mouse(mouse2, sel_frame)
+hold on
+temp = reshape(mouse2(sel_frame,:,1),3,nfeatures);
+scatter3(temp(1,:),temp(2,:),temp(3,:),dotsize*ones(1,nfeatures),color_map_self(1:nfeatures,:),'filled','Parent', h14);
+hold on;
+for l = 1:size(drawline,1)
+    pts = [temp(:,drawline(l,1))'; temp(:,drawline(l,2))']; %line btw elbow and shoulder
+    line(pts(:,1), pts(:,2), pts(:,3),'color','k','linewidth',1,'Parent', h14)
+end
+hold off
+view(-74,72)
+xlabel('x')
+ylabel('y')
+zlabel('z')
+set(gca,'TickDir','none')
+set(gca,'XTickLabel',[])
+set(gca,'YTickLabel',[])
+set(gca,'ZTickLabel',[])
+axis([-350,-170,50,250,-10,100])
+grid on
+title('3D Poses','Color','blue')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

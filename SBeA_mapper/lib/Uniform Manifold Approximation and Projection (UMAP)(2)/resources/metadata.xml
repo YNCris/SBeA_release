@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addOn>
+  <identifier>eaee15d4-dd66-4cee-83e3-f57ed03c9594</identifier>
+  <displayType>Collection</displayType>
+  <translatedDisplayType>
+    <en_US>Collection</en_US>
+    <es_ES>Collection</es_ES>
+    <es_MX>Collection</es_MX>
+    <ja_JP>コレクション</ja_JP>
+    <ko_KR>컬렉션</ko_KR>
+    <zh_CN>集合</zh_CN>
+  </translatedDisplayType>
+  <name>Uniform Manifold Approximation and Projection (UMAP)</name>
+  <author>Stephen Meehan</author>
+  <version>4.1</version>
+  <downloadUrl>https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/eaee15d4-dd66-4cee-83e3-f57ed03c9594/bbc168ce-e442-46c0-a5fb-401ecf5cf924/packages/zip?src=addons_ml_desktop_install&amp;profile_id=11952608&amp;license=40613867&amp;release_family=R2022a</downloadUrl>
+  <licenseUrl>https://addons.mathworks.com/registry/v1/eaee15d4-dd66-4cee-83e3-f57ed03c9594/4.1.0.0/-/license</licenseUrl>
+  <previewImageUrl>https://www.mathworks.com/responsive_image/160/120/0/0/0/cache/matlabcentral/mlc-downloads/downloads/eaee15d4-dd66-4cee-83e3-f57ed03c9594/bbc168ce-e442-46c0-a5fb-401ecf5cf924/images/screenshot.png</previewImageUrl>
+  <releaseNotesUrl>https://www.mathworks.com/add-ons/eaee15d4-dd66-4cee-83e3-f57ed03c9594/bbc168ce-e442-46c0-a5fb-401ecf5cf924/releaseNotes</releaseNotesUrl>
+  <installationFolder>Collections</installationFolder>
+</addOn>

@@ -1,0 +1,4533 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%Produced by poppler pdftops version: 0.33.0 (http://poppler.freedesktop.org)
+%%Creator: \050MATLAB, The Mathworks, Inc. Version 9.0.0.341360 \\(R2016a\\). Operating System: Linux)
+%%LanguageLevel: 2
+%%DocumentSuppliedResources: (atend)
+%%BoundingBox: 0 0 1193 624
+%%HiResBoundingBox: 0 0 1193 624
+%%DocumentSuppliedResources: (atend)
+%%EndComments
+%%BeginProlog
+%%BeginResource: procset xpdf 3.00 0
+%%Copyright: Copyright 1996-2011 Glyph & Cog, LLC
+/xpdf 75 dict def xpdf begin
+% PDF special state
+/pdfDictSize 15 def
+/pdfSetup {
+  /setpagedevice where {
+    pop 2 dict begin
+      /Policies 1 dict dup begin /PageSize 6 def end def
+      { /Duplex true def } if
+    currentdict end setpagedevice
+  } {
+    pop
+  } ifelse
+} def
+/pdfSetupPaper {
+  % Change paper size, but only if different from previous paper size otherwise
+  % duplex fails. PLRM specifies a tolerance of 5 pts when matching paper size
+  % so we use the same when checking if the size changes.
+  /setpagedevice where {
+    pop currentpagedevice
+    /PageSize known {
+      2 copy
+      currentpagedevice /PageSize get aload pop
+      exch 4 1 roll
+      sub abs 5 gt
+      3 1 roll
+      sub abs 5 gt
+      or
+    } {
+      true
+    } ifelse
+    {
+      2 array astore
+      2 dict begin
+        /PageSize exch def
+        /ImagingBBox null def
+      currentdict end
+      setpagedevice
+    } {
+      pop pop
+    } ifelse
+  } {
+    pop
+  } ifelse
+} def
+/pdfStartPage {
+  pdfDictSize dict begin
+  /pdfFillCS [] def
+  /pdfFillXform {} def
+  /pdfStrokeCS [] def
+  /pdfStrokeXform {} def
+  /pdfFill [0] def
+  /pdfStroke [0] def
+  /pdfFillOP false def
+  /pdfStrokeOP false def
+  /pdfLastFill false def
+  /pdfLastStroke false def
+  /pdfTextMat [1 0 0 1 0 0] def
+  /pdfFontSize 0 def
+  /pdfCharSpacing 0 def
+  /pdfTextRender 0 def
+  /pdfPatternCS false def
+  /pdfTextRise 0 def
+  /pdfWordSpacing 0 def
+  /pdfHorizScaling 1 def
+  /pdfTextClipPath [] def
+} def
+/pdfEndPage { end } def
+% PDF color state
+/cs { /pdfFillXform exch def dup /pdfFillCS exch def
+      setcolorspace } def
+/CS { /pdfStrokeXform exch def dup /pdfStrokeCS exch def
+      setcolorspace } def
+/sc { pdfLastFill not { pdfFillCS setcolorspace } if
+      dup /pdfFill exch def aload pop pdfFillXform setcolor
+     /pdfLastFill true def /pdfLastStroke false def } def
+/SC { pdfLastStroke not { pdfStrokeCS setcolorspace } if
+      dup /pdfStroke exch def aload pop pdfStrokeXform setcolor
+     /pdfLastStroke true def /pdfLastFill false def } def
+/op { /pdfFillOP exch def
+      pdfLastFill { pdfFillOP setoverprint } if } def
+/OP { /pdfStrokeOP exch def
+      pdfLastStroke { pdfStrokeOP setoverprint } if } def
+/fCol {
+  pdfLastFill not {
+    pdfFillCS setcolorspace
+    pdfFill aload pop pdfFillXform setcolor
+    pdfFillOP setoverprint
+    /pdfLastFill true def /pdfLastStroke false def
+  } if
+} def
+/sCol {
+  pdfLastStroke not {
+    pdfStrokeCS setcolorspace
+    pdfStroke aload pop pdfStrokeXform setcolor
+    pdfStrokeOP setoverprint
+    /pdfLastStroke true def /pdfLastFill false def
+  } if
+} def
+% build a font
+/pdfMakeFont {
+  4 3 roll findfont
+  4 2 roll matrix scale makefont
+  dup length dict begin
+    { 1 index /FID ne { def } { pop pop } ifelse } forall
+    /Encoding exch def
+    currentdict
+  end
+  definefont pop
+} def
+/pdfMakeFont16 {
+  exch findfont
+  dup length dict begin
+    { 1 index /FID ne { def } { pop pop } ifelse } forall
+    /WMode exch def
+    currentdict
+  end
+  definefont pop
+} def
+% graphics state operators
+/q { gsave pdfDictSize dict begin } def
+/Q {
+  end grestore
+  /pdfLastFill where {
+    pop
+    pdfLastFill {
+      pdfFillOP setoverprint
+    } {
+      pdfStrokeOP setoverprint
+    } ifelse
+  } if
+} def
+/cm { concat } def
+/d { setdash } def
+/i { setflat } def
+/j { setlinejoin } def
+/J { setlinecap } def
+/M { setmiterlimit } def
+/w { setlinewidth } def
+% path segment operators
+/m { moveto } def
+/l { lineto } def
+/c { curveto } def
+/re { 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+      neg 0 rlineto closepath } def
+/h { closepath } def
+% path painting operators
+/S { sCol stroke } def
+/Sf { fCol stroke } def
+/f { fCol fill } def
+/f* { fCol eofill } def
+% clipping operators
+/W { clip newpath } def
+/W* { eoclip newpath } def
+/Ws { strokepath clip newpath } def
+% text state operators
+/Tc { /pdfCharSpacing exch def } def
+/Tf { dup /pdfFontSize exch def
+      dup pdfHorizScaling mul exch matrix scale
+      pdfTextMat matrix concatmatrix dup 4 0 put dup 5 0 put
+      exch findfont exch makefont setfont } def
+/Tr { /pdfTextRender exch def } def
+/Tp { /pdfPatternCS exch def } def
+/Ts { /pdfTextRise exch def } def
+/Tw { /pdfWordSpacing exch def } def
+/Tz { /pdfHorizScaling exch def } def
+% text positioning operators
+/Td { pdfTextMat transform moveto } def
+/Tm { /pdfTextMat exch def } def
+% text string operators
+/xyshow where {
+  pop
+  /xyshow2 {
+    dup length array
+    0 2 2 index length 1 sub {
+      2 index 1 index 2 copy get 3 1 roll 1 add get
+      pdfTextMat dtransform
+      4 2 roll 2 copy 6 5 roll put 1 add 3 1 roll dup 4 2 roll put
+    } for
+    exch pop
+    xyshow
+  } def
+}{
+  /xyshow2 {
+    currentfont /FontType get 0 eq {
+      0 2 3 index length 1 sub {
+        currentpoint 4 index 3 index 2 getinterval show moveto
+        2 copy get 2 index 3 2 roll 1 add get
+        pdfTextMat dtransform rmoveto
+      } for
+    } {
+      0 1 3 index length 1 sub {
+        currentpoint 4 index 3 index 1 getinterval show moveto
+        2 copy 2 mul get 2 index 3 2 roll 2 mul 1 add get
+        pdfTextMat dtransform rmoveto
+      } for
+    } ifelse
+    pop pop
+  } def
+} ifelse
+/cshow where {
+  pop
+  /xycp {
+    0 3 2 roll
+    {
+      pop pop currentpoint 3 2 roll
+      1 string dup 0 4 3 roll put false charpath moveto
+      2 copy get 2 index 2 index 1 add get
+      pdfTextMat dtransform rmoveto
+      2 add
+    } exch cshow
+    pop pop
+  } def
+}{
+  /xycp {
+    currentfont /FontType get 0 eq {
+      0 2 3 index length 1 sub {
+        currentpoint 4 index 3 index 2 getinterval false charpath moveto
+        2 copy get 2 index 3 2 roll 1 add get
+        pdfTextMat dtransform rmoveto
+      } for
+    } {
+      0 1 3 index length 1 sub {
+        currentpoint 4 index 3 index 1 getinterval false charpath moveto
+        2 copy 2 mul get 2 index 3 2 roll 2 mul 1 add get
+        pdfTextMat dtransform rmoveto
+      } for
+    } ifelse
+    pop pop
+  } def
+} ifelse
+/Tj {
+  fCol
+  0 pdfTextRise pdfTextMat dtransform rmoveto
+  currentpoint 4 2 roll
+  pdfTextRender 1 and 0 eq {
+    2 copy xyshow2
+  } if
+  pdfTextRender 3 and dup 1 eq exch 2 eq or {
+    3 index 3 index moveto
+    2 copy
+    currentfont /FontType get 3 eq { fCol } { sCol } ifelse
+    xycp currentpoint stroke moveto
+  } if
+  pdfTextRender 4 and 0 ne {
+    4 2 roll moveto xycp
+    /pdfTextClipPath [ pdfTextClipPath aload pop
+      {/moveto cvx}
+      {/lineto cvx}
+      {/curveto cvx}
+      {/closepath cvx}
+    pathforall ] def
+    currentpoint newpath moveto
+  } {
+    pop pop pop pop
+  } ifelse
+  0 pdfTextRise neg pdfTextMat dtransform rmoveto
+} def
+/TJm { 0.001 mul pdfFontSize mul pdfHorizScaling mul neg 0
+       pdfTextMat dtransform rmoveto } def
+/TJmV { 0.001 mul pdfFontSize mul neg 0 exch
+        pdfTextMat dtransform rmoveto } def
+/Tclip { pdfTextClipPath cvx exec clip newpath
+         /pdfTextClipPath [] def } def
+/Tclip* { pdfTextClipPath cvx exec eoclip newpath
+         /pdfTextClipPath [] def } def
+% Level 2/3 image operators
+/pdfImBuf 100 string def
+/pdfImStr {
+  2 copy exch length lt {
+    2 copy get exch 1 add exch
+  } {
+    ()
+  } ifelse
+} def
+/skipEOD {
+  { currentfile pdfImBuf readline
+    not { pop exit } if
+    (%-EOD-) eq { exit } if } loop
+} def
+/pdfIm { image skipEOD } def
+/pdfImM { fCol imagemask skipEOD } def
+/pr { 2 index 2 index 3 2 roll putinterval 4 add } def
+/pdfImClip {
+  gsave
+  0 2 4 index length 1 sub {
+    dup 4 index exch 2 copy
+    get 5 index div put
+    1 add 3 index exch 2 copy
+    get 3 index div put
+  } for
+  pop pop rectclip
+} def
+/pdfImClipEnd { grestore } def
+% shading operators
+/colordelta {
+  false 0 1 3 index length 1 sub {
+    dup 4 index exch get 3 index 3 2 roll get sub abs 0.004 gt {
+      pop true
+    } if
+  } for
+  exch pop exch pop
+} def
+/funcCol { func n array astore } def
+/funcSH {
+  dup 0 eq {
+    true
+  } {
+    dup 6 eq {
+      false
+    } {
+      4 index 4 index funcCol dup
+      6 index 4 index funcCol dup
+      3 1 roll colordelta 3 1 roll
+      5 index 5 index funcCol dup
+      3 1 roll colordelta 3 1 roll
+      6 index 8 index funcCol dup
+      3 1 roll colordelta 3 1 roll
+      colordelta or or or
+    } ifelse
+  } ifelse
+  {
+    1 add
+    4 index 3 index add 0.5 mul exch 4 index 3 index add 0.5 mul exch
+    6 index 6 index 4 index 4 index 4 index funcSH
+    2 index 6 index 6 index 4 index 4 index funcSH
+    6 index 2 index 4 index 6 index 4 index funcSH
+    5 3 roll 3 2 roll funcSH pop pop
+  } {
+    pop 3 index 2 index add 0.5 mul 3 index  2 index add 0.5 mul
+    funcCol sc
+    dup 4 index exch mat transform m
+    3 index 3 index mat transform l
+    1 index 3 index mat transform l
+    mat transform l pop pop h f*
+  } ifelse
+} def
+/axialCol {
+  dup 0 lt {
+    pop t0
+  } {
+    dup 1 gt {
+      pop t1
+    } {
+      dt mul t0 add
+    } ifelse
+  } ifelse
+  func n array astore
+} def
+/axialSH {
+  dup 0 eq {
+    true
+  } {
+    dup 8 eq {
+      false
+    } {
+      2 index axialCol 2 index axialCol colordelta
+    } ifelse
+  } ifelse
+  {
+    1 add 3 1 roll 2 copy add 0.5 mul
+    dup 4 3 roll exch 4 index axialSH
+    exch 3 2 roll axialSH
+  } {
+    pop 2 copy add 0.5 mul
+    axialCol sc
+    exch dup dx mul x0 add exch dy mul y0 add
+    3 2 roll dup dx mul x0 add exch dy mul y0 add
+    dx abs dy abs ge {
+      2 copy yMin sub dy mul dx div add yMin m
+      yMax sub dy mul dx div add yMax l
+      2 copy yMax sub dy mul dx div add yMax l
+      yMin sub dy mul dx div add yMin l
+      h f*
+    } {
+      exch 2 copy xMin sub dx mul dy div add xMin exch m
+      xMax sub dx mul dy div add xMax exch l
+      exch 2 copy xMax sub dx mul dy div add xMax exch l
+      xMin sub dx mul dy div add xMin exch l
+      h f*
+    } ifelse
+  } ifelse
+} def
+/radialCol {
+  dup t0 lt {
+    pop t0
+  } {
+    dup t1 gt {
+      pop t1
+    } if
+  } ifelse
+  func n array astore
+} def
+/radialSH {
+  dup 0 eq {
+    true
+  } {
+    dup 8 eq {
+      false
+    } {
+      2 index dt mul t0 add radialCol
+      2 index dt mul t0 add radialCol colordelta
+    } ifelse
+  } ifelse
+  {
+    1 add 3 1 roll 2 copy add 0.5 mul
+    dup 4 3 roll exch 4 index radialSH
+    exch 3 2 roll radialSH
+  } {
+    pop 2 copy add 0.5 mul dt mul t0 add
+    radialCol sc
+    encl {
+      exch dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      0 360 arc h
+      dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      360 0 arcn h f
+    } {
+      2 copy
+      dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      a1 a2 arcn
+      dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      a2 a1 arcn h
+      dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      a1 a2 arc
+      dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      a2 a1 arc h f
+    } ifelse
+  } ifelse
+} def
+end
+%%EndResource
+%%EndProlog
+%%BeginSetup
+xpdf begin
+%%BeginResource: font ASXHQQ+Helvetica-Bold
+%!FontType1-1.0: ASXHQQ+Helvetica-Bold
+12 dict begin
+/FontInfo 10 dict dup begin
+/Notice (\(URW\)++,Copyright 2006 by \(URW\)++ Design & Development) readonly def
+/Copyright (Copyright \(URW\)++,Copyright 2006 by \(URW\)++ Design & Develo\
+pment) readonly def
+/FullName (Nimbus Sans Bold) readonly def
+/FamilyName (Nimbus Sans) readonly def
+/isFixedPitch false def
+/ItalicAngle 0 def
+/UnderlinePosition 0 def
+/UnderlineThickness 0 def
+end readonly def
+/FontName /ASXHQQ+Helvetica-Bold def
+/PaintType 0 def
+/FontType 1 def
+/FontMatrix [0.001 0 0 0.001 0 0] readonly def
+/FontBBox [0 -218 745 741] readonly def
+/StrokeWidth 0 def
+/UniqueID 5082797 def
+/Encoding 256 array
+0 1 255 {1 index exch /.notdef put} for
+dup 40 /parenleft put
+dup 41 /parenright put
+dup 68 /D put
+dup 81 /Q put
+dup 83 /S put
+dup 97 /a put
+dup 100 /d put
+dup 101 /e put
+dup 103 /g put
+dup 105 /i put
+dup 108 /l put
+dup 110 /n put
+dup 113 /q put
+dup 114 /r put
+dup 115 /s put
+dup 116 /t put
+dup 117 /u put
+dup 118 /v put
+readonly def
+currentdict end
+currentfile eexec
+5AA4F71255501637F1A431BAB555283D093E1B588B45B0281559110D21315C62
+BD638C6B34BA54AA75227715D9947EBCD51A104CAEA657499E94138F5645BF68
+368BB1B1EC8E4776F067FFF2CE9B89FB7E63A7DB304498C1036D399C47A4CB79
+BD517EDB02BEB90195FD7DDAF3E839BCE2DB156D9337DBB2305A465B3E0FFB97
+1985C79DC71C47E26F9F0F042B2CDEE97B679358059256FB93D662D43C7ECB5B
+1A564DFCECB963478373C69F52172F071E0AA6082A3E10D9E1CE2851CFA210EE
+7BD5FCB1AAE15E89D1FB339D587D218B89C18A32F47C7451A80CB1FC07CF5EF6
+FB39B30D1F81ADB02AFF24E5D868D68195CD5C0705234B24901D6BCBC0562D42
+D219CCE983539A0837FC73619E1137448AB941192FDE2CD88CA764A231F34A3E
+5E5E4651486AF9C5496F76FBBCF820D69087ABCDA356EC01336B79AF2F35C4F5
+76DC1AEC468663E5A9001AD2ECDE868C1F037C0FF1A53BC2D0A3BF212938792E
+D88C71C973B7B65E0B138E5AC59F3AAFFDFE88DE309652A1B32D5F1B30E83D19
+E9E0FFD03B580110BAE05768451039492C80E2D44A87245F2E7DEE48CD4F6DD2
+D5916760EEC77AB905EB24F3C15B13B35684F0BD4345D31D366E7B59FD48A898
+BF323EB0FDB6875C5F25DCF220CE377DEE9927F53AE0CE965131FBCC09BEC9D2
+2C1CF1D80CABD3B0A969582E77A412AB37607570C5754E34405F7AF5F3665256
+84731C4BB2DA0EF2633A32244260C1ACC7FC4675A5E68840ED1108246BDCD2E4
+3A899B654B793714ED2DF1D3A907076C686DC9144179408DBC292C6FA038C25C
+925A33219DC594207EE1062FF0AC5C3EBB477FFAEA08B9F2CB97897C61230C46
+569C033301705694098639E1FF3E599BF023DD650A58E71F010778548D974F85
+91423F005E50FBAA83F09FD8B09FC4352549E14151F4CDAC6B0BECC08BF28A53
+A551194041491FA7DF851E686EED34873140ABDC123FC446C605B9470AFB0211
+9EA996E295EE4665238EFC2B984BD0D58C0E1CAF995E241E0D762766632B3EDD
+CE26E81DE3E6ED127AF59635AD6ABC88F50B03A922BA39941D28A21D460A96EB
+CB0703DB7E0130D42B1F2DEF9F2FA6BA41030D9243F97AFDD9379EE6F2992583
+7C04CE991FE89BB283C7E06F6287C81E54C6B53C11F702F35529A7F7F411C2B2
+242E6B2B9A82E0C0B9AB2EBD953C77BE1FDEDB5E9956CE39F6AD3EF92390B5F1
+C0477538A50458D9BDEED4DA1E4A662F4D38F1B9505AED4BE40E294D07D67CC2
+8D36322C2973938165D8B2E8F737B5631AB4973DF29F9B0E3B9C11627800A4F9
+59F7B63E12A2BF368A0555AE2D621EC6B11F89A376C9E959D9A3862C56874685
+2F8AFE7DD86AA7EC11374E5EB699F5895650E93E53F755D6CFB496D16523EEFE
+2D32B1906AB9A8CA483CCD84EB1E61D44AB2934233289C6767C3B0C39E941880
+B63763F197FD84B53E407C9C3A47F0F54CE6E6A792D4BCAD8054D8DCF3B6EC9A
+5B6FE123E4628C58351F49E5EF62252163AEDB304EC5F44134C5026CF69162A5
+16CBCB1D3F130D4A6A45711999E57017E7A25F38302FBCD7DB3C9A4BF6352658
+37950BA2902286B9A10356A77BD2D01CDC6119F667A0AF4D9B23348A14CD3929
+64A6D5663BF108764DB1C8817486A2D4CF25FB617A49B90B2CE95BFCF0A1ADBB
+516992DBBC314A33A498A21CA15AA38ED41B49823F5D62CDE0EA5D0748141B18
+B798148E71BE0DE6D6399D1A04F4DC684C3D7FD4601F574C822F5804565B7195
+8F3774A207E322CBEAF3670765FEC2A9D905D4AF22D5EB527EB2DC52022A5DBC
+A4A9F4A7A0E300CAFCCB02D5EA156AC58373492DDBD398CC1292AB4A1D2C7D9B
+C3371B050F309169542B21175E987E2CAC7BF468E6FE8DA91FD3C9FEA2C98F43
+8A89FFE01D6E3E24D4C5AEC722EBD3B0DE541F65B1C5937D037CAA438B916C06
+D1C367B98745DBDC28301C3B06175FDC8C0C486507AC55F1B173D7D0A0B4B4C2
+9AE8B7D77103ADAAC42E5178663DF2431456C04F3EED2E3D4D7608C318367503
+387AB469370988455251E539075C879B21E6FA18C0030B20A93AF71FF1E620FE
+F720F3481EC8D5ED48C206A2A9A1259C71663873F2C96BDE767E07D84196D30B
+850223E0F9E5481A8E33E514BF54EEB082263163156F646416BCB6AC9BF78FBE
+26EB21075D55F4ADE5DB807FF655FC532D07E0BB166272A70B9CE6394F8E8629
+3951FC55BD5E0C13DCD48C5E6D25F4FDFF2B753E51FBE5F59D2BED465A3D9F6B
+89DFB72C29A7AD91848192D4C278FA2F373E6F0BABC989537A4C4AD35060789C
+6BE5C7D7867D8D0D924CFFB5F3EC1ED3FC7E6D5CEF31794D539BFE40C4293580
+05E9E66A83B312ECB128CDCE75139D6A4829A1C92043BA6C4B7874C64B46F3B9
+7DEC08F796772E392C42D2B8EA370B51A353A5A1287D43C67366913778F9E2EF
+3024CC66D2EAB5CA8E85D2F9EA5A6C032236F3301148D3B6A43C9C0B755CF829
+60E7D26A20161E360E2FDB92883102CEB1DD3A77D686DE213A12777BADAF5A68
+206BA1DBD279900BE55934F84BD36D212AF70DB02C9163501B7398502C8C8BAF
+A8D225C5EC25E50F2DF7B716BB5225D8CB6816506CB923946B65DA01999BCA47
+788921A02B7F290A14EEF14E07D159C8A7CB890BB0ADD41C9B7DF4A864E0DDE2
+D1D7C49970AF45E4B1F7A47BB6EED9E57FC5024A37203C86BBC6D7CFDCC5B5DD
+B50CA750A116C5B7C93F8C3EA455B3F5EFCF234886B1F701D60538B9FA014331
+531208044FDF043ED50AA27B8A242486F1084C6399ADBF6FEE1D8735E33FE64E
+A685F8CBB8FBDBB2987A0B79308BB9208406A37C59FA07FD27423B9614EEBA2C
+1088886C333698482E683AD51240356B7BE2BF06A12846F064A9B442D0A1EC57
+40FA21883F94FC946DBDB7538A39A354B4AAD8D75F66D9CF7FEE18FE669FD1C6
+B7A85863B278ADBB44621ECE325F23DB5214F47BD62DD04FDDD0817106CF3BD7
+0EB62799DDC74D0F467600090B30D9B2E9B1F02E6F7428D3643A7207EB109945
+D0849102457735CF6E2783961AC9EB7283892AA96C7BC46AA60A2F4C7E73E617
+AEA0B55571E5958960A244CA0FA6EAEF2ED829CEE6B4AE06546D635BEED2E508
+24FE1DD4AF5CFC68FD55C3571583D3F9C33A386802104D8E45EA29A8F040A064
+B8D8899622606ECE0645D8138E44AB4C7C0779A2704EF9D95F47E5177556CBC5
+C259EBD3DF49194E24E2F422DE3094190B7FF2F09E76DEC656E01D7E39A703A4
+6AB4AACE6CFE7221CAAD70F97C5A7E6B6EC2273CC31E915E1C21DA00D87F22A2
+0EF9C7E117BF8B1BD4050D16052A8A151EBFBD761A87DFBC7940A1CCA2C1F39A
+8CDADF4B8A9FC013BDEA2842A6D2C3D26A06865DF2901D2BA9132E95317B1FEC
+7F68928B9A9718483710C2759A7524617D62802924F613EC850E0614C5D425
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+cleartomark
+%%EndResource
+/F12_0 /ASXHQQ+Helvetica-Bold 1 1
+[ /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /space/exclam/quotedbl/numbersign/dollar/percent/ampersand/quotesingle
+  /parenleft/parenright/asterisk/plus/comma/hyphen/period/slash
+  /zero/one/two/three/four/five/six/seven
+  /eight/nine/colon/semicolon/less/equal/greater/question
+  /at/A/B/C/D/E/F/G
+  /H/I/J/K/L/M/N/O
+  /P/Q/R/S/T/U/V/W
+  /X/Y/Z/bracketleft/backslash/bracketright/asciicircum/underscore
+  /grave/a/b/c/d/e/f/g
+  /h/i/j/k/l/m/n/o
+  /p/q/r/s/t/u/v/w
+  /x/y/z/braceleft/bar/braceright/asciitilde/bullet
+  /Euro/bullet/quotesinglbase/florin/quotedblbase/ellipsis/dagger/daggerdbl
+  /circumflex/perthousand/Scaron/guilsinglleft/OE/bullet/Zcaron/bullet
+  /bullet/quoteleft/quoteright/quotedblleft/quotedblright/bullet/endash/emdash
+  /tilde/trademark/scaron/guilsinglright/oe/bullet/zcaron/Ydieresis
+  /space/exclamdown/cent/sterling/currency/yen/brokenbar/section
+  /dieresis/copyright/ordfeminine/guillemotleft/logicalnot/hyphen/registered/macron
+  /degree/plusminus/twosuperior/threesuperior/acute/mu/paragraph/periodcentered
+  /cedilla/onesuperior/ordmasculine/guillemotright/onequarter/onehalf/threequarters/questiondown
+  /Agrave/Aacute/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla
+  /Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute/Icircumflex/Idieresis
+  /Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis/multiply
+  /Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute/Thorn/germandbls
+  /agrave/aacute/acircumflex/atilde/adieresis/aring/ae/ccedilla
+  /egrave/eacute/ecircumflex/edieresis/igrave/iacute/icircumflex/idieresis
+  /eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis/divide
+  /oslash/ugrave/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis]
+pdfMakeFont
+%%BeginResource: font AFNZFI+Helvetica
+%!FontType1-1.0: AFNZFI+Helvetica
+12 dict begin
+/FontInfo 10 dict dup begin
+/Notice (\(URW\)++,Copyright 2006 by \(URW\)++ Design & Development) readonly def
+/Copyright (Copyright \(URW\)++,Copyright 2006 by \(URW\)++ Design & Develo\
+pment) readonly def
+/FullName (Nimbus Sans Regular) readonly def
+/FamilyName (Nimbus Sans) readonly def
+/isFixedPitch false def
+/ItalicAngle 0 def
+/UnderlinePosition 0 def
+/UnderlineThickness 0 def
+end readonly def
+/FontName /AFNZFI+Helvetica def
+/PaintType 0 def
+/FontType 1 def
+/FontMatrix [0.001 0 0 0.001 0 0] readonly def
+/FontBBox [0 -218 742 741] readonly def
+/StrokeWidth 0 def
+/UniqueID 5082796 def
+/Encoding 256 array
+0 1 255 {1 index exch /.notdef put} for
+dup 49 /one put
+dup 50 /two put
+dup 51 /three put
+dup 65 /A put
+dup 66 /B put
+dup 68 /D put
+dup 71 /G put
+dup 79 /O put
+dup 80 /P put
+dup 82 /R put
+dup 83 /S put
+dup 89 /Y put
+dup 97 /a put
+dup 99 /c put
+dup 100 /d put
+dup 101 /e put
+dup 103 /g put
+dup 105 /i put
+dup 107 /k put
+dup 108 /l put
+dup 110 /n put
+dup 112 /p put
+dup 114 /r put
+dup 115 /s put
+dup 116 /t put
+dup 117 /u put
+dup 121 /y put
+readonly def
+currentdict end
+currentfile eexec
+5AA4F71255501637F1A431BAB555283D093E1B588B45B0281559110D21315C62
+BD638C6B34BA54AA75227715D9947EBCD51A104CAEA657499E94138F5645BF68
+368BB1B1EC8E4776F067FFF2CE9B89FB7E63A7DB304498C1036D399C47A4CB79
+BD517EDB02BEB90195FD7DDAF3E839BCE2DB156D9337DBB2305A465B3E0FFB97
+1985C79DC71C47E26F9F0F042B2CDEE97B679358059256FB93D662D43C7ECB5B
+1A564DFCECB963478373C69F52172F071E0AA6082A3E10D9E1CE2851CFA210EE
+7BD5FCB1AAE15E89D1FB339D587D218B89C18A32F47C7451A80CB1FC07CF5EF6
+FB39B30D1F8747CF3029BA9CDC574CE92C96CB7F7EB09200A6B1EDB6E92C5D4E
+A60D07DF489BED2B34E84D9F993E34182B0ACA4851CDBD352659242F9BAE94A9
+CF3902B79F3D036CD8910627BD9899627BA6EA8F2987DB12373189C36BB091BB
+E1FDEC7555721801651068DBE178BF0FB10CE961AAE763822D13FD26873F196D
+472190BF3C6B88B59A58E4CB2ACF74C330000AE47A6B584F6A311B1894604AE9
+F9621B41EB06E94E5228610EC3DC8B10714E759B6A513C513BB1DA6A75910FA0
+8FAFFC268D3B510D931D3F59B70FECF0DC9FD25DBAE7AFBABEC40DFA738D613A
+199C31565D123FA38D1487A142D9DB5F37B8939AFFB56502FAEB21D6ACC2A5E8
+6FBEE582EB8735405531095514135A04E8FAABD7B11C55D4881A4180A19345BE
+BB3C63E71FD66168DFA2C2C0B7711F15B89FD4AAF130E6B2C4242EA4D325465D
+F24762FA50C10110E592C52EFFBB3433C2BC54E00716959D8B6315C655478B15
+C27B469F3D4E6B004C8A452BEC7B5A4A276F61598F4E63CEE4B6F2AFA1B6ABBA
+075930CAC67692D562E5072ABDA10468478489295269A1A573364C07BFDFA9CC
+FDE94C2D78163151AFB2DB1DF7875B849AFBCD7546E74CBF5DA6A0166905EDD6
+B9150376DEE37848033840A0AE068A62E2F061C9725B02E97FC4046EBA9CBCEA
+A4A88D88ECD42CFE5A8B28CC049C35461287EE195165EF8E40E4F6B5714CFDF6
+77E1A5B22E77024D44A0D7ED445C34EA8A48185A21C9DD9A7779D97A27D8C3B2
+9A343F2549889303848D4C44F1FBDA0CBADA38D08B5D2C868CBB8E463F82E037
+9CCD9DA1726092B4FF2517FDA7E9914F224E5EFCBDE65D582CD0910BBD775E2B
+8366D67625BCC7CE0E9B3A2B6718D910B3B18CCFDE024284973846941B303257
+B02237F41241F5E53FF7E15A62198B9A8413674C79D32F36711147E67EBF78C5
+66ACA94093CC62BA134E5348E5F3E2978DC60B290208340C56C2C899A308D94D
+6BFF6600A76BB8F49C50377E69B6CDF343FF3D87D039697489BBBCB2D95C51C2
+4F3EC5FB657CA18E3C3DE8AD3B9A109F11C9B2C20D539DCBB645E51B07960D5D
+9232D863543B34F16B930391CC5E7B55EC7CD6AC475322F9C4093D62DE59AE56
+49C39CA34DD295F586E04CCAE9191CCFA8DBBD5F70BF1E51151BFEC77845C364
+3B6E3BBABFA3EB4212B0B632F65B13AB9E14A0F0DCB1727874CFDD3E57921C3E
+D29B560B7ADAD64AE0FF118FDBD5FF483D8266887FB127CAE0D779A13A76AFF6
+A1B5CD1340B17056B16F98BF7FC94E6D2CED1CFE2F3C0C508828D43710785758
+29DD235C2897A2509C66CCE2C48C809C21563BEA43792F4B414F3F6FDDFD1D79
+D9F6DA5E6B29F05A641E2859BD5BA42271A0B675B108AB0593DC16A9549BD970
+5C86829C8CC2EA870415EA836FD4192F0411C5AA34E5DF7C9641B03502DFD9EF
+588EEA3867FCE97D3502EDD4464521A4C5434343D2CBADB473BC404073F9B66E
+DE4A6ADEB103FF2439DBEF47383571848948CD79D07898D67E14787F4C592D4E
+C606E4874A7AC7168B6D3CC2887A2081841FCF6E0B91087727CBBAF42997B68B
+8C1805FA2C2A0627710A0385D6F6633C2C047F5520B777D24951D91C8DA7AFFA
+0B443617B85B11FB08763C93870086F3C1362E3C5E7BC9251B9F156A7AEE449C
+5C6DED47F7133BD34EC81742AD84964B6E7157A840C77E140B1AE5F2386F784C
+3C632E84B0CCC4FDCA536D60132C5F53253B6A5F948BB0376D0C99BC7989AD58
+7720113AFA5C1104EC0D516480995A7F3726F9489290645E212541DF078903F2
+7E4A218A3C704A04B2C8E7F2D3A215F5738ACBB16D85BD3103F3FB7007E45F06
+A6B1FB09DE0FAD84A1D21738DEEB13FB85D7182FE01776E743C30ADD2D0B6DEE
+636BA812AF0D4EF58444C4B0658C70505065743116FA7C113D596533947E207D
+5895BD4AB99CD8B58D0995AEBD0476176AE3FEE141432C5B6AD5779B5967D5DD
+69C70ADA4E043BA215F402F6C55D8EB715A07B507105962428C3B0E387151F41
+EB71714B649560C812AC554F25DD7C708B4F56F104CA7765CC6D38C38AA49E8B
+916D224220A4499094B53B5CBE7DF079DE4E3E2C52B477D40CAF443AA98B10FD
+B9A6985CCD4A2C9AEE65DAA78CC155BF0BCA776DCA72E659E4F4F95370CFDEE7
+9B7AC4D7F2BCA9D13494163180332984201A73E2EFD7E1E96DA69F08283A3E65
+39C37CB67983516F5463578B6FC5328E38D55C4E3E085A9CC7C808201B3B71D2
+EC4F5D995FEFD04CEDED429E7ABAFE7BBEEBBF937CDC548E7F64BABE03E6D852
+F6FCCD646E4174A7EA121D5F67EE0711EA0F8561B9D57E0127C81417AD5BF06F
+611DE0FCC5F99C4200179F1C002F85EA7FA71047C156E3E2AF2F9683CF52884E
+284B7C655AA587B2A40ABF8093288C70FD9623327F7BEFF06DD76EA44D40399C
+58AF4CF7BEF195D791F3211E0A9042BF23953C908F29336D6DCD6336598E70B1
+5993BA36AF2951AED2FEA0A0EEC27B4E5041B4F980F0349BA6DF74F397857B5B
+05DE0F35E8A7070AA08B671058674DBA649AC70FA3E7985228C690D77BD726C5
+66824CC3EA5FD78012899C54EDE45481D08B723587A03399054BA40998446233
+A36588BCF710C0814459117BB80EF9B311FA516F8085F560ECFBA552D4D8E7FA
+BEC7AE139FFC059353C390C1A680B65BCB258138FA886095FABA6CC95727EC43
+4591EC17F021F2A1CD4E25B9C67CCFBE57A51E25B5E76D21CD197B05259A7F94
+883EF3F091ADB1EB1AF33158590FD4F9A125C8C937323ECC5523F20AF8998A00
+B6EBB522CF70B411C82398FE0AE376F8E30AC005A2DE914699FD90B185F07015
+987003F59D52A252AFBE5FA4A814CE444C196B7743581D9EDB193F6B18002EB1
+1ADD8D11636A88DC1BD773904E4878AC003AB363CD4AC029E64AA2652F659930
+45BA6330202903D8E305024F15C70705922931B39BD9B2E61A5027D58C4972CF
+C947A9A598046D1C95CC4EF4A4CC720AEBB0E30D355219BC5ABDEC36259BC165
+19CD7652B69E39CFE64F4D79D7F4DCCB4A36FBF934D127EF91F891FB7F24BE70
+4AD521CE8A4FC2281AA67D1AC87ACAC482D3619ED5464ECC4D8939DA9C2DD99B
+E5B5ED3795DAA85E5DD589E4AAFD11C45F6BB38478D99D56BAA7DEFFC1FAD756
+A60F0C07170589BE3D1A58E2A2C56572FCCA71C72723FFB045EA31C23E50FED8
+C69E8CF31C6DC92C6785EC9FAE9314B40E856D69980484D71A548ED45C0EDECD
+A1F7E40CC2D5F2FDC82B08F78CC6C36F8CCE3CA54106E053AFD883BEC142A932
+2824D1785A9809739965F2A202FD5DB3811668B1E7DB4F39824AB24231952970
+85EC1F21B365702F675617ED85CC5BA2B002E1AA94EFE59CAD08029299E68D28
+FCEE17104CF7261B213A39C0584A9BC9C42103EAF6D80ADBF1868741472A6DD0
+5CEB786F2C31273F0628E972C87CC9A653807D2C63D7AC1468DBC86087F7324E
+2A4D53903FEC58EBB6D500AC39215E38624EF36A7E2B39113788B89ED73AE375
+2E56DE315A8011159308EA6363565F2CA4758AEA45870C08575FF96709CC0628
+FC661AC2B163D4A7639B08E54E09952F396F272C1363B93D002BAAC2430460F6
+DA795FDA23788731C30189124296384710BC7B003B49D2C00B79D1CE1980A7D8
+93DD846C2E0B3F0AA638F58794C041E664D7A0190773B0EC502AD146FDCA43E9
+6E927F0521421EF7A4A9F7A35454287C87783359F58A327D0DFA122D61B49B85
+1D85C305EC5EA602351AB6081E869A22B1EFFC8AF5BFE1910A0701494042B1E5
+B76716F95A17E0B06ACDC6AB33FC3302F8A44119B82CA13D6C0D4A4D05491D77
+3384360B4782C21B019038EB765D725706B6858C4DA71674BCD30101A94828CB
+107EC0A8911FDE7C2392D574FD49FE9A4A5F2F3998FD537850E01D47010275BB
+1D0B6466F06F24AD07BDCE44FEF8A43AEEE5D177DD5F2EDC62E89719E6F5EFB8
+D31BDB9D5409748787F5976BCB52BB5976B06F47F2D33513C40B6659FF6A8C50
+29D6EAB4E3FD6BBD12D45C23309D914A53AE4C3F5A8CBF8077B12CB79BADFF00
+D518C3D54EFFD623AC3989DB9CC40ED6218FB100EADD4D62E0BE95696BB0D173
+31234F3F10D314680470C391000F0E4070ECCD78C1001D6FA5FFD6D56A2FBD0A
+364C90FBCB1E02EF6DA12E738AC52B56EA9A28DF13C0F1A673A2C2187E2763C5
+FAC62073A4FCAD7BACDD593EC44E0C6152D958E0C5827BDE5BB825B5D48B813B
+9A4972E2EFD7B6C96906745C13AB29E6361E785E10CA85345FC10FF48FFF0B0A
+979CA389E25DE62867BADD57DA591F70E5CE384A586EFFB0090B22037E4EA44B
+8733814844D1DE81ECA8AD1B28BE1DA7CA51E80EF189406D2E417BD9E50ACAAF
+94538E329CBE5A4D60F351
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+cleartomark
+%%EndResource
+/F9_0 /AFNZFI+Helvetica 1 1
+[ /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /space/exclam/quotedbl/numbersign/dollar/percent/ampersand/quotesingle
+  /parenleft/parenright/asterisk/plus/comma/hyphen/period/slash
+  /zero/one/two/three/four/five/six/seven
+  /eight/nine/colon/semicolon/less/equal/greater/question
+  /at/A/B/C/D/E/F/G
+  /H/I/J/K/L/M/N/O
+  /P/Q/R/S/T/U/V/W
+  /X/Y/Z/bracketleft/backslash/bracketright/asciicircum/underscore
+  /grave/a/b/c/d/e/f/g
+  /h/i/j/k/l/m/n/o
+  /p/q/r/s/t/u/v/w
+  /x/y/z/braceleft/bar/braceright/asciitilde/bullet
+  /Euro/bullet/quotesinglbase/florin/quotedblbase/ellipsis/dagger/daggerdbl
+  /circumflex/perthousand/Scaron/guilsinglleft/OE/bullet/Zcaron/bullet
+  /bullet/quoteleft/quoteright/quotedblleft/quotedblright/bullet/endash/emdash
+  /tilde/trademark/scaron/guilsinglright/oe/bullet/zcaron/Ydieresis
+  /space/exclamdown/cent/sterling/currency/yen/brokenbar/section
+  /dieresis/copyright/ordfeminine/guillemotleft/logicalnot/hyphen/registered/macron
+  /degree/plusminus/twosuperior/threesuperior/acute/mu/paragraph/periodcentered
+  /cedilla/onesuperior/ordmasculine/guillemotright/onequarter/onehalf/threequarters/questiondown
+  /Agrave/Aacute/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla
+  /Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute/Icircumflex/Idieresis
+  /Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis/multiply
+  /Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute/Thorn/germandbls
+  /agrave/aacute/acircumflex/atilde/adieresis/aring/ae/ccedilla
+  /egrave/eacute/ecircumflex/edieresis/igrave/iacute/icircumflex/idieresis
+  /eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis/divide
+  /oslash/ugrave/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis]
+pdfMakeFont
+%%EndSetup
+pdfStartPage
+%%EndPageSetup
+[] 0 d
+1 i
+0 j
+0 J
+10 M
+1 w
+/DeviceGray {} cs
+[0] sc
+/DeviceGray {} CS
+[0] SC
+false op
+false OP
+{} settransfer
+0 0 1193 624 re
+W
+q
+q
+[0.1 0 0 0.1 0 0] cm
+/DeviceGray {} cs
+[0.48] sc
+0 0 11925 6240 re
+f
+/DeviceGray {} cs
+[0.478] sc
+0 0 11925 6240 re
+f
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 107.25 589.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(Blues)
+[7.337133
+0
+2.442044
+0
+6.116111
+0
+6.116111
+0
+5.5001
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+1042.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [139 53 159 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+1390 530 200 1800 re
+W
+q
+[0 1800 -200 0 1590 530] cm
+/DeviceRGB setcolorspace
+[<~)Ya./hWspUg[C`ViG5UI6B]>3EO?'LS-Ufa~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 9
+  /Height 1
+  /ImageMatrix [9 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.500122 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0.1489] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 22.25 533.25] Tm
+0 0 Td
+/F12_0 11.0002 Tf
+(Sequential)
+[7.337133
+0
+6.116111
+0
+6.721122
+0
+6.721122
+0
+6.116111
+0
+6.721122
+0
+3.663067
+0
+3.058056
+0
+6.116111
+0
+3.058056
+0] Tj
+35.25 -13.5 Td
+(\(seq\))
+[3.663067
+0
+6.116111
+0
+6.116111
+0
+6.721122
+0
+3.663067
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+1267.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [169 53 189 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+1690 530 200 1800 re
+W
+q
+[0 1800 -200 0 1890 530] cm
+/DeviceRGB setcolorspace
+[<~J+ia=p%n[\q>U$^rq#pao(`1Rp\jXVrUBOZn+Q\Ip&+4Mr9a.Sm.C2@oD@hEqs*bLl14]7nbVG=qW@;Dk4&3.n+l&5q;^o=j6l^%mJ,Z-pu(N6hsC*plhB9%pYG-/h!4Ugl1Wlrp=ea(g$&._kOmKjp"/@!fB2bWk(!$Rjn.'ao[Msoe)^/Lj7C[Yo?lRhd,OZCiUY=Ro$61ac/A0:hsnnIn]TeZb22X0h=/M@nAj>Ra4p(&g[E,8~>
+<~n&3rJ_qFIpg$QW.mD.BA^XqhcfBg0$lata6]%-,Ve`sWnlF,4,[++?He*+*dkciLuYL;U9dH7OXk,X!Yjf-SfW6aS&cK(hIjJ:&\U<MYkbi5;=ih+BPT$$#^al&Z0i0q^ER)e*N`o!*$hNYt8PJc7>_VL9ih2]>-N548,^YF[[gkWSuKtQ/n]A%qKgOQigI^n*[\Cu;=g3L-[GI?+I[+TQ-fQ+:MEO",6Yh*`qf5.V@C9H-;Bs#ou~>
+<~XOUp`e7GZ0A#[pdW7,.QdpK$$?Dc.VV9rMCd9<<l=ea8FU!Hc5cW-X`<1hE6T$:0(bYanS:RfO&R`eEob"S5G8sm^lQcVdaa@DN:7?kh\PK-%R`^,a,5`irKOMsAD`&s'u3fV$;N5IW5_Dd@h2Mo7-LVYd$J&!gn^bLMW0S@+nK"`jg^+FlK/:Y>`I_71Z]IJ<@.=8ZTHFbJL\gD[4-$HdDFgr]=[j,t','(+8EO?p.Zlj:o+)\D+~>
+<~D6b4!Z5m_c*GVeuBs8RjY8_,W)eQ5kAZZk]X;PNK).KWa@B(/PW>K!A(LF$U?)JHCVA3=3'Rs;_'Nq4F=JHL1U(LG"%oo84<1aRtSdJAd#Z7)r:n%S`RKH<Q!DSp]9U5ZOPlOF@!(rFT8Wa!DO8qe3!(MqJ7>q47M?#u"!'uA?5_T2&KE+2f!'Pi54F[AnI0)HV"#tQ.2g>H`Fp0aF"Z16(1N<XTD[/"6#V^$"0P^~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.498169 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 167.625 589.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(BuGn)
+[7.337133
+0
+6.116111
+0
+8.558156
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+1642.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [219 53 239 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+2190 530 200 1800 re
+W
+q
+[0 1800 -200 0 2390 530] cm
+/DeviceRGB setcolorspace
+[<~)Ya1.jn8Gnm,j_ga_&Dc6*>AUMa[V_/-&'W~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 9
+  /Height 1
+  /ImageMatrix [9 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.500122 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+1867.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [249 53 269 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+2490 530 200 1800 re
+W
+q
+[0 1800 -200 0 2690 530] cm
+/DeviceRGB setcolorspace
+[<~J+rm>pAFm_qu-3brUp'do_\UZqu--_rU]mao(r=TqYfs\rUBX]nG3%Oq>KdXrU0L[mJ-VHq#'LRr9X4VlhC>Bp\a=Nqs!kPl1Y#<pA=%HqWISKk4ST5p%d_Bq;h5EjRi6-o_@G<pYti>iUcd$oCh,6p##B6hXgBrnd"gCo(1Z-oA'B:!8IPD!8@JCJ(aA]g$nI_nF+uumagmpeaMnTn*JQmldP:fddHDJmci*cl-Jb\cL'f>m,uUZ~>
+<~k0*)Pam8$/lf?+Oj2UBD`9H6ul/BJBi5"O5^?=@dk2!Z3gpuP$\E)APjOpp#fWsMgZ/O9;iRP'ge>qKVWo):(hU8:WdA5UFUYO1hgOIM@g<H2BbadA0Rb5cMfZBK3aHb>sPLda:e]!X"`/iEbNRP_%d_Lag^PL:OL=!Vfd(G"W\q//;JBbTQc*r)E[X63*H-<O=b-H34Z#n'kF3(M(a/s=#XDZ%YD8iMj`2IFhVeEuFB>UKV_P:YX~>
+<~U11p3@DJOD^RecHSR$`ZS6N^r>.p>,]U)^4Q<(V^<P+Gn\rot&OAWQL:q;Q\\;X.kMG1L99=BUJ[Y7;\KLiJ%8$mh:Z[YELIRLJh6a:u*Y^&R=GX8KV6*58pX`Qe/E^-UD5,rNaWGOesCcnS04/HUOUh2Z_AN?Jp32'b>TO0UL?8\9Y1n7a!1n.T'RTD84<ABh>0:#KgPu'&s:Fq])/!<RUO\7-a8gfWi-B1MAN(,%M73[UW+c/Q.~>
+<~LdN5=661eH*/-WrKg-H.58]#:(P4dcJNOZt3u!0+'7MtTI5qmf3"UHs%sp5FH8Z4X2@Ogf$[4E6Fu'DH1C&"W#'2L&E\IW9D_D330*6&E!H'IhD(G['/-'H9!,<t`Bds*r.0+!0!+mVZALIOg-NIU'!+@2S?mYk[,lh3s!*gcL>9j2O,61gj!*:?E<?_EB+TPC_!)Xj=:`f[4*ro"V!)"@58f[n&*<8SL!(@k-6lQ+o)Z~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.498169 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 228.375 589.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(BuPu)
+[7.337133
+0
+6.116111
+0
+7.337133
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+2242.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [299 53 319 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+2990 530 200 1800 re
+W
+q
+[0 1800 -200 0 3190 530] cm
+/DeviceRGB setcolorspace
+[<~)Ya1.i9^*Ne)m77g5M?;N,,\S6(NQ;HqaT6~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 9
+  /Height 1
+  /ImageMatrix [9 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.500244 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+2467.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [329 53 349 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+3290 530 200 1800 re
+W
+q
+[0 1800 -200 0 3490 530] cm
+/DeviceRGB setcolorspace
+[<~J+ig=pA=g]qu$-`r:Kj`oD8CVq>9aYqsjIYnbE"Np\O@QqX=1Tme6MEpA++Kq<[eMlh'u;oD%VBq!%AEkjnK2nb;29pZCu=jm`!)n+Pf0p#>E4ipHEtmI]?'o\]!,hWsdhlLWfqo%WF"g?A+\kOI6fn^lpmf&cDOjF?XJj6tIVn'^4`dGaN?i9ekJmEXSTc/%a1h<W8>lcIoHaP,q"g$-N/l,D<=`7O4jf'(!$kJ>[2^sqM]e)nBm~>
+<~jh9('][>iQd,_dajLNRs\Ba-Dc/Z7Vj0d+j[*.I8b2T_LiN^M`YfPe,aPa5Ai2t#WXN'.u`S[]6hPl"BhP\9JVS_/c_;1p'gnV[?U;,KW^>#<ogRl15T"NdI]@i[bfp]J(RCLn;\(@"Uf9`nrQF,2.Zdk>Ge<I2ePcrQ"Y0rN8dZUZYP,clkWR-d*c]G$LOJU6`UWnjob`AIANhFRUT$!(ab)Mq5NLIqJRE1>Sa,HA)N0VBsN0M;>~>
+<~PJiBB`/B_pMiY`5Nl$^5_>fFC^l+)cMho-+LVA\$^5IZXMhA[#J\6nk]8M0MMg`0qI(>2_\;Y^CN-MgjG.*?P[Z#=9N,l=bEO:[CZ]&e.N,>kZCU&h5Z&ED$N+fDRB!7/)Y)HnoMdifH@B>ApXG^DcMd<BA>cN]cWf(#ZMccs:<iCmUVi"HOMGg=/Io3)#:o0%EUl%mBM+j\$9;787U5;F7M+=4q7A,H)T85k+Ld@Sf5b*WpRts4s~>
+<~Lch,]4.1jaR"mYfLGtNS23iqRP_V#XLG=sI09M#BOG>BJLF\C?.?0*2N/&a<LEqb4,Dh-uLk[",L)u)'*/'"aK7t.oKGT2l'nCoMIpR^=I=VoVJ.6jT$[R7.G^TjAHj4b@"E\qlF*Ib,G6)Z+!,lrZD0#\nE<'`m!,6<NBPd`]CB.mZ!+T[B@:fLIA,oqF!*in3>@%;4>Q@i/!*32%<)rus;uf`l!<5gp!<5ar!)$#d9)~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.498291 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 287.625 589.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(GnBu)
+[8.558156
+0
+6.116111
+0
+7.337133
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+2842.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [379 53 399 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+3790 530 200 1800 re
+W
+q
+[0 1800 -200 0 3990 530] cm
+/DeviceRGB setcolorspace
+[<~)Ya1!i:G^Ilc#gY[<p-9::&D"N4oR2X9_(B~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 9
+  /Height 1
+  /ImageMatrix [9 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.500244 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+3067.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [409 53 429 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+4090 530 200 1800 re
+W
+q
+[0 1800 -200 0 4290 530] cm
+/DeviceRGB setcolorspace
+[<~J+ig/p&"4NqsO+RmIU5Bo(q_DqWm\JlgX`8n+l8;q<@>BkjA0/mJ,l2pu^o:k3D^&lM'B(pZ1Q3j663rkP!otp#5$*i8sXijRqEjo\SX#hW"1`iUbj`oA&9qgY_VVht#LXo%Djif\Q,Mh!s"On^cIbe_BWDg@<\Hn6+5nnC#tYdFds8fC.)<n'BSRcIVI/eaC]4m`a2KbL>n&e*Y<+mE*cCajKLsd-Sg!m)RE<`m3qjc0N?mlc%'5~>
+<~`6.A`am-gclGL[,_oCrX`9>(UkeY."s1n]us1j-I^qSsG^#m)Bk.\Ih]t*7<\E(<3jLhq]]<pV1Zf8R%ijuDR\Zk&'Y2Hgli4,lG\#\DqWnt1`hR9E>[A_ohVqeYVgpEp4[%uH`UY<)Lg9dR,[%H$ZT%LHAfX@=%[[PgWRF\j6f!q$r\<POSPLR1+e@Ugk]8k@QN7,BnMp]7qdCtC_^P:+NK[7JdcbY1X_LKkKIEfZWbf"hO`-KPF~>
+<~GKRmIb/SPF`cB/@EW=+0Do]q:`lW&:b%nu>BuJ2.`6;l3c"4c:AAQQ#^s?H)cX4H6?G=cl^!U&sd9=32=hE*`]$aWidoEp,;n(4R[aS*]dnmF#::&DDZI;LPdn?pn9!?Z7Y0feBd714b7B=d'Wm=&2cU+PT6)MmlV9M3!bWV]D4JBnZT?93dJ&s^Aa>f[02k%`ERDq+O`AEn!1R5j5Peo/<_Cq%f/s*k#O2!6*^FP8W.Z;"iMS1Ep~>
+<~]I/NJ-AT5ZKtAR_]-;m=+bI9IJ[unQ\K-11)h,:8ICL,@\/0J#'m[8&Gd\6/[Lm\k%s>8iFL2KuZjUl[$?3<XDmBXdYm>3N#An:\#A^IJBrqYSX9`I>$"g1DAZ6#HV[?n1$=Tb<@&+-9UC(;#$='52>Fu7*SdJSi$<N](<gj=oQjH]X#u[&q;3VA_P6k!I#YgBd9TKHON<i+7#Y9gY7YqC>LBp;&#Xa7N6%]G.JI"Ml~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 342.75 589.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(Greens)
+[8.558156
+0
+3.663067
+0
+6.116111
+0
+6.116111
+0
+6.116111
+0
+5.5001
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+3442.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [459 53 479 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+4590 530 200 1800 re
+W
+q
+[0 1800 -200 0 4790 530] cm
+/DeviceRGB setcolorspace
+[<~)Ya1&jn7QPl+j"GRrlSl6*"99Ma[V_/-&'W~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 9
+  /Height 1
+  /ImageMatrix [9 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+3667.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [489 53 509 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+4890 530 200 1800 re
+W
+q
+[0 1800 -200 0 5090 530] cm
+/DeviceRGB setcolorspace
+[<~J+rm6pAFRVr:BUYoC`"Oo_\4Oqsj=UnalVHoD7tIqX<tNmd^/AnG2J@q<[SGm-jc9meQ/8q!.8Al0S3/m.ff1pZLi9k3D^&l1a<'p>kH2j6--qk4[crp#5$*i8jRgj7M3go\JO!h;Rt\i:G^\o@i*mg"u;Ph=B1QnUK-En^Z@`eCj??f^R>@nBohUd+.U2eF(W2m`j2JbgGh$d-\s$m)[K=a3Eqibj36klbps2_o_2\aQ^O]l+k=&~>
+<~^W#EN`9=kNkI\Rn]"mI=^ZN&?jgVqb[_1\.]B$</j0H2TZ+&_s[c4KuiN9HFXKpcbZ/DXdhl3d9Vla[iVQAXNX50SNh4pq(U8Qe>VV@`=g7G(nSYFf-U"Pp-fU8>`R%;iqS(<moes2ZRPF'g_QIM%^duT^ANfqhMOO9#Jd>Et2M2]c:MpI-7c@q)!KSRg)L!5.%bCG2fIt>akJ'!+fao?_gaT$U:a*N$OH$I>RG/\ZJ`--4?G&kKC~>
+<~E5H^7_/jJ0EbiI2BtnY$^Mmf!De-P"A%Z\f]PV#fCgFVf>e+WR\S>6VBi_]V<OQR>[V&IFAl,jG::"J)Z=HV5@nEq78?cMlY@'f%?pq,(6`aT[X'Iuj>sG;n5,haLW*2<]=Z`K`IlaE.3M]_9UK0=J<]6XO25!o*T2RP;;_stB17V2rRSY]+:bS23/sf<bQ;/ur9e2H%.[*LTP"R6d8gocm-]^eFN^tIU7jO$_,E"u7MF8VE6m.:Q~>
+<~+GW9*LHuu95okYE*/$NqK0C3*4W/f6(k=^bIleEp3Yd*)'R_tSI"+*fHT)L^2\10l%X9i?G;K\N1^\@]#]qg,F"ml>0ElGL")ompD_;'./HBW=!,O1dCF]C".KF04!,*e]B.3gm-idg,!+RAV@OD.a-3.F#!+$rO>pTJU,QM$o!*LNH=<dfI+okUe!)t*A;BPs:+954[!)=U99ca:-*WQaD*<8VN!(S"/72u:q)ZW8F~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 406.5 589.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(Greys)
+[8.558156
+0
+3.663067
+0
+6.116111
+0
+5.5001
+0
+5.5001
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+4042.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [539 53 559 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+5390 530 200 1800 re
+W
+q
+[0 1800 -200 0 5590 530] cm
+/DeviceRGB setcolorspace
+[<~rr;uern7:arg*P)r_i_ArVu~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 9
+  /Height 1
+  /ImageMatrix [9 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+4267.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [569 53 589 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+5690 530 200 1800 re
+W
+q
+[0 1800 -200 0 5890 530] cm
+/DeviceRGB setcolorspace
+[<~rr;cmqu-<fqtp9eqt^-aqtL!]qt9jYqt'^UrpfmTqsXFMrpBULrp0IHrosFGqrdt@roO%<ro=";qr.P4rnmV0rn[S/rnI>(rn7;'rn%%urmh"trmUbmrmC_lrm1Shqp#,arlb;`rlP/\rl>#Xrl+cQrkn`Prk\TLrkJHHrk8<Drjr*>rj_s:rjMg6rj;[1riuI,ric='riH+"ri,mqrhoamrhTOgrhBCbrh'1]rgj%XrgNhSrg<\O~>
+<~rg!JIrfd>ErfR2Arf@&<rf$i7reg]3reUQ/reCE+re19&rdk'!rdXorrdFcnrd4Wjrd"Kfrce?brcJ-\rc8!Xrc%jTrbh^PrbVRLrbDFHrb2:Drau.@rac"<raPk8ra>_4ra,S0r`oG,r`];(r`K/$r`9"ur_reor_`Ykr_NMfr_3;`r^m)[r^QlUr^6ZNr]pHHr]U6Br]:$<r\sg6r\XU0r\=C*r\"1%r[[str[Igor[.UjrZqIf~>
+<~rZ_=brZM1^rZ;%ZrZ(nVrYkbRrYYVNrYGJJrY5>FrY#2BrX\u<rXJi8rX/W2rWiE,rWN3&rW2lr~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 459 589.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(Oranges)
+[8.558156
+0
+3.663067
+0
+6.116111
+0
+6.116111
+0
+6.116111
+0
+6.116111
+0
+5.5001
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+4642.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [619 53 639 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+6190 530 200 1800 re
+W
+q
+[0 1800 -200 0 6390 530] cm
+/DeviceRGB setcolorspace
+[<~)ZTKrroVN)d%^KAC]05TnS&Zi8-,SG"+M[$~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 9
+  /Height 1
+  /ImageMatrix [9 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+4867.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [649 53 669 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+6490 530 200 1800 re
+W
+q
+[0 1800 -200 0 6690 530] cm
+/DeviceRGB setcolorspace
+[<~J,f3,s7GUVo]cDJkl:8;s7>FRo&fuCjo=l3s7,.Ln`0W<ir8H+rpSeEn)+-4hYus!rpAM?mG%X,gA^Hlrp/59ldu.$f)Fsbroqr3l-oXqdf/IXro_Z-k0O%hcMlqMroMB'jN@J_ao:>Aro1util:uV`;\`5rntZmhg`H@hnT0I^Acs$rnY3cgq!F=\Gk6lrn=dYfsL_1ZMiF\rR\7Oeunu%XSp\MrR@hFe#<5nVZ"o=rR%D=d%^Kb~>
+<~T`*0-rQUo3ba\RSRf1BrrQ1B(aHZYDPPrL`rPair`/X`5MuCMMrP=<g^P;^$K`/T9rOd^[]79djIJnZ+Hi:F!rO-tL[<DMUFT&OerN^GAZ#BTFDZ-bTrN9o6X_Ia8BDnlCrMa?+W+5e(@K!'1rM<j!Ug3kn>Q1@"rh3HnTN;&a<W8RgrgcsdS5B3S:]?eWrg?IZQqI@E8cG#GrfotPPXYS86iN68rfKMFO?`])55gL)rJWgfrJN`7~>
+<~ME1Tk3;eRjr.d0-L,Ad]1Ac_ZqgpNuJM-eL/c'rJqL0piI4=u=-hr!7pj"1\GU)s,,567(p2qJNEut$q*VFCkol(iAD]/1b)"VS\nn]*4C)$2P'Cf`Kn7N@%AeFKC&FO'>mUHao@L_[4%.%@1lX(%b?4,t'IgP@E$0YS!kZJ2S=9mti#Nf%kj])NG<!D;\"liJai_]j;:^#]P"Q)rVhG"+.9EX'C!o$<Kg.;=u8-.@5!S9d@ej]Yh~>
+<~70(e)!7F47cpIfZ63,7r!6[Y.b!5sJ5QJeg!5q&$_`e(:4TW;\!PLVs]K?5+49;rR!Ob&k[=:4=ZT8/m3<HBE!j4KaX>g<_3!6-="/n-\VD\OQ2?T^3"/7XTTelkD1]s=*"._4MRkb)71'<q!"IChGQ7rH,0EdUn"HkD@OY-cu/d.4e"HG&:N%>*i/-Lh\"GnW3LaiO_.KkGT"GA3,K.-qT-j5)L"Fqj&IjYAK-Nj~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 528.75 589.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(OrRd)
+[8.558156
+0
+3.663067
+0
+7.942144
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+5242.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [699 53 719 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+6990 530 200 1800 re
+W
+q
+[0 1800 -200 0 7190 530] cm
+/DeviceRGB setcolorspace
+[<~('"$prohH%e=QWNK`$g4mq#&A0H[Y$!!%NK!!~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 9
+  /Height 1
+  /ImageMatrix [9 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+5467.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [729 53 749 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+7290 530 200 1800 re
+W
+q
+[0 1800 -200 0 7490 530] cm
+/DeviceRGB setcolorspace
+[<~J,f9/s7YaXp?DVMkl:>=s7POSo]?,FjT"i2s7>4Lo&0Q=huE6's7+qFn_F06g]$]rrpSM=n(7R,f)G*frpA57mF2($dJiLZrp.o0ld#Lpc2R"OroqT)kfNhfaStACro_9"k/@8]_uAc6roLrpjM1]S^&I')ro1Ngid\N<iOAgE[f53mrnk']hQm.;Yl<I^rnX^UgoUM0X8^kQrn==Mfr+i&V>f,CrR[hCf:r5pU&EN7rRIP=e=QWf~>
+<~Sc.!,rR.26d@1$\RJkL#rQgl/cBnISQMf!mr61H(b`r%KPPrXfrQ16$acZPCOT!4]rPjos`K'o9NW"@FNW$bRrPFKk_2A3,M>b2FrP+-d^5)[#LAec=rO[a]\qBskJc3'.rO.4S[=8(\I/U?trNUYHYB^&LG5eRcri:,>WH/!:E;l_PrhXK2UMKk&CAsl>rgmd%SRqeiAH&$,rg7-mQ=0ZV?N$'nrK:FaOB_XD>5XC`r/=d.r/4\S~>
+<~MHB\2=8RbRqM&#HKiRu%<;D,Fq12K?J5c5m;YYZ<pj?!6HVsN`;>,62p30@,G#7jS:\Ag*oQ!_!EDH+E:%N9tnnh(kCeXA79CZahn7YG`B1_Q(8FL(ZmUJcT@7KWl7I4>Kls2sD>=%RX5jDH9kuKt3<'9ABIlljk3Tj0tk"Rbr9/Yg&1ZV(^j$kc`6ndOd0&]&Hi'&[K4Xo5L.,Hs3h)H_92C.$6,MFpsfJ4T$0H\k!*n;k`e1DZh~>
+<~.iZnd)UKoNcR9XU-Pt#R(<e$=b9I_D+qr'@'$).,`uYf2*=p(-%`91o_AE]t(CS"o$GR8]^)@Ui]b(L]%gKTS"h>!D\-W8H#6M=:!ji"0Zi:#/Z2ap1!!9A)"0MV,XT/O+!!TA&#,qS,VZ6pu!!]5!#,;/&T`>:i!!]"p#+PYtRfEV[!!S\h"dK&jPQ1iL!!JA`"-*?`MuWp:!!7rV!f$aVK`D.+!!.ZN!!%NK!!%NK!!~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 588.375 589.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(PuBu)
+[7.337133
+0
+6.116111
+0
+7.337133
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+5842.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [779 53 799 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+7790 530 200 1800 re
+W
+q
+[0 1800 -200 0 7990 530] cm
+/DeviceRGB setcolorspace
+[<~)ZTR/m-!rddH7=>gN9F@2NY]XE3KIKN<2(A~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 9
+  /Height 1
+  /ImageMatrix [9 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+6067.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [809 53 829 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+8090 530 200 1800 re
+W
+q
+[0 1800 -200 0 8290 530] cm
+/DeviceRGB setcolorspace
+[<~,6.E7rq?6gpA4a\qYg*`r:Kj`o_JCVq>9dZqXaLXo(`%Os7cTas7cTas7ZN_s7^^+p\+(Mp$_VIme6;@p@I\EoBl5Am.Ko7o^V8>nETZ7lLaQ0oBtl7mHF0/kjn*'o'>H/lK7X%jmhTsn`]''kMu'oj7)3jn)`NsjPfOei9oU^mc!$ii83kZh<a%Sm,$Oah:q8Ng?[MHle:%Wg">TBfBN=e!9sO7!9sO6!9jI4"6e4`kPs!2kPrt[~>
+<~kL%`?d*_"%d,rX"jiu-5bg,:mc/d!kjN,R*a33M_bN$Raikrpu_TCfRaPjnTiP*@k]uT'C`o+GIi4-b`\&@13_r%i=hQk#TZ,5A%_;290h6"KKX2!Gi^YGd%go%j?V7kWZ]\B3og7c.4TXrgJ]%NXbfpfM(R^h";J%+'s\(?nRf9E\pP-rl&[+:;FeW$ocN3^ukZIF]8e;(<YKs9$YYLA*,dX\LKJ$%.IXjMKsd<_k?GcT27WmGmf~>
+<~cZ?)3Ei@9&Vp91Wc>9B&CSf9iUs*JIb[mQmA>77VTupc:b$La_>bB,AT#b$)aB"kP<1M!,S&\?o`d^aO`_;f>8smRgQc)@Z`'fm.6C#GRPeoSI_E3ps3K_-:OME`7^bUtc0TNn#NP7!'^+5,U.>keeM7k6l]Hr?G,DEcSKY&C[]-)^:++_!EJ@ZbN\K$(/)h#47I(1&@[hsG#(O3A(GIA60[1d\j&p:PmFL)HuZOCl[$#tI"#&pdK~>
+<~Dm'.ZXoN@B!,en=D6*_SWrQt9!,JP6CT%5JVZ:J/!,880BVYWAUB"r$!+qo)AY9$7T)`Dn!+VN!@[d@,RK-ca!+;,o?^:b#Plb9V"'q&l?',7pO9AdJ"Bpcf=c<JcM?I%<"BUB^<e^`WK`kA-"B0mT;Lem>;1A[EI038l"&=.E9m?b6G6:K\"%dP989"`%E!&RI"%@#.6tufkB`g\7!^L;u5@XaY@0/T!!^'cj3a;_H=opZc!]X9~>
+<~~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 640.501 589.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(PuBuGn)
+[7.337133
+0
+6.116111
+0
+7.337133
+0
+6.116111
+0
+8.558156
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+6442.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [859 53 879 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+8590 530 200 1800 re
+W
+q
+[0 1800 -200 0 8790 530] cm
+/DeviceRGB setcolorspace
+[<~)ZTR/m,IN]dH7=>gLmM32NY]UJVjJE=TLuM~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 9
+  /Height 1
+  /ImageMatrix [9 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+6667.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [889 53 909 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+8890 530 200 1800 re
+W
+q
+[0 1800 -200 0 9090 530] cm
+/DeviceRGB setcolorspace
+[<~1&ptErq?3fp%nXZqYg$]r:Ba^o(`+Pq"sUVqXF7Tn+ZYHp\=1Mq!IeLmIp;@p%I_Oo`4=Xo`4:WoDn.UoQKKkoB>f:kO\9-oC:u6nE0<2jmqm$na>K.mGma(j7)EpnE]'&lJ_3si:#pgn*&ZskMP^jhX9O^mH*0kjP9._h!F%Tm,HddiS*YVg?[YLle^=\h:V#Jf]q5ClJ'qTg=GNAf'1i;kh"AKf$rp6eEGE2kPs!2kPrs1kPrqZ~>
+<~k0VN<cd:h"d,iNujibs2b0K(ic/csjjN#L)`lmD\bN$L_ikijt^rbTNaPjkSiP!:j]>id?`o+AGhm^P][`%(1_qq`;hQarSYef.u_;26/h5e<GWk[>f^>,X"gSMU<UqGHV]\9$jg7Pt0S\!LD\_3C]fU',#Q+,D0J%+$l[b$PJf8R,gMRD#k[+0o;eUt3YJ[3dTZIF<-e9\@JGd,Y?YL7NqdW2M=E37N*XO1jcctf]/Br]NnWR#1U~>
+<~cXj'#A#IU]VTrVHc!R<l?)5\LUWco9bZUX_=/!f;TZ^<,b#4hR:n>^(SB4Kqa\/,E8t*glRE%dba+$OF`^?*46'fJTQ,PqP`''@'4-RQCP/95B_Dm[o2NY^3OME]6^GCna160%&NOpj'\h8rP/<%%gMmb'mZm^g;-Ao#RM6A.\XW`P%+,Hm;Lo25KV&G,a(l+e#L7]07SIpUG%u$D\KpN1#PmN,-#D8-BK9-4fNWXll!eGiY!eH10~>
+<~J;42UK`ZaW"+Gh(IXhQLIft.I"akY$H[,jCGR&P<#^LLuH#a49E=-r/$?p=oG&.M/C'o)s$?TnfFCbf#A.!?e$$'G[EF9#j?NtFS"`IWKDHd3[=oiGB!,G[:CKLRO<rcr8!,,@4B2ekC;ZLB,!+\q,@o34n@Sd&5:&nZr!+/D"?:t9'8cW'e!*Vnn=[rHn70$@V!*)Ad;aLI^5QFVF!)GcY9g&JM3rhl6!(f0N7lLH<2??9*~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 708.376 589.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(PuRd)
+[7.337133
+0
+6.116111
+0
+7.942144
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+7042.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [939 53 959 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+9390 530 200 1800 re
+W
+q
+[0 1800 -200 0 9590 530] cm
+/DeviceRGB setcolorspace
+[<~)Y`n"kMbmZ\_>/ia5:I4k:);6&ltA"6Y?B@~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 9
+  /Height 1
+  /ImageMatrix [9 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+7267.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [969 53 989 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+9690 530 200 1800 re
+W
+q
+[0 1800 -200 0 9890 530] cm
+/DeviceRGB setcolorspace
+[<~J+rU2p@J+RoD/(Nq"=4Qp%%nMnbDbHp[dnKoC2MFn+ZDAp@7SEna?,?mIfu8p$_8?n*BW6lh'W1o^1o7mHF0.kk"0(o'>H/lK7X%jmhTrn`f*'ki2*qipZ'hn)iQrk25UghX9I\mH!'hj4iq\g?[bOlf$L]iR[8OeUQi@eEGf<kMFVLh9b<?cK3j+jP7u?gWJR1al;$piRu60fu2h$_r'(_hq,[#f"^%l^>.8Ogss$ke@OA`\_>NB~>
+<~g!dC_d^@`U[+E^3f?pnTd'2*JYLUt%e^(AIcE,O@X4,=me'4i>bbrk4VU<S`d*&63bG3D+U!LlScH6loc,lR%adpYtSBT*EbK60padC5mQiG0WQH715a2sRdacaZdOi>J)`644[bDjE`N5Ees_TdqRcA99^L;2&g^X.YJd=T'[J\BN^][VDBeU5![HFh^R\^u&8fQOdXFLTtE[bGf1gMaLTDRA59Ze]B&hJ':PB<g?+Yhruqi+&tK~>
+<~@BSNqXl3TfiEWGC>,pUbWT.$XJ)jV-jAVr;;5NAMUukCGk"DE28>,-8TBJ\6kX(g'5b$t$RHZi$krP0q30i_cPj'ufkq\Cc0TbKNO6A-SkUVVT.?!@;M<61AjsGiE-&(D*KB+8.j!'!5+ar>mI,Z5oi?*=&*d6H^FPe'YhAgLk)fFIMCtoqDgDO\Y)1Q8P(hMA;A(VT+f,%iG(1,N,?.9TndhQ'7'Nrfs=O7^_c4X1&&QR$e<QYkP~>
+<~aU_@k%o^IX;T'#B_[KDY$rObI:qd95]EqBF#uA&:::CI'[0KF4##2?+9WnUnXTV:u"A>`s8uMhaV?0>b!_B$e8>-&ST)hEP!CiOZ7@Iih7$msAQN0@;!'ueK5`u+4O8qM+!'ZAB4cBA'M?#_o!'5l83J@GmKE*r_!&]<-1k,K]IK2-N!&8g#0R3XOGQ9==!%`3l.rt\?E<%D+!%2Xa->``.CB,So!$Z(V+D1ZrB)j"~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 762.001 589.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(Purples)
+[7.337133
+0
+6.116111
+0
+3.663067
+0
+6.116111
+0
+2.442044
+0
+6.116111
+0
+5.5001
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+7642.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [1019 53 1039 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+10190 530 200 1800 re
+W
+q
+[0 1800 -200 0 10390 530] cm
+/DeviceRGB setcolorspace
+[<~"oS8rn*TfJg(N_a^"f3JaFJ]MC/La*-]^IlI/~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 9
+  /Height 1
+  /ImageMatrix [9 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+7867.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [1049 53 1069 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+10490 530 200 1800 re
+W
+q
+[0 1800 -200 0 10690 530] cm
+/DeviceRGB setcolorspace
+[<~J,K3Bqtg9gqY^6er;-6eqYC'cq"sm^qt^$aq=jd]p\O[YqY9d\p\"CWp%e=Sq=aIVp@S1RoD&"Mq"4.Po^_eKnb;YFp[[hJo'lDDn+Q;?p@.MDnF$#=mIfr8p$V2>md0T5lh'T1o^(l8m-=3.l1=3)oBPQ1l0.^&k8s3XkORfun`T$(k2l-pjRD9lnDrX!j5TOfipYmcn,M>Nmc!*li8<u&hZ3'Dh?30%h<k6u!:9a@!:9a?!:9a?~>
+<~!:0[=!:0[<!:0[;"7"LjlMoH9l2T<7l2T96l2T65kl9+/kgIrCdF.4)dH8d%k0D<7c-GFpc/d'ljN>[,ai`YbalCF_il9$u`Q-rU`o4hSi5<Lk_Sb9I_VW)EhS6k^^;&L;^>-B7gq15R]"?_-]%[1o!87C]!87C\!8.=Z!8.=Y!8%7W!7q1U!7q1T!7h+RJ(1[)e?5q&XfTsPX4")LdAs7nWi4:DVU)3;cDRJ`VPDD4U<KF,bbLiS~>
+<~U7]W&T$!^sae,*FSt!fmR`M%fa./O;S!V-`QH#>X`L)n/Q]o@RP/NWJ`0?A$PE<\FO2@$>_N9boOGq#:MntF2_2X>fN/>?.Lqeh&^PR][Ljt,mLP3BrK=utj]nCsLK7LUdJ%L8\]7>=@IsehVHb"TO\:&Y4I!E,IG.2d?[X*&'H#g9:EO9q/ZZg;mG&=L,CU&"sY]OQ^FD%atB!-/bX`@pQEFGnf@&n6QWc)1BDd0/X>,Q4>VeoM4~>
+<~CfR<J<2FA/UhWc%Bi(O<:SN>P9qc2nTk@#kAkAV+8=sH`Sn(9\@mlkt6C_LNRpeRO@6U,f4do_?R9r"B?9+BY31!l.Q<Z;5>;VUK16l#tPZ]](=>#e>/Ws0dP#a)q<@O#0.$.CUO&IBc;^IH%,`PYGNDUjX:`tZl+,`o9MG>1L9cT!a)Mq-*LeARILJ&G=8f!.Q'S]0mKh)i17hLDE%td=]K1-6$714]8$@tPMJO9Zm63_s+"Fi]>~>
+<~Im='a5QQ<u!.@'3I/~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 828.376 589.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(RdPu)
+[7.942144
+0
+6.116111
+0
+7.337133
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+8242.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [1099 53 1119 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+10990 530 200 1800 re
+W
+q
+[0 1800 -200 0 11190 530] cm
+/DeviceRGB setcolorspace
+[<~)ZTR'rSZN0`PD>B[J+@.h)(J$!If=qG=_dL~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 9
+  /Height 1
+  /ImageMatrix [9 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+8467.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [1129 53 1149 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+11290 530 200 1800 re
+W
+q
+[0 1800 -200 0 11490 530] cm
+/DeviceRGB setcolorspace
+[<~J,f65s7Z$`p$r(Snc/7Nrq#UXo'cSKmf)bDrp]=Sn*L&Bli-><rpB"MmHOW:l2L#4rp&\GlKA02k5OT+roiGAkN)U(j8J*!rT3#:jPg'ti;MZmrScW3iSOOkh>Q6drSH<-hV.qagATg[rS-!'g=Q;Wf)=:PrRfWuf2^;uf$aNJdJ_VBrRB0le'@p?c2H&6rR&ged)u=5ao0N+r6<:[bf9S(`Vdlsr5lnTai"%t_YhHjr5QSN`PDDi~>
+<~^\l!ar5-2G_7oi_^&5XYqnB`?s1EjY]=e$P]DK.Nqma98\%;IF])/kGqm3m2ZFTk;\biVAql[L,Xh">1\GN>:qPh"$W4;]%\,)r1qP:UsUUL#m[ecZ)qOY+kS[A6`[/-5tqO+\dQa6IQZ20]iqNA)ZOKeSBYPO6]qMVNRM66Z1XS[aRqh2$IJu\]uWV_-oWVV"@qKo.:H)LL_VYYG3qK&M/EMWDLV"no'phZ]"C81H:U%`2np1Buk~>
+<~A>&U)TCcQaoO"6^?(UXmT(6'VnQ;CQ=.Sh\SaTLJmo#_E:n?uKSF'"?lq<l78Y#'9SEWM4kX:p'6C[+'S)ll'j?8sl4IY7jRGg/oi&@%\Il<\M24*)SQeO9]g+\fE09t-APgq=Ke16^1.?W"+OjGJ;c6\Or,`^%lNQNE'a<->\*fIuWMSg?h_AS0F(Pfa@L:n:T]Fon/&;7S)K=;;A[L7Yn$%]DfJ?]9-YQKBX!Ih-NI]NNtWW7IH~>
+<~!.CaFI&6mkU]>e;!.1C>HUaV-H_(4aS,do)!.(%5HC"VXPlQ,p!.'e.HB8,QNW=?a!-sJ&H&2NHLB)US!-s4tG_,p?JH:"F!I0"nG^KO9H3&58!WR?D!WR=I!HrPcG&dV+E<13#!Hi8\FDLu"CB8Kj!HVoTF(PGnA-$^\!-2KJEF8cd?3"qM!,u-BE*<6[=9*8@!,bd:DH$UQ;?1Q2!,PF2CeatG9E8j$!,>(*C.SD?~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 889.126 589.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(Reds)
+[7.942144
+0
+6.116111
+0
+6.116111
+0
+5.5001
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+8842.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [1179 53 1199 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+11790 530 200 1800 re
+W
+q
+[0 1800 -200 0 11990 530] cm
+/DeviceRGB setcolorspace
+[<~)ZTL"rnu6&]:o.cEr0TDmlN)D(`fF`'k[LU~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 9
+  /Height 1
+  /ImageMatrix [9 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+9067.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [1209 53 1229 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+12090 530 200 1800 re
+W
+q
+[0 1800 -200 0 12290 530] cm
+/DeviceRGB setcolorspace
+[<~J,f31s7Gd[o^;bNmJleFs75OVo'?>GlMpD=s7#:Qn*'c>kPjo3rpJnImH"95j8SB(rp/PBlJV[+hu;lsroi2;kM6(!g]$?hroMi4jOjIlf)F[Zro2H,iR@eadf/.Ornc!#h9Q#Tc2QJ@rn>Nofua6Ga8X]1rRSpceUPL8eA;+3^\uQorQr4Ucb'/#\c'a]rQDYJb-_,gZMhhKrPl&=`NB'UXSfr8r5#?0^o.+EV>S$&r4Jd%]:o/5~>
+<~TDZ3jr3r3o[[[3&RJaCYr3DXdZ'>0iPPhSGr2l(YXH*4YNVoc6r2>MNVMP/HL]!s%r1\lBTn<38Jc("hJGbser1&35RX=t#HMj.Tr0MX*Q$3(iFSq>Dr/u'tODt,YDu>W4r/GOjMei6JC&Eg$r.o"`L1U::AGh*jr.AGUJRJD+?i5CZr-hoKHs?Mq>5W\Kr-;BAG?4Wb<W$u=r,bj7E`)aS;#G9.r,5@.D,'nD9`&Tuqe8WOqe/Os~>
+<~B1Mf07f$XaqI2kh@70lu6Mb"Sq-62\><hpd55A;Dq,TWQ<'0kR3quQ4peNmD:,ho@2YTj%p.7+77l9m.1\F-koKtA)688!r0Ch=\nNJSp4>$"`/FGPMm5Z]`3%F5Q.dAo@kqsmQ1aqNC-g!03jY8+B0IGd4,phM&-/^@#h^]u/.O3^t,MOUjg*\)t-6h(g+kIt_eKQ-c+X#86+99ji++MZZ+4)#LcQ""N)]m3@*Qo9?aql)?(*(C1~>
+<~*6/a5`Y9B2'-"k&)oE:-_@[^&&K8Cr)SQe%]au'o&/i(k)7g@s\I]Uf&/_he(psnlZk+(\&/VS_(U+GeY7MMQ&/M>Y(97u^W=TiD&/M/S'r;EUU^n37%MbZI'V>gKSIJO4S.$+#$ko!9':'">PmS1g$5/I-&s!>3N<g/T#SMt!&VgT'Ka&-A"qcCi&UsrqI0:+.";#h\&9\-dF92tn!Y95N%W2:WCB4oZ!"EQ@%;,YM~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 949.876 589.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(YlGn)
+[7.337133
+0
+2.442044
+0
+8.558156
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+9442.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [1259 53 1279 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+12590 530 200 1800 re
+W
+q
+[0 1800 -200 0 12790 530] cm
+/DeviceRGB setcolorspace
+[<~s8Nqtp\_STn>!,ANd/Qh6*"99KL5`Q2ZQ8q~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 9
+  /Height 1
+  /ImageMatrix [9 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+9667.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [1289 53 1309 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+12890 530 200 1800 re
+W
+q
+[0 1800 -200 0 13090 530] cm
+/DeviceRGB setcolorspace
+[<~s8N)Zs8N)Ys8N)Ws8N)Us8N)Ss8N)Rs8N)Ps8N)Ns8N)Ms8N)Ks8N)Is8N)Hs8N2Is8L=DrW(1BrW(.ArW((?rdW#frl4p9`VoeSr;OS2rPAC0_#+)FqYe/)rOr%*]_VK;q#%_ur4;Y#\b>s2pADGnqmZ4p[e'C)oD>rdqR#eh[.*pun+j9Wq6B>_Z0h=jm.ddMpo`oVY3G\_kk;+@p8mELX6'#SjRoM4oVpjBW8[?Ght*c&ntt76~>
+<~V;-RjV;(O9g@1ljn>"Y)U=Se-eaB-\m\&%rT[E/!d-RCNm%2MgS]pDjbNbV>l'ocYS&a`]`TW`.kF'3LR).pO^u^osjd*U@Q+Q(A]&T$bifgk1PI9A4[,@(PhiP,#OK[N%Y2,,>h2\PkNN(ZkW8!9.g5Df\Mkes_U"G2bT\#$lf8-!KLRZhLRFR%Ye:s:<Kp:#>P1##Gd=[M,K8n60MpHs3c@LerJ;2<uL!5%!bC5#bI=KCfI`_V;~>
+<~J&lt_a*N$NH$@8RG/\]J`-67>G&Y?ADo-U5_/sJ.F(rC0B>8Fu^2RVrDdp@s@(^A`]5:faCg+Ab=L`*I[qSjOBN)?P;71%4Zt<%=APBC?9!MktY[U,+@7@>,7'0f`XBn2n>sPDp5H.jNW*;E_>!/Zb4/H%?UK9IM<e!*&<B$RM2P*i)SPh;7;)=Y;17:rnQqoE%:+ql,/sK$]P>!Qj9.Z/s/!!7ONCYLW819Bd-]1A@M+/hJ74![V~>
+<~,_\W2KL6r96Qq%J+b;p%J3b9,5otJ?*I^6nI6SZu58nl4)1"I`Gs3$h4Vi9*'mDeTG!$F\4:uZt&9NC`%s'fBE]X\L3t$!g$?%s2DE8#?3<j=\"`-1$CH)B13!!_P!,+:kB/]g&2ZRDI!+[tfA2XEt2?72D!+@_b?o7pk1]Ui=!*h;[>;H7_1&tH4!*CuV="s\U0`Y3-!)tWP;D/#I0*"g$!)G3I:+ZH>/-&<o!(naA8LjcJ7k+L.~>
+<~.KDmd!(A=~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 1002.38 589.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(YlGnBu)
+[7.337133
+0
+2.442044
+0
+8.558156
+0
+6.116111
+0
+7.337133
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+10042.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [1339 53 1359 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+13390 530 200 1800 re
+W
+q
+[0 1800 -200 0 13590 530] cm
+/DeviceRGB setcolorspace
+[<~s8NqhmJ*s,l*Prb]0WmD*Ke,]?Do/,PR&:3~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 9
+  /Height 1
+  /ImageMatrix [9 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+10267.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [1369 53 1389 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+13690 530 200 1800 re
+W
+q
+[0 1800 -200 0 13890 530] cm
+/DeviceRGB setcolorspace
+[<~s8N)Ns8N;Rrr:IHs3grHJ'e/ncMdadrVk"<rlP*;aSYqUqu+M1rPSL1_YO/Gq>A#&r4_q']_D?9pA;GoqmlCs\Ff[-oD5oeqR,nj[IO("nG0EZq6KJbZL7LmmJ*sQpp'/ZYj1tel1_FGp9<`RYNGM]jn5h<ormEJYN#2YiUa;3o<@-DYhnrTgdq"?g[VQ&nZgd:Z.JKMf'fopn$:I2ZI80HdI"9dm'G"(Zd%gBbNlOXlEnXs[)_F<~>
+<~`TX\Hkd81h[(th3^?)c7jgDY[[C>2r[<LW=ZJi6ri3ofG[]A8nWSP%\h7'38\"VQcT%^]EfsmI&\<kgWPh*C.e[^aj\W,(KMUK(ldCP(Z\qJD@K$LuYcF\PM]7%o8Hcs'Ib.MuA]QVE1FND.9a1ZK5^2M$*D8j5*`P60+^M(O"B#DDq_SBZt^g[8ZIp^"-?,+3[^VX-f_H4Ff<P61I]YdUY_b[k]9tJ57\\q%K`'q/R6FOft[_t>:~>
+<~`&b9D34$O\ZG\Q(`%eL70<`;GY/Dln`%%k,.BCB7Wl-6_`$M>",c8L*V8OUS`$1qo,,)puTYhqF_]bSg+Ip=lS&6A:_B>5_+.'hdQ@H^lPeeE)_&\]S*K\&VO1uZo^Di-G)iD?KM7jj`]GlU<)hbgBK";nP\Jp%/*.>=:I(()A[N0V#*I"k3FgN32ZQ=+l+)nJ,DQk7"Y97V`+DIu%BWWFiX<D,T+_.Mr@B(MZW?PZI,$h)j>c/fM~>
+<~VB]6@,Zgfg<i%*AUaCRiUaK$7-r?Ze:SK:4U+/j1.S?Bb8Y@S)TIWL(/4H0^6_5hqSh*0u/3f[V5+F/eRk-[j.ls+L3LM?VQmjt\-oRA=23fIEPU&&K+u5<)0p*P4Nug!8*A<?k/rLZ#M&Iq$)(UFY.YJTfK,5tf(+=YI-[c^WHP@fP'I@rS'-q]5,]aSCE=jC5&L)''+_qT3BFZ.s%Nf3j+(5R!?O@i[#p!1T*EWRf=9~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 1065 589.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(YlOrBr)
+[7.337133
+0
+2.442044
+0
+8.558156
+0
+3.663067
+0
+7.337133
+0
+3.663067
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+10642.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [1419 53 1439 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+14190 530 200 1800 re
+W
+q
+[0 1800 -200 0 14390 530] cm
+/DeviceRGB setcolorspace
+[<~s8Nqts7a2*j,s>Z:]?b2lu3Z_9ELV="D/qa~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 9
+  /Height 1
+  /ImageMatrix [9 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+10867.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [1449 53 1469 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+14490 530 200 1800 re
+W
+q
+[0 1800 -200 0 14690 530] cm
+/DeviceRGB setcolorspace
+[<~s8N)[s8N)Ys8N)Xs8RT,s8LpUrn[VRh#IB.s8LaPrn.8LfDkg#s8CIIrR:fEdf96ls8:4Cr6G?>c2[[as80t=qT8d6a8c"Us7sY6q8E=/_Z0DIs7jD0pqHe&^&Ri>s7a/*p::4s\Gu62s7Ni#oX+YjZiBX&s7<Mqnur)aY5e$os7!)gn>cJ;n#?<SW;c4^rp?Q]m%jXIUAjJPrp$0UlCS">Sc7iBro]aLkEu82Qi?*3roB=CjHBN&~>
+<~OoF@$ro&k9i/@TmM>lCfrn`A.h1P^^Jc=DRrn;c!fm<YMGlH<;s4;>leoC`?DZA4&s3k`_d:`L+AcL(ds3>'Qc!LFo>lVuNJ,dYnrlJ4?aAr5[;uXd6rl%_5`)$BL:&_t&rkM2+^IeF=8H-7lrjtVu\jZP.6iOP]rjG)lZp4Ss56%oNs0+TbY<)]c3WH0?s/J!WWAX^S2#jF/s.qLNUG;eC0`Rdus.:nCSh0o3/,l"frgG;8Qmr!#~>
+<~./fGZrKJZ,PCFnVOsKse,l<WIqi2lsN$8%U+o.!<q2$3gLEH;G*qt@0pOaL[JfOK8*;+e#oR7bOI2_^()Y87mnp),CGSopn([uP`mrT?5Eu+.`($olRlYdL'DA2;P''X3Fk\CdnBb9E?&*7F7jCSn^AI[[1%H:h*iF*,P?jkk!$Jp8=$/Jkngft->=pWhb#ME2afN/:/<X.,T"k?QUdo-Ct;?YBD"40gGcV=Sf9`iO4!m=4<b";`V~>
+<~8HHk&!QIV1`'sdF7KL=o!Ph)(^-_q6634\a!P(Js[m0u&56A2U!jXukYrr/l49DWI!j"HbW]C6\3Wl6>"/RsZUGr?tTf3(H2[#^1"Iq=PRl(>:1^'1%"I:hHPVNB*1'E^o"HY>AN\CWq0*R7e"c4i8Lb8jc/HpeZ"bS?0JLgtT.g:AP#(.p*HR]5F.L(,H#'MF"F=7?7-jFZ>#&kpoDC5X)-3e64#&,CgBI*jp,mIs-"o~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 1123.5 589.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(YlOrRd)
+[7.337133
+0
+2.442044
+0
+8.558156
+0
+3.663067
+0
+7.942144
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+11242.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [1499 53 1519 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+14990 530 200 1800 re
+W
+q
+[0 1800 -200 0 15190 530] cm
+/DeviceRGB setcolorspace
+[<~s8Nq[s6ZKYflmA#9`9r5r(\a%)B?Ej-@c(C~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 9
+  /Height 1
+  /ImageMatrix [9 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+11467.5 4492.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [1529 53 1549 233]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+15290 530 200 1800 re
+W
+q
+[0 1800 -200 0 15490 530] cm
+/DeviceRGB setcolorspace
+[<~J,fMks8L.?rQ,$;`rGtUs89h8qniC1_>jAHs8'J0q7Zh']DqZ;s7a&'pUC1r[f?'.s7N_uoWeGgYlF<us7<AmnuVl^X8h^hs6uuen>H<TV>p"[s6cZ^m\0[JT`=AMs6Q<Vl^\"@RfDZ@s65pNl'DA5Q2g'4s6#RFkC8Wok)fW*NrS4#s5].=jGNutM>uUls5Je5iJ%<jK`Bt^s5/D-hgka`J,\8PrnVu$gjB%TH2cNBrn;SqflmAI~>
+<~FT0m5rml,heStN;DuS4&rmGW^d;/a.C&ZCkrlo'Sb[g^rA,aSYrlALHa'Sba?2hcHrk_k<_--cQ=8m]`<rTd4rk)2/\l/O<;?"(%rjGW%[8-_.:&_Imrj#5sYY4u!9)btcriJckX@`Dl8H,V[ri&EeW(-c`7fK5QrM2m\UIG-U7/`fIrLcOVT0rRK6N*HArL6+ORR-n?62d09rKfeJQ9Y>45Q-d0rK9ACO?NQ'4oLC'rJWjgrJNc9~>
+<~M*(Zl3rOdnrId31JiNa[3<"Cdrd?a)HT(nL2?.hWs)^*tE]!f81]M>Ks(jIjBefX#1&kf=s'mb_?n_Od0E590s&q#S==sMQ/H/U"rDG0E:b2H>.f<!jqb&C78h'U-./?@]pdHS)6mq^q-MB\Nofjbq4XBY^2^IuU,k<o>ni%f`2'VNG,4@91mk>pQ/g0O5+RCU#lR<qA-m._$*pFpkkT_/3+W]\e*T\=_jSp3Liu/os)'%TO*8hSP~>
+<~h\7'e'-,g?*8D)FgCG:X%NX43*S:c@f*`YN$6I\'+4CK;dK^lA#9_@t+O:68bm#?8"X;+n,0C$5a93a."=1th,fBd2_ZD.#![YV_-GKR.]`9Cl!%,8W-b04)[f@ea!%>2S.'`h$YlH2U!%=rL74>2:.&d1pVuS6C!%=WC.&$\iTE$C3!%=?;.%1,aQiJP#!%='3.$=QYNrUPe!%3[)-]%gNLB&]T!%*9t-@c(CJ,gn~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 108.375 416.813] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(BrBG)
+[7.337133
+0
+3.663067
+0
+7.337133
+0
+8.558156
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+1042.5 2467.5 150 1650 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [139 283 159 503]
+  /XStep 20
+  /YStep 220
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+1390 2830 200 2200 re
+W
+q
+[0 2200 -200 0 1590 2830] cm
+/DeviceRGB setcolorspace
+[<~%TG+cN)9qsJM#crIJ2mBrq-cAlK*Q@_)7R?!G5X<4>6~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 11
+  /Height 1
+  /ImageMatrix [11 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.500122 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0.1489] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 21.5 345.75] Tm
+0 0 Td
+/F12_0 11.0002 Tf
+(Divergent)
+[7.942144
+0
+3.058056
+0
+6.116111
+0
+6.116111
+0
+4.279078
+0
+6.721122
+0
+6.116111
+0
+6.721122
+0
+3.663067
+0] Tj
+33 -13.5 Td
+(\(div\))
+[3.663067
+0
+6.721122
+0
+3.058056
+0
+6.116111
+0
+3.663067
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+1267.5 2467.5 150 1650 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [169 283 189 503]
+  /XStep 20
+  /YStep 220
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+1690 2830 200 2200 re
+W
+q
+[0 2200 -200 0 1890 2830] cm
+/DeviceRGB setcolorspace
+[<~Io\9-=>C%a1Bh&@"^a+j@Q"@"3!<hR"DBh!CHDZ949TRd"E?X/F$KkO5m2F""F<H>Hq"9g7g4H7#(oMPKhDZ+9aHSO#`DLcND^.F;[edg%?jj'Q!"Wa=qI*,&Y!)>SR<,'@25JG(8GFWV.UXCBc<sd)lmfqX`#8aEIT(8F!7l4,.2V?[s9=2HRHFR.D:3]^O[uQK.k,r0u\r*`el[qNB,+B4NimPb`tN>Qq#Dk8^O#%d@a=aUJoX=~>
+<~=4F3QeZ<*.Y$oqeA_=A'fsY_N\8U-6Enn?Oh7n6l_0k1YIc87sil?`4aG8m"MWW-BkK]1Qd$*_AQKiG<RI&IomFIotfV.cfV"!-:nD1,7hQ?A+YOg_YoA[1Mj1"^B](P0tp#a$_kJ?lU_tN?6p?K]mlH8kebkLJMp[$<%mF:muf(\Xdp[?l2nD<p/i:ld%p[[G>o&o`<l1X`7p@I\Fo^DMGnFlMFs7HB`s7HBas7HBaq"4XZs7HB`~>
+<~s7HB_s7HKao_%_RoDn=ZoDn:Yo)S+Vo)n7Ko&p&DJ*$7kj72WtnaG?(mbI="g@+F\n*JTmldG1cd-^)Cm-)XYkK3&Pa6Md*l/]bHj1sm<^?=Iek2<c2hR;M$ZfKoGj4g]qfrF#`Vr-($hUS=Ue"5@CS(l;Wg!>o8c'$]&O4DC3eB!Kpa+i!\K[7SfcGG(T^jO;=HHEjEa+(^C`OU$,[r9*jCqm;j]s21\Y@>#D?ad"?[&I36VcL!t~>
+<~;lufjX.`4cT1PoN7\lM@U7"9=QT^n)3h)<mR?9@nO#*&\0U%DIObkWMLFJ4:-]<U'M1Hn,Ij'Mo++nn\JU&2aG8YgO(OL6=H#aRBE"[>3&9M^uEbZ#%BF/!_Ad<-_"_qNMBjh'U?N=YC!+T45@Tib>=9)]/!*rS)>>kN*;#j]o!*2hp<D3Bk8cV^Z!)Q,b:.5.V6NBbF!(fBT7m-iA3rhZ/!(/[F5rJ^-1]T]p!'Dq84>6~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.498169 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 170.25 416.813] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(PiYG)
+[7.337133
+0
+2.442044
+0
+7.337133
+0
+8.558156
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+1642.5 2467.5 150 1650 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [219 283 239 503]
+  /XStep 20
+  /YStep 220
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+2190 2830 200 2200 re
+W
+q
+[0 2200 -200 0 2390 2830] cm
+/DeviceRGB setcolorspace
+[<~%ZUQf`>a6^GHUJEgATsurq?obp!C5-L4?j%9p-YIA/P~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 11
+  /Height 1
+  /ImageMatrix [11 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.500122 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+1867.5 2467.5 150 1650 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [249 283 269 503]
+  /XStep 20
+  /YStep 220
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+2490 2830 200 2200 re
+W
+q
+[0 2200 -200 0 2690 2830] cm
+/DeviceRGB setcolorspace
+[<~Ius_1P5nXL!*GWh>+5LrScE&h!+2H#@ANs5VZ:8,!+r83B<;/JY5i@C!,StADRBI_[fCBX!ckjVFM&!(^(5G''7%G1Hc-eL`Z9NL+FqQZJ]fHobUeIn0Sdt2M9n5>d6*B95`X;]OOQgaeOu.X:R9R1R+GE.fNOfu?@SR"@A)=cU=s:VgM<\ADQ)?1WnhcuhKQ-[HEc=TZJg;?iI\MtKX]us\`AX[jc$n8O2'h?_<7'#ka06PRE"N^~>
+<~aQfA>l_2MgUWr/&cg@[Xm]+_'XjlgCeaTiqn?^d;[Ft)Zg[_o1o"3`L^#&Cri:OkEoto_]`8gR2jS*f<jnHpZprhgpc0+oKkk`]kqU4X*eEZq]lhoB#r7LB6g?edmmJYi.rSHu@hs^O%n,;56rSm>Fj73*0nbqV@rTEbMkk"c;oDRtHrTj.TmIgDFpAFCQr:'IYnFukNp\XOVqt'U[o_A:Tq"j[Yq=aUZpAamgp\=X["SVT`p%\R[~>
+<~#5Il`q"41Qs7:a8nacJEo(_\Dq!ISGm-sf8n+c/9pZLu=jmMm'mJ#T+pYbE4hWsmjlLrrrp=SX'f')eVkOm9cp!DgncK+WAj7LIPoZ,n]`8:+&h=A>8n\!QF\_-D[f'frpm]b.-XO-@6cKqFPl_DVfT?-8e`TW`-kE`sHPJ?4@^#Y0&]AndZieP#$KsffiZeg2:h0cE]H*#_CWnDKmfPm_=D55WrU"!_HdU\lq@@GMKQd/g#bZU.P~>
+<~<fkF%NlOtT`_MB/98CAUKu$93^I<^f6[ua7IC_Xi\NY;J4En4qFgO/MZ8cj/2fGlWD65X1X>=Rj0k[I>Au@:mV(Q5QD_5@k.peku>b<HKSL@U0-WZZ_<1"t0Q6]:l,>OFH9T^GiNupoQ+%M827>`*QL`A^9*'f2s5(ae;JJpV#)EN<b3.)T&H5SSb))QLS13FHhEu?ZO)(ohF/Su@VCDeX;)(B5:-tX>EA/Qb*)#~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.498169 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 227.625 416.813] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(PRGn)
+[7.337133
+0
+7.942144
+0
+8.558156
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+2242.5 2467.5 150 1650 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [299 283 319 503]
+  /XStep 20
+  /YStep 220
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+2990 2830 200 2200 re
+W
+q
+[0 2200 -200 0 3190 2830] cm
+/DeviceRGB setcolorspace
+[<~%R:"eFt/-4E3$jPcf`gArq?oUnC+8hTN\L,)gF:A6lQ~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 11
+  /Height 1
+  /ImageMatrix [11 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.500244 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+2467.5 2467.5 150 1650 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [329 283 349 503]
+  /XStep 20
+  /YStep 220
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+3290 2830 200 2200 re
+W
+q
+[0 2200 -200 0 3490 2830] cm
+/DeviceRGB setcolorspace
+[<~ImO-070-4T!E)Jj<D*Eq:'=]r"^=k/?;q2<<XN;<$tNNOB3Z!^?4q$]'Q%=qDe0c*B,Yl+*-Q*>G\nUMD^0XL-%9n_J9<;mG:S>l/V\U+Lj_%9IPm(73/rJNO+TWYKKt]T6^3?qQ&&"uM+j:o:R[5?RuLF=N`_m6>CW<-?D3KiU69&_P@gYVBr@84W0_D%R;f3rEibdQY+Bj@T6[]8Ha9Dp[%r2ZVLl:TKXe"9\uUY!XGX]oN4uNV~>
+<~^p0!;Z]`56Pf1"r`OM;U\XLUOSB8I9bJ'Xn^nT)iUs?lTd);m1`i@J-XOG:oeB>)Hbd,gF[+N^5g!M:Zg=*Uee@XMe^"q;ThV#a&g;Dk(`SoXniSV`9i6(*=biIg/jlFbMjjF+j!7Lo1!7_&4!7q27!8%89!87D<+ku>Lh!FFbmI&p#n)Eg+j7)X$nabl6oB>f<lLac9p%IeQp&OR]pAj^_pAja`p]0mbp]0pcp]0sdp]1!ep]1$f~>
+<~p]:*`qtC6ep\+:Ss7HBds7?<cs766bs7-0as7(U5n*p)>n+Z5;p?V)=lKe0-lLj?)p#YB0jQ?*ojn.KkoAAR!h;IkYht#LWn^uXef%TWDg$mJCnBohUd+%O0e*bH-mE3cBaNa(lbj36jlbgg/_8b`S`9=nOke"Xn\A%+6]B-E1jKc8TYdNJnZf/!ii2Ws;Vl\aOWnjEcVqduBg7P+mSY4W(S^s0seWuQOPEaMqOT<c.NdoB5MTq!5~>
+<~bD(\mK7M$nIE$_^`-Z[EG]UZDE5$C1]Q%\tDJ-IqA@?2\ZtEaOAR)HL>-;:9XC##.>u[b,;5RMmUf^?b<_K&a8=`[KRo)SA:I1=B5F"o*P"Ics8N;`#22js[MF9.S67mpX.t^&7JNbB04<f28+F?*hGrSV<G;^4Z2%t$e&90H7D_VT90F2GH"_fOjB.O*p.fa$.!+75U?75eY-NI<s!*CNI<[7ZE,61Uc!)Og=:*9O1*rnnS!(\+1~>
+<~7N;Cr)ZW8F~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.498291 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 289.125 416.813] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(PuOr)
+[7.337133
+0
+6.116111
+0
+8.558156
+0
+3.663067
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+2842.5 2467.5 150 1650 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [379 283 399 503]
+  /XStep 20
+  /YStep 220
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+3790 2830 200 2200 re
+W
+q
+[0 2200 -200 0 3990 2830] cm
+/DeviceRGB setcolorspace
+[<~%Y$PGZWIFiJe\0nA,bDprq?oTg?Z&FdXZD?<%!JR!)!~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 11
+  /Height 1
+  /ImageMatrix [11 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.500244 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+3067.5 2467.5 150 1650 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [409 283 429 503]
+  /XStep 20
+  /YStep 220
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+4090 2830 200 2200 re
+W
+q
+[0 2200 -200 0 4290 2830] cm
+/DeviceRGB setcolorspace
+[<~It9]fK09Ko4pQm.#DtbON'R]/63iT>#EhIZPXPeB7L#5M#+A'eSOj$X8d:t^#,=lsV+q5m:Bmdp#-(Q*XA]>+<!KR-#-q;7ZrmUA=pDKA#.\"D]3bcU?j=AT"i4[P_IWnhB*H:g"itE]b%q4(D$8+%"j_/ld;fE=FFOMEFpHTB#hO>/fm=+]I1>"]&)MgLi.;[&KGW[')<HYok)(8EN$@MH-0pX@m#imePqVTm1@U\hnXDN/SilV;~>
+<~5P:a;p7t1PVb-W^9_bYaq5mQkY?(P*=o5O1r3]o1[po<HAH'2Rrk*"G^2<ncEW<mts29-]`HqR)IfF]8JcElHs3-<!cA_eLO8mUks3d55e=$?eSc@<7s4F+Hg8Fu*WrCeUrnamYhm<=?[f56rro1Tij1kTT_YrW9rTD9#kf`qicMd(VrTr&3mFV:(gALEqr:&YAn`0N;jnnZ5qXj(Lp$MSJn+l\Iq=aCSp[n7Tp&FadpAXenp@n@U~>
+<~p\FLUq=OCVoC_qMo_J%Kq=*tNn+$2?nG)A=pZq5?l0S--lh0H*o]><.jQ?$mjmh<inDE3nhVdhWhX0(Rm+L.[f\5ZCg$7,>lI=DLda[L.dc]!)k0D<8s31Q*s2tE's2oiOaiNJ^`o4qUi5ELi_nb-F^>6T;gqLAS]sue.[b/-tf=8-;[]n;iY10eZe$5q#YGfgNVU)?>cDmV_W1_>2T#mduaJ,*BTU3WhQ,B,U_O?V&R#f"JN4kI5~>
+<~]TS)^OG:9*K=?ej[>KI@LjZL_HEi-JYC^o"J9.f@EN=J:DQ.qtW-N'SG@dUn@\e*QUN0V6EESuR<M+/,Snq2nCJ1138=O9]R:\aPA3Q>h4-a56P[?;2>r%LG0996fNE7Tf<@E]&-APGDKhinF9d#![*e$[#Hq,-%72^><(Ni%ZF$LCY57qfs%r=?<C,uc93=9=W#\#[s?o8*n(Gl8!1BU`6!`guV;_J/J/c\Wu!)"mD9)~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 348 416.813] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(RdBu)
+[7.942144
+0
+6.116111
+0
+7.337133
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+3442.5 2467.5 150 1650 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [459 283 479 503]
+  /XStep 20
+  /YStep 220
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+4590 2830 200 2200 re
+W
+q
+[0 2200 -200 0 4790 2830] cm
+/DeviceRGB setcolorspace
+[<~%VGb`Z5>+C?qp9iK)OHErq?oMjm\GPhF!LE+_IeZ0OX~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 11
+  /Height 1
+  /ImageMatrix [11 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+3667.5 2467.5 150 1650 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [489 283 509 503]
+  /XStep 20
+  /YStep 220
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+4890 2830 200 2200 re
+W
+q
+[0 2200 -200 0 5090 2830] cm
+/DeviceRGB setcolorspace
+[<~Iqo$,D?(f"!$QIb+aF&3HiP@?!$[$q,DH1CM#\cZ!$mU*,a&-QPlN(s!$n!5,b4o\TE-=4"!scJ-)_+sWXU>W&1F^q.BsX<ZPkC&*A+`C0"E2[]-]8F.5JUg1VbY#_(mpc2)iH435mp=`]ZE)5Wm.U4j$5Xb=FnB97K7P:.!9'7*nk$d8icc=@gnF9%@3?emM5(@o(ch:tfS\gM9dED-#M4=Pn1'iHAJcH!]NX@-)iHk(.(+KP0M(~>
+<~C$CLjl\o]IO)OEKEpf37n!A4eRX"@mHh*eWo:^[+Uk/08KCu3tp8a#DXbukWNVKf?q6Z=\\!?g#R/2*?ResgiqnSm%_P@%JVYnK6r5l&=bHLlhZMi+WrR&.Re%>S/^&?NtrRf!cg;X$Fa8Of8rSG`rhp22Zd/DtPrT)N-jk'Iog&:-hrTW2;leqa.ir/9*r9reGnEBf?lMU5>qt'7Qo^D\LnbVqLq=aIVp@\4TpA=T6p@n@Tp\=CT~>
+<~q=F@Vnb2eJpA+1Mq<dkNm.C,>oD%S@puq;Ck4/3,nFko2p>PH4hsL'mm.B*!o@iL$f]htXkjd3dn^HXidH0lDjRCFSn&s_Zal2[.i9eJ?mD@`H^YS7ih!;Q+lF>O4[Fj`MfBBHikH37sX4-40dcI=PJ)m?Mj.OZWS]p)_b2J`0i0MF@PK)IA`86Nkh2K2*M8.f#^"S.Ofn$]dI^dpU[FTT/eTJ.GEj*o/XjLpbctKE)AZ*g^Us35?~>
+<~bZga_=.[N5SB+Qra%_r@8sdLdQ,H%R_a'@$4cmK@NkdW5^c%(b1l8q%LV>Ks]eG)P07SSd/qCSdI_.1Z].A<?/:"cVGIT/G\12U0.<;jGE3q$2ZR9Rp-#9_1Bs/^nXWV2U*b2/h@Ab#NV&*F3'jI=E=e-.+Rh/Se%TAZ%;3M>_O9nX@#>9pY8V[L>KEXbp"@@M>5^EPsG6C!K"?CE(2f&USBE^/&"Ya?g0OX~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 407.625 416.813] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(RdGy)
+[7.942144
+0
+6.116111
+0
+8.558156
+0
+5.5001
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+4042.5 2467.5 150 1650 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [539 283 559 503]
+  /XStep 20
+  /YStep 220
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+5390 2830 200 2200 re
+W
+q
+[0 2200 -200 0 5590 2830] cm
+/DeviceRGB setcolorspace
+[<~%VGb`Z5>+C?qp9iK)OHErr;uUrjr)ar_<A1~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 11
+  /Height 1
+  /ImageMatrix [11 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+4267.5 2467.5 150 1650 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [569 283 589 503]
+  /XStep 20
+  /YStep 220
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+5690 2830 200 2200 re
+W
+q
+[0 2200 -200 0 5890 2830] cm
+/DeviceRGB setcolorspace
+[<~Iqo$,D?(f"!$QIb+aF&3HiP@?!$[$q,DH1CM#\cZ!$mU*,a&-QPlN(s!$n!5,b4o\TE-=4"!scJ-)_+sWXU>W&1F^q.BsX<ZPkC&*A+`C0"E2[]-]8F.5JUg1VbY#_(mpc2)iH435mp=`]ZE)5Wm.U4j$5Xb=FnB97K7P:.!9'7*nk$d8icc=@gnF9%@3?emM5(@o(ch:tfS\gM9dED-#M4=Pn1'iHAJcH!]NX@-)iHk(.(+KP0M(~>
+<~C$CLjl\o]IO)OEKEpf37n!A4eRX"@mHh*eWo:^[+Uk/08KCu3tp8a#DXbukVN;0]>pp?4[[ZpTuQhkg9Rej^gqS/^#_P@"HVYeB4qoGi9b-(ZdZ2DnSr6VqNd^oA+^&6HrrRf!cfu<pEa8Oi9rSGcti6VD^df/=WroVi3kh?%$h>cj"s6\kHn)jZ?l2UA@s7GaZp@/+VoDeXZs8)Kiqt^9iqu?Wms8Muss8M]kqu6KkrqucmrqZQg~>
+<~rqHEcrq-3]rpg!VrpKdPrp0RJroa:CroF(=ro*k7rnm_2rnRM-rn7;'rmq)!rm^qqrmC_krm(Merlb;_rlG)Yrl+lSrk\TLrkABFrk&0?rjVm8rj;[1rilC)riH+!ri#gnrhTOfrh07^rg`tVrg<\NrfmDFrfI,=repc4reLK,re(3#rdOiord+QfrcS3]rc%jSrbVRJrb)4AraPk7ra,S.r`T5%r`/qqr_WShr_3;`r^d#Xr^6ZN~>
+<~r]gBFr]C*>r\sg6r\OO.r\+7&r[[ssr[7[krZhCcrZM1]rZ(eR~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 462.75 416.813] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(RdYlBu)
+[7.942144
+0
+6.116111
+0
+7.337133
+0
+2.442044
+0
+7.337133
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+4642.5 2467.5 150 1650 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [619 283 639 503]
+  /XStep 20
+  /YStep 220
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+6190 2830 200 2200 re
+W
+q
+[0 2200 -200 0 6390 2830] cm
+/DeviceRGB setcolorspace
+[<~%]'.Pf.\TED+"9)@K,2Hs8NVEi:H`Eg$*U\d7&2b0fG9~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 11
+  /Height 1
+  /ImageMatrix [11 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+4867.5 2467.5 150 1650 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [649 283 669 503]
+  /XStep 20
+  /YStep 220
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+6490 2830 200 2200 re
+W
+q
+[0 2200 -200 0 6690 2830] cm
+/DeviceRGB setcolorspace
+[<~2Q$R&WW=EI![XuP-*ROuZ3MY^#pcqf,Ie4.\e$+!&gP+*,/>!=_AOQ9)^<9B,01iMarr"Qs!*$<,pU_`,ge%ddjl`o/LK%%-eL.$g+t/32(@??/)E9;i&iUM4tbh\0B>JSj[Cod82B@#1[%Oiktj8&;E!i@3:'^,m92R=>W_C]4RccBn7+ZPAjGp#61\kYoPHtgDaa;>7J:gmpNK1'GtIdY9)3s0q1269KMD;u:ATit:]$)Jqi=YP~>
+<~P#M7B<;W"^r0g[aS65]]=o=ssr1mQpVHs+u?N$p3rN0K+Y@@I8A,`fGrjHG<\7klQC&Yb\rk<7K^i04hEW3purl90\a`ma-H2c'8rm-#ld=;/EJc=/Ormlf&fSBI[M>l7ernWP4hN%TnOT+7&ro97B4lqt/k*Q,3RK)N@s6H6Um@XFHU&XVWs7)rco;DW\WW2[ms7`Yqpoj_oZ2a^-s898(rO2b)\GuQ>s8KY1rrBb4rrBe5s$4C!~>
+<~s2"^7_u9VSr;Xk8rlY*:c2%@cq#/\9rRLW>f_#*roD@D8qr.&@jR;p-mJ6#5q!@;@mcaE7kP"K.p@RGGomc#opYkc=i:Ha$o(_&3ptYE7g@4min+bK&psea+dd?eUm.S`jp<;gpb3AQ=kk)jWo>9Y\^ub+#jRBeAn%%EF\)?\]hsI`+m',:2Y1r6Cg?GWil)<4tVUak*eE3LRje1#_T$QJfcJtA;ig@mIQHA'La5<'!hN,S1NPU,"~>
+<~Mnn)(^=n=Sfn?rhK"0E_[aol7eU+XPH*PhAYL7Npd;l;7DlM'"Vp9(Sc"WrsB;*L[T?1T6aC1RY?^Si=QGm'm`*&8@=HC="NPJMO^Jfs&;22b[KY1'3\kIUa97=<AHacLi[RPGJ7!,b&Ej@uLYs<015ARGdBWXE\Aun+*X#jai3a\jH>c0PbVDq\S2cZY3;kl6ITf#T<2+sPu8Y.b.S23O%1I7Hb5++/fQn^Ue0fG:O2O+~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 522.375 416.813] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(RdYlGn)
+[7.942144
+0
+6.116111
+0
+7.337133
+0
+2.442044
+0
+8.558156
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+5242.5 2467.5 150 1650 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [699 283 719 503]
+  /XStep 20
+  /YStep 220
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+6990 2830 200 2200 re
+W
+q
+[0 2200 -200 0 7190 2830] cm
+/DeviceRGB setcolorspace
+[<~%]'.Pf.\TED+"9)@K,2Cs8NVEg$airfkP-4@iC_2!,+:~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 11
+  /Height 1
+  /ImageMatrix [11 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+5467.5 2467.5 150 1650 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [729 283 749 503]
+  /XStep 20
+  /YStep 220
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+7290 2830 200 2200 re
+W
+q
+[0 2200 -200 0 7490 2830] cm
+/DeviceRGB setcolorspace
+[<~2Q$R&WW=EI![XuP-*ROuZ3MY^#pcqf,Ie4.\e$+!&gP+*,/>!=_AOQ9)^<9B,01iMarr"Qs!*$<,pU_`,ge%ddjl`o/LK%%-eL.$g+t/32(@??/)E9;i&iUM4tbh\0B>JSj[Cod82B@#1[%Oiktj8&;E!i@3:'^,m92R=>W_C]4RccBn7+ZPAjGp#61\kYoPHtgDaa;>7J:gmpNK1'GtIdY9)3s0q1269KMD;u:ATit:]$)Jqi=YP~>
+<~P#M7B<;`(_r0g[aS65]]=o=ssr1mQpVHs/!?N$p3rN0K+Y@@I8A,W`ErjHG<\7bfPC&Yb[rk<4J^i'.hDuR^qrl9*Za`RO*G5fa2rm,oid<klAIJqZFrRQPufRj+VK`9_\rnWD0hhh?jMuM[pro9(>5in..k*,i/QN-3:s6H0Sm%+1ET`=JUs7)udnu2T\X8hjqs7W\spp0qq[K$*4s80A,r4;q,]`7rDs8Kb4rkJL5!5JR6J%u!_~>
+<~^]"2Hr;XJ-s1J1-](l97p\qVprNu4pZLe!tnb]HXqPruZVsX;UlhI4=pRgXBSEBL5jReeuo9J8)P2>_jh=6N[n;Q&hMq@BSeaA7Bm>'-VL=#7>cK^&+l@R1CJB6r(`ohcgk'Y&-Hbe`g^>sOOj*/)oG.?LQ[X[4V[,5o/hJf[SDlqf4X4qKjg2*\?CSf]uUY'7Rf4^c,B:RLaRabr9dq4lmAWkDOOO%Ktc=MpYAVeQAL!+%[b%6+F~>
+<~AUVX2HcK]B`as;2ATPb#E5H.'_.7>sA8&\eB"_\b]OG<\@U?TR>e"3F[U<1E?W=C>;6jM(Z!DiQY['i'>Xki"6`XBUW`hQa=ZWH_2l0S4UfK4E<\C(G.\BZfSl6l(;BVE**19V?QV\B^:Ci[b$^+3gOA#\99)srE!/jGLMFml)8H=K9!/3rDK1>om7K@p,!.@68HU@dY63)3p!-LL+F$9SD4TKC^!,O[rC,c3,2ZRLk2Z~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 579.75 416.813] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(Spectral)
+[7.337133
+0
+6.116111
+0
+6.116111
+0
+5.5001
+0
+3.058056
+0
+3.663067
+0
+6.116111
+0
+2.442044
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+5842.5 2467.5 150 1650 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [779 283 799 503]
+  /XStep 20
+  /YStep 220
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+7790 2830 200 2200 re
+W
+q
+[0 2200 -200 0 7990 2830] cm
+/DeviceRGB setcolorspace
+[<~%\<\feNQe$D+"9)@K,2Cs8NVEk4P+Bh5"Z"V)!k??;I9~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 11
+  /Height 1
+  /ImageMatrix [11 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+6067.5 2467.5 150 1650 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [809 283 829 503]
+  /XStep 20
+  /YStep 220
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+8090 2830 200 2200 re
+W
+q
+[0 2200 -200 0 8290 2830] cm
+/DeviceRGB setcolorspace
+[<~J"Qs4UBs>b%7R3,7B."jX;4=/)+_"P8@'@/[3/)N,>,Nn9=uWF^*uak.nmf39uJ\Z`\C3/1JZ(M:<YUkc8\SG3`"0d:XhO'eius_5Yp'":YS94h*k)q7nqo5:#S`=i_3#+:.jVE8`ioAk>Xt8<^u=T7I"#DlWZdD?%56/?UF0h6LSDNn7=oUB0u0'6M"tZoPHtgDaa;=7JCmnpNB(%Gt@aX8bmg-qLM<9K1u,r:&BcBqhn;JN`#\9~>
+<~;Z)bXr0C@\R9'6U=8\Xlr1R<lUKdYn>lCU-rMs<(X^M+2@f<QArNg&6[V#NKBE#JVrk*"F^23eaDZ4gsDuR^qrl9*Za`RO*G5fa2rm,oid<klAIJqZFrRQPufRj+VK`9_\rnWD0hhh?jMuM[pro9(>jcTT*PQ0j4s65pNl^Rq@ScA,Ns6l`_nYZ?WW;lLjs7NPpp9=SlZN'a.s8'5)qmlb)])V`As8BY2rkAF4!5JR6!5JR6J%u!_~>
+<~^]"2HrVsS/s1J7/]DDQ=q>[u#rjMV$[.jR*pAM5grN>ejXRl@io)#BUqPNcYV!n,RmeNOCpn$gGSa,s=l1US/p6k(9R-!t,j7J\so9\A*Qeq;"h!p`an<_bqR+:Vle*WRMm$c5cR`jucam#>8kafZTT#'Q]^457;]]>`rj.Wp@U9rmSZ/DC\hk[@1UoN7HVqe)EgSCRtV4cM<S_0d.f;4kcV3TT-PLQFje"r)QUl3WrLsVrOc_Q3=~>
+<~Uk$^cIE\L5bG9@)UijeTElXto`h[FiV.miDB#:BS^nkGRVHpm5>.^_7\Z&T<W`$7+:U@/sYciOJY-:EsZ:(\!6)V+SUpiI[\2g1l2k7K;R_1GC]ePec0Ts.(OM3E/^+bJZ0o<S"LV5R!]JbDS3.SS$I^qOf\35/I5BsV%FgXPWZp\o@7W5V'D6c`JYY/Z59kLP'A?A[;XAWE+<*cM(>H(\+Vcd&t>#_>';57GnU0^UqU&~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 256
+  /Height 1
+  /ImageMatrix [256 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.501953 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 92.25 214.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(Accent)
+[7.337133
+0
+5.5001
+0
+5.5001
+0
+6.116111
+0
+6.116111
+0
+3.058056
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+1042.5 892.5 150 1200 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [139 553 159 713]
+  /XStep 20
+  /YStep 160
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+1390 5530 200 1600 re
+W
+q
+[0 1600 -200 0 1590 5530] cm
+/DeviceRGB setcolorspace
+[<~#_0sG^95ua^kVmh$(3bhYj_^D^KVNRAc~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 8
+  /Height 1
+  /ImageMatrix [8 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.500122 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0.1489] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 20 165.75] Tm
+0 0 Td
+/F12_0 11.0002 Tf
+(Qualitative)
+[8.558156
+0
+6.721122
+0
+6.116111
+0
+3.058056
+0
+3.058056
+0
+3.663067
+0
+6.116111
+0
+3.663067
+0
+3.058056
+0
+6.116111
+0
+6.116111
+0] Tj
+32.25 -13.5 Td
+(\(qual\))
+[3.663067
+0
+6.721122
+0
+6.721122
+0
+6.116111
+0
+3.058056
+0
+3.663067
+0] Tj
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 154.5 214.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(Dark2)
+[7.942144
+0
+6.116111
+0
+3.663067
+0
+5.5001
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+1642.5 892.5 150 1200 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [219 553 239 713]
+  /XStep 20
+  /YStep 160
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+2190 5530 200 1600 re
+W
+q
+[0 1600 -200 0 2390 5530] cm
+/DeviceRGB setcolorspace
+[<~'H<Wffj=f'E3n^VMIr_,k,SQ\FrgQo~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 8
+  /Height 1
+  /ImageMatrix [8 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.500122 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 213.75 214.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(Paired)
+[7.337133
+0
+6.116111
+0
+2.442044
+0
+3.663067
+0
+6.116111
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+2242.5 292.5 150 1800 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [299 553 319 793]
+  /XStep 20
+  /YStep 240
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+2990 5530 200 2400 re
+W
+q
+[0 2400 -200 0 3190 5530] cm
+/DeviceRGB setcolorspace
+[<~*N%-B+*b/uhhj4_/Gkm(iu/p9^Mj.%!6VUuC-A$crr\[o=XX~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 12
+  /Height 1
+  /ImageMatrix [12 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.500244 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 271.125 214.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(Pastel1)
+[7.337133
+0
+6.116111
+0
+5.5001
+0
+3.058056
+0
+6.116111
+0
+2.442044
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+2842.5 742.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [379 553 399 733]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+3790 5530 200 1800 re
+W
+q
+[0 1800 -200 0 3990 5530] cm
+/DeviceRGB setcolorspace
+[<~%f<W9Zd%OSlc%`(jSmi0s8N;Ijk.9Fg?eh0~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 9
+  /Height 1
+  /ImageMatrix [9 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.500244 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 331.125 214.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(Pastel2)
+[7.337133
+0
+6.116111
+0
+5.5001
+0
+3.058056
+0
+6.116111
+0
+2.442044
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+3442.5 892.5 150 1200 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [459 553 479 713]
+  /XStep 20
+  /YStep 160
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+4590 5530 200 1600 re
+W
+q
+[0 1600 -200 0 4790 5530] cm
+/DeviceRGB setcolorspace
+[<~'=6]CrQVFee`cYJjQ?-Ws73>_ir.(~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 8
+  /Height 1
+  /ImageMatrix [8 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 398.625 214.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(Set1)
+[7.337133
+0
+6.116111
+0
+3.058056
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+4042.5 742.5 150 1350 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [539 553 559 733]
+  /XStep 20
+  /YStep 180
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+5390 5530 200 1800 re
+W
+q
+[0 1800 -200 0 5590 5530] cm
+/DeviceRGB setcolorspace
+[<~%ceNJ2h&82Y=b0WU]5fDs8N9ZVH,,>J\V2P~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 9
+  /Height 1
+  /ImageMatrix [9 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 458.625 214.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(Set2)
+[7.337133
+0
+6.116111
+0
+3.058056
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+4642.5 892.5 150 1200 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [619 553 639 713]
+  /XStep 20
+  /YStep 160
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+6190 5530 200 1600 re
+W
+q
+[0 1600 -200 0 6390 5530] cm
+/DeviceRGB setcolorspace
+[<~'P>4Yr/G0FTZcMU_ku'cs4K'e`0C8-~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 8
+  /Height 1
+  /ImageMatrix [8 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+/DeviceGray {} cs
+[0] sc
+q
+[10 0 0 10 0 0] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[1 0 0 1 518.625 214.313] Tm
+0 0 Td
+/F9_0 11.0002 Tf
+(Set3)
+[7.337133
+0
+6.116111
+0
+3.058056
+0
+6.116111
+0] Tj
+Q
+q
+/DeviceGray {} cs
+/DeviceGray {} CS
+0 w
+5242.5 292.5 150 1800 re
+W
+<<
+  /PatternType 1
+  /PaintType 1
+  /TilingType 3
+  /BBox [699 553 719 793]
+  /XStep 20
+  /YStep 240
+  /PaintProc { 
+[0.1 0 0 0.1 0 0] cm
+q
+6990 5530 200 2400 re
+W
+q
+[0 2400 -200 0 7190 5530] cm
+/DeviceRGB setcolorspace
+[<~!fb[Ls8N_<^:N%qJ9$1Fe,?X_ZefEoc/nrX#eY]$bj37Jm;D~>
+<>]
+0
+<<
+  /ImageType 1
+  /Width 12
+  /Height 1
+  /ImageMatrix [12 0 0 -1 0 1]
+  /BitsPerComponent 8
+  /Decode [0 1 0 1 0 1]
+  /DataSource { pdfImStr }
+    /RunLengthDecode filter
+>>
+image
+pop pop
+Q
+Q
+  }
+>>
+[7.4998 0 0 -7.49998 0.5 6240.5]
+makepattern setpattern
+clippath fill
+Q
+Q
+Q
+showpage
+%%PageTrailer
+pdfEndPage
+%%Trailer
+end
+%%DocumentSuppliedResources:
+%%+ font ASXHQQ+Helvetica-Bold
+%%+ font AFNZFI+Helvetica
+%%EOF

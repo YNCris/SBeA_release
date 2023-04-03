@@ -34,8 +34,11 @@ Output:
 ### 2. Single animal behavior segmentation by Behavior Atlas (BeA)  
 The second step is to decompose the behvior of single animal.  
 Demo results:  
-![image]()  
-  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/demo_step2.png)  
+Notes:  
+Panel: behavior atlas of each animal  
+Color: different clusters of single animal behavior modules
+
 Script: [SBeA_step_2_mice.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_2_mice.m)  
   
 Input:  

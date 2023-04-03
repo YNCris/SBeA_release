@@ -25,5 +25,5 @@ Right: social behavior atlas with distance map
 Circle: current social behavior module of left three groups  
 Trace: previous social behavior modules last 100 frames  
 ## 2. The tutorial of SBeA 
-[SBeA_tracker]() 
-[SBeA_mapper]()
+[SBeA_tracker](https://github.com/YNCris/SBeA_release/blob/main/README_SBeA_tracker.md)   
+[SBeA_mapper](https://github.com/YNCris/SBeA_release/blob/main/README_SBeA_mapper.md)

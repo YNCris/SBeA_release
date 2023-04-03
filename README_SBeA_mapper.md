@@ -61,9 +61,8 @@ Script: [SBeA_step_3.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_ma
 Input:  
 *_struct.mat:  BeA struct of single animal
   
-Output:
-*.mat: single-animal trajectories
-*.avi: corresponding videos of single-animal trajectories  
+Output:  
+*_social_struct.mat:  SBeA struct of social behaviors
 
 ### 4. Social behavior clustering
 The fourth step is to map and cluster all the social behavior modules across different videos under the same metric in the same low dimensional space.  

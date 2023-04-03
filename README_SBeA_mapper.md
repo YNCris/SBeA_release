@@ -74,13 +74,10 @@ The fourth step is to map and cluster all the social behavior modules across dif
 Demo results:  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/demo_step4.png)  
 Notes:  
-Green line: the trajectories of animal 1  
-Orange line: the trajectories of animal 2  
-Trajectories: the trajectories are arranged by the order of [X_nose,X_left_ear,...,Y_nose,Y_left_ear,...,Z_nose,Z_left_ear...]  
-NM: the decomposition of non-locomotor movement  
-L: the decomposition of locomotion  
-D: the decomposition of distance  
-All: merge segmentations  
+Left: feature matrix of all social behavior modules  
+Center: social behavior atlas with upper boundary clusters (gray line) and lower boundary clusters (Different color of dots)
+Right: distance map of social behavior atlas
+  
 Script: [SBeA_step_4.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_4.m)  
   
 Input:  

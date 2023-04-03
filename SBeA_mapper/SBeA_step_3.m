@@ -6,12 +6,15 @@ close all
 genPath = genpath('./');
 addpath(genPath)
 %% Set path
-rootpath = ['Your path of *\BeA_path of step_1'];
+% rootpath = ['Your path of *\BeA_path of step_1'];
+rootpath = ['Z:\hanyaning\multi_mice_test\paper\' ...
+    'Nature Methods\test_run\pose tracking\BeA_path'];
 BeA_struct_path = [rootpath,'\struct'];
 save_path = [rootpath,'\social_struct'];
 mkdir(save_path)
 %% load social groups
-[social_names,temp_unique_names] = load_social_group(BeA_struct_path);
+[social_names,temp_unique_names] = ...
+load_social_group(BeA_struct_path,'.mat');
 %% Social behavior segmentation
 for iData = 1:size(social_names,1)
     %% Import dataset
@@ -20,9 +23,9 @@ for iData = 1:size(social_names,1)
     %% create SBeA struct
     clear global
     global SBeA
-    create_SBeA(social_names,BeA_struct_path,BeA_cell);
+    create_SBeA_big_data(social_names,BeA_struct_path,BeA_cell);
     %% Social behavior decomposition
-    social_behavior_decomposing(SBeA);
+    social_behavior_decomposing_big_data(SBeA);
     %% Save data
     save([save_path,'\', tempdataname{2},'_',tempdataname{3},...
         '_',tempdataname{1}(1,1:(end-11)),'_social_struct.mat'], 'SBeA', '-v7.3')

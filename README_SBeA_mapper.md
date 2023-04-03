@@ -48,47 +48,54 @@ Input:
 Output:  
 *_struct.mat:  BeA struct of single animal
  
-### 3. 
-Script: [SBeA_step_1.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_1.m)  
+### 3. Multiple animal social behavior segmentation
+The third step is to segment social behavior.  
+Demo results:  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/demo_step1.png)  
+Notes:  
+Green line: the trajectories of animal 1  
+Orange line: the trajectories of animal 2  
+Trajectories: the trajectories are arranged by the order of XYZ
+Script: [SBeA_step_3.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_3.m)  
   
 Input:  
-*id3d.mat: multi-animal trajectories with identities  
-*-camera-0.avi: one camera view video  
-Demo results:  
-![image]()  
+*_struct.mat:  BeA struct of single animal
   
 Output:
 *.mat: single-animal trajectories
 *.avi: corresponding videos of single-animal trajectories  
+
+### 4. Social behavior clustering
+The fourth step is to map and cluster all the social behavior modules across different videos under the same metric in the same low dimensional space.  
 Demo results:  
-![image]()  
-### 4. 
-Script: [SBeA_step_1.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_1.m)  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/demo_step1.png)  
+Notes:  
+Green line: the trajectories of animal 1  
+Orange line: the trajectories of animal 2  
+Trajectories: the trajectories are arranged by the order of XYZ
+Script: [SBeA_step_3.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_3.m)  
   
 Input:  
-*id3d.mat: multi-animal trajectories with identities  
-*-camera-0.avi: one camera view video  
-Demo results:  
-![image]()  
+*_struct.mat:  BeA struct of single animal
   
 Output:
 *.mat: single-animal trajectories
 *.avi: corresponding videos of single-animal trajectories  
+### 5. Group analysis (optional)
+The third step is to segment social behavior.  
 Demo results:  
-![image]()  
-### 5. 
-Script: [SBeA_step_1.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_1.m)  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/demo_step1.png)  
+Notes:  
+Green line: the trajectories of animal 1  
+Orange line: the trajectories of animal 2  
+Trajectories: the trajectories are arranged by the order of XYZ
+Script: [SBeA_step_3.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_3.m)  
   
 Input:  
-*id3d.mat: multi-animal trajectories with identities  
-*-camera-0.avi: one camera view video  
-Demo results:  
-![image]()  
+*_struct.mat:  BeA struct of single animal
   
 Output:
 *.mat: single-animal trajectories
 *.avi: corresponding videos of single-animal trajectories  
-Demo results:  
-![image]()  
 
  

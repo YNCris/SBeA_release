@@ -6,9 +6,7 @@ close all
 genPath = genpath('./');
 addpath(genPath)
 %% Set path
-% c3d_path = ['Your path of *\BeA_path of step_1'];
-c3d_path = ['Z:\hanyaning\multi_mice_test\paper\' ...
-    'Nature Methods\test_run\pose tracking\BeA_path'];
+c3d_path = ['Your path of *\BeA_path of step_1'];
 save_path = [c3d_path,'\struct'];
 mkdir(save_path)
 %% set config_bea

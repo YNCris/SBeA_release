@@ -72,7 +72,7 @@ Output:
 ### 4. Social behavior clustering
 The fourth step is to map and cluster all the social behavior modules across different videos under the same metric in the same low dimensional space.  
 Demo results:  
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/demo_step1.png)  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/demo_step4.png)  
 Notes:  
 Green line: the trajectories of animal 1  
 Orange line: the trajectories of animal 2  

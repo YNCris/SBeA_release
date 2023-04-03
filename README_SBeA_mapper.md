@@ -14,7 +14,7 @@ Case data: [fig2_data\pose tracking](https://figshare.com/projects/Social_behavi
 ### 1. Seperate multi-animal to single-animal trajectories  
 The first step is a preparation of later steps.
 Demo results:  
-![image]()  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/demo_step1.png)  
   
 Script: [SBeA_step_1.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_1.m)  
   

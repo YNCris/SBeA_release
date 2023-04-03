@@ -91,7 +91,7 @@ Output:
 ### 5. Group analysis (optional)
 The fifth step is to analyze the fractions of each social behavior modules.  
 Demo results:  
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/demo_step1.png)  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/demo_step5.png)  
 Notes:  
 Green line: the trajectories of animal 1  
 Orange line: the trajectories of animal 2  

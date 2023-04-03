@@ -12,9 +12,13 @@ Operating system: Windows 11
 Case data: [fig2_data\pose tracking](https://figshare.com/projects/Social_behavior_atlas/162718) 
 ## Run
 ### 1. Seperate multi-animal to single-animal trajectories  
-The first step is a preparation of later steps.
+The first step is a preparation of later steps.  
 Demo results:  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/demo_step1.png)  
+Notes:  
+Green line: the trajectories of animal 1  
+Orange line: the trajectories of animal 2  
+Trajectories: the trajectories are arranged by the order of XYZ
   
 Script: [SBeA_step_1.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_1.m)  
   

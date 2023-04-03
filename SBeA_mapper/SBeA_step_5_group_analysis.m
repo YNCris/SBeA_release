@@ -7,9 +7,7 @@ close all
 genPath = genpath('./');
 addpath(genPath)
 %% Set path
-% rootpath = ['Your path of *\BeA_path of step_1'];
-rootpath = ['Z:\hanyaning\multi_mice_test\paper\Nature Methods\' ...
-    'test_run\pose tracking\BeA_path'];
+rootpath = ['Your path of *\BeA_path of step_1'];
 recluster_path = [rootpath, '\recluster_data'];
 %% load data
 dsc = load([recluster_path,'\Your name to save data_sample_cell.mat']);

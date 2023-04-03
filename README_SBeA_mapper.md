@@ -13,35 +13,34 @@ Case data: [fig2_data\pose tracking](https://figshare.com/projects/Social_behavi
 ## Run
 ### 1. Seperate multi-animal to single-animal trajectories  
 The first step is a preparation of later steps.
-
+Demo results:  
+![image]()  
+  
 Script: [SBeA_step_1.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_1.m)  
   
 Input:  
 *id3d.mat: multi-animal trajectories with identities  
 *-camera-0.avi: one camera view video  
-Demo results:  
-![image]()  
   
 Output:
 *.mat: single-animal trajectories
 *.avi: corresponding videos of single-animal trajectories  
-Demo results:  
-![image]()  
 
 ### 2. Single animal behavior segmentation by Behavior Atlas (BeA)  
+The second step is to decompose the behvior of single animal.  
+Demo results:  
+![image]()  
+  
 Script: [SBeA_step_2_mice.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_2_mice.m)  
   
 Input:  
 *id3d.mat: multi-animal trajectories with identities  
 *-camera-0.avi: one camera view video
-Demo results:  
-![image]()  
   
 Output:
 *.mat: single-animal trajectories
 *.avi: corresponding videos of single-animal trajectories
-Demo results:  
-![image]()   
+ 
 ### 3. 
 Script: [SBeA_step_1.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_1.m)  
   

@@ -35,23 +35,12 @@ savelist_cell = recluster_savelist_3(...
 [data_sample_cell,net,info] = init_data_sample_cell_3_big_data_dl(...
     savelist_cell,data_move_cell,data_speed_cell,...
     data_dist_cell,fileNames);
-% data_sample_cell = init_data_sample_cell_3_dr_all(savelist_cell,...
-%     data_move_cell,data_speed_cell,data_dist_cell,fileNames);
 %% calculate dtak
 sigma = 1;% big sigma is important, if only the data have higher dimensions
 extract_len = 2000;
 dist_mat_all = calculate_dtak_distance_big_data(data_sample_cell(:,1),...
     sigma,extract_len);
 imagesc(dist_mat_all)
-% %% create data_sample_cell
-% data_sample_cell = init_data_sample_cell_3(savelist_cell,...
-%     data_move_cell,data_speed_cell,data_dist_cell,fileNames);
-% % data_sample_cell = init_data_sample_cell_3_dr_all(savelist_cell,...
-% %     data_move_cell,data_speed_cell,data_dist_cell,fileNames);
-% %% calculate dtak
-% sigma = 1;
-% dist_mat_all = calculate_dtak_distance(data_sample_cell(:,1),sigma);
-% imagesc(dist_mat_all)
 %% reclustering
 show_flag = true;
 [data_sample_cell,wc_struct] = recluster_SBeA_wc(dist_mat_all,data_sample_cell,show_flag);

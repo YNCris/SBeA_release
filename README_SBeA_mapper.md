@@ -72,7 +72,11 @@ Demo results:
 Notes:  
 Green line: the trajectories of animal 1  
 Orange line: the trajectories of animal 2  
-Trajectories: the trajectories are arranged by the order of XYZ
+Trajectories: the trajectories are arranged by the order of [X_nose,X_left_ear,...,Y_nose,Y_left_ear,...,Z_nose,Z_left_ear...]  
+NM: the decomposition of non-locomotor movement  
+L: the decomposition of locomotion  
+D: the decomposition of distance  
+All: merge segmentations  
 Script: [SBeA_step_4.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_4.m)  
   
 Input:  

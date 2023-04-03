@@ -26,8 +26,8 @@ Input:
 *id3d.mat: multi-animal trajectories with identities  
 *-camera-0.avi: one camera view video  
   
-Output:
-*.mat: single-animal trajectories
+Output:  
+*.mat: single-animal trajectories  
 *.avi: corresponding videos of single-animal trajectories  
 
 ### 2. Single animal behavior segmentation by Behavior Atlas (BeA)  
@@ -42,7 +42,7 @@ Input:
 *-camera-0.avi: one camera view video
   
 Output:
-*.mat: single-animal trajectories
+*.mat: single-animal trajectories  
 *.avi: corresponding videos of single-animal trajectories
  
 ### 3. 

@@ -6,8 +6,7 @@ close all
 genPath = genpath('./');
 addpath(genPath)
 %% Set path
-id_3d_path = ['Z:\hanyaning\multi_mice_test\Social_analysis\' ...
-    'data\two_dogs\sbea_data_20221129'];
+id_3d_path = ['Your path of *id3d.mat'];
 savepath = [id_3d_path,'\BeA_path'];
 mkdir(savepath)
 %% process

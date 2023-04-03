@@ -6,8 +6,7 @@ close all
 genPath = genpath('./');
 addpath(genPath)
 %% Set path
-rootpath = ['Z:\hanyaning\multi_mice_test\Social_analysis\' ...
-    'data\two_dogs\sbea_data_20221129\BeA_path'];
+rootpath = ['Your path of *\BeA_path of step_1'];
 BeA_struct_path = [rootpath,'\struct'];
 save_path = [rootpath,'\social_struct'];
 mkdir(save_path)

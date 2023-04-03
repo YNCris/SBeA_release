@@ -7,12 +7,11 @@ close all
 genPath = genpath('./');
 addpath(genPath)
 %% Set path
-rootpath = ['Z:\hanyaning\multi_mice_test\Social_analysis\' ...
-    'data\hcl_bird\sbea_data_20220919\BeA_path'];
+rootpath = ['Your path of *\BeA_path of step_1'];
 SBeA_struct_path = [rootpath, '\social_struct'];
 save_path = [rootpath, '\recluster_data'];
 videopath = rootpath;
-cutvideoname = 'sbeapath_20221130_watershed';
+cutvideoname = ['Your path to save cut videos'];
 mkdir(save_path)
 %% get all SBeA structs
 fileFolder = fullfile(SBeA_struct_path);
@@ -62,9 +61,9 @@ scatter(zscore_embed(:,1),zscore_embed(:,2),10*ones(size(zscore_embed,1),1),cmap
 axis square
 title('dist map')
 %% save data_sample_cell and distmatall
-save([save_path,'\SBeA_data_sample_cell_20221130.mat'],'data_sample_cell');
-save([save_path,'\SBeA_dist_mat_all_20221130.mat'],'dist_mat_all','-v7.3');
-save([save_path,'\SBeA_wc_struct_20221130.mat'],'wc_struct');
+save([save_path,'\Your name to save data_sample_cell'],'data_sample_cell');
+save([save_path,'\Your name to save dist_mat_all'],'dist_mat_all','-v7.3');
+save([save_path,'\Your name to save wc_struct'],'wc_struct');
 %% cut videos
 cut_videos(save_path,cutvideoname,data_sample_cell,dist_mat_all,videopath)
 

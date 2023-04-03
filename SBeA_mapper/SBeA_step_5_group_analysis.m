@@ -7,11 +7,10 @@ close all
 genPath = genpath('./');
 addpath(genPath)
 %% Set path
-rootpath = ['Z:\hanyaning\multi_mice_test\Social_analysis\' ...
-    'data\shank3_wt\sbea_data_20221108\BeA_path'];
+rootpath = ['Your path of *\BeA_path of step_1'];
 recluster_path = [rootpath, '\recluster_data'];
 %% load data
-dsc = load([recluster_path,'\SBeA_data_sample_cell_20221209.mat']);
+dsc = load([recluster_path,'\Your name of data_sample_cell']);
 %% analysis
 beh_labels = cell2mat(dsc.data_sample_cell(:,8));
 unique_little_labels = unique(beh_labels(:,1));
@@ -20,18 +19,19 @@ unique_data_name = unique(dsc.data_sample_cell(:,3));
 tempsplname = cellfun(@(x) split(x,'_'),unique_data_name,...
     'UniformOutput',false);
 %
-mice_names = {...
-    'M1','KO';
-    'M2','KO';
-    'M3','KO';
-    'M4','KO';
-    'M5','KO';
-    'M6','WT';
-    'M7','WT';
-    'M8','WT';
-    'M9','WT';
-    'M10','WT'};
-% generate groups
+mice_names = {'Your animal name like below'};
+% mice_names = {...
+%     'M1','KO';
+%     'M2','KO';
+%     'M3','KO';
+%     'M4','KO';
+%     'M5','KO';
+%     'M6','WT';
+%     'M7','WT';
+%     'M8','WT';
+%     'M9','WT';
+%     'M10','WT'};
+
 group_names = cell(size(tempsplname,1),5);
 for k = 1:size(group_names,1)
     %%

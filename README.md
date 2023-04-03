@@ -6,6 +6,7 @@ The study of social behaviors in animals is essential for understanding their su
 Linked paper: [Social Behavior Atlas: A computational framework for tracking and mapping 3D close interactions of free-moving animals](https://www.biorxiv.org/content/10.1101/2023.03.05.531235v1)  
 ## 1. The demo of SBeA 
 ### Multi-animal tracking cross species
+#### Tracking mice
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/rec11-A1A6-20220822_visual.gif)  
 #### Tracking parrots
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/rec3-B1B2-20220919_visual.gif)  

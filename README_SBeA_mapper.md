@@ -81,11 +81,13 @@ Right: distance map of social behavior atlas
 Script: [SBeA_step_4.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_4.m)  
   
 Input:  
-*_struct.mat:  BeA struct of single animal
+*_social_struct.mat:  SBeA struct of social behaviors
   
-Output:
-*.mat: single-animal trajectories
-*.avi: corresponding videos of single-animal trajectories  
+Output:  
+*data_sample_cell.mat: all of the segmentation data of social_struct used for clustering  
+*dist_mat_all.mat: the feature matrix  
+*wc_struct.mat: the adaptive watershed clustering results 
+
 ### 5. Group analysis (optional)
 The fifth step is to analyze the fractions of each social behavior modules.  
 Demo results:  

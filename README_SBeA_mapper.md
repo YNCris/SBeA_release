@@ -93,16 +93,19 @@ The fifth step is to analyze the fractions of each social behavior modules.
 Demo results:  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/demo_step5.png)  
 Notes:  
-Green line: the trajectories of animal 1  
-Orange line: the trajectories of animal 2  
-Trajectories: the trajectories are arranged by the order of XYZ
+Left top: the fraction matrix with lower classes  
+Left bottom: the fraction matrix with upper classes   
+Right: phenotype space of social groups
+  
 Script: [SBeA_step_5_group_analysis.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_5_group_analysis.m)  
   
 Input:  
-*_struct.mat:  BeA struct of single animal
+*data_sample_cell.mat: all of the segmentation data of social_struct used for clustering  
   
-Output:
-*.mat: single-animal trajectories
-*.avi: corresponding videos of single-animal trajectories  
+Output:  
+*fractions_little.mat: the social behavior module fractions of each group with lower boundary of clustering
+*fractions_much.mat: the social behavior module fractions of each group with upper boundary of clustering 
+*sort_group_names.mat: name information of social groups
+*LDE.mat: phenotype space of different groups
 
  

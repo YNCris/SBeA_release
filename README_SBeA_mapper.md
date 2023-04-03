@@ -56,6 +56,7 @@ Notes:
 Green line: the trajectories of animal 1  
 Orange line: the trajectories of animal 2  
 Trajectories: the trajectories are arranged by the order of XYZ  
+  
 Script: [SBeA_step_3.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_3.m)  
   
 Input:  

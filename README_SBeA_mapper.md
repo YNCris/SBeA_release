@@ -75,7 +75,7 @@ Demo results:
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/demo_step4.png)  
 Notes:  
 Left: feature matrix of all social behavior modules  
-Center: social behavior atlas with upper boundary clusters (gray line) and lower boundary clusters (Different color of dots)
+Center: social behavior atlas with upper boundary clusters (gray line) and lower boundary clusters (Different color of dots)  
 Right: distance map of social behavior atlas
   
 Script: [SBeA_step_4.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_4.m)  

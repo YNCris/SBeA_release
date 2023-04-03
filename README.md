@@ -1,6 +1,6 @@
 # SBeA_release
 
-## The demo of SBeA 
+## 1. The demo of SBeA 
 ### Multi-animal tracking cross species
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/rec11-A1A6-20220822_visual.gif)  
 #### Tracking parrots
@@ -23,4 +23,7 @@ WT: Wild type mouse
 KO: Shank3B knockout mouse  
 Right: social behavior atlas with distance map
 Circle: current social behavior module of left three groups  
-Trace: previous social behavior modules last 100 frames
+Trace: previous social behavior modules last 100 frames  
+## 2. The tutorial of SBeA 
+[SBeA_tracker]() 
+[SBeA_mapper]()

@@ -51,7 +51,7 @@ Output:
 ### 3. Multiple animal social behavior segmentation
 The third step is to segment social behavior.  
 Demo results:  
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/demo_step1.png)  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/demo_step3.png)  
 Notes:  
 Green line: the trajectories of animal 1  
 Orange line: the trajectories of animal 2  

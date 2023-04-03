@@ -90,19 +90,13 @@ end
 %% LDE
 Y = run_umap(fractions_much','sgd_tasks',1);
 unique_group_label = unique(cell2mat(sort_group_names(:,5)));
-cmap = cbrewer2('Spectral',length(unique_group_label));
+cmap = cbrewer2('Spectral');
 cmaplist = cmap(cell2mat(sort_group_names(:,5)),:);
 scatter(Y(:,1),Y(:,2),30*ones(size(Y,1),1),cmaplist,'filled')
-%% save
-save([recluster_path,'\Your name to save fractions_little.mat'],...
-    'fractions_little')
-save([recluster_path,'\Your name to save fractions_much.mat'],...
-    'fractions_much')
-save([recluster_path,'\Your name to save sort_group_names.mat'],...
-    'sort_group_names')
-save([recluster_path,'\Your name to save LDE.mat'],...
-    'Y')
-disp('Save finished!')
+
+
+
+
 
 
 

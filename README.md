@@ -20,7 +20,7 @@ Right: 3D poses with identities of multiple animals
 ### Social behavior clustering of mice autism model
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/embed_demo.gif)  
 Notes:  
-Left three frames: the free-social interactions of three group of mice
+Left three frames: the free-social interactions of three group of mice  
 WT: Wild type mouse  
 KO: Shank3B knockout mouse  
 Right: social behavior atlas with distance map

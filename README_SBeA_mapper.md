@@ -55,7 +55,7 @@ Demo results:
 Notes:  
 Green line: the trajectories of animal 1  
 Orange line: the trajectories of animal 2  
-Trajectories: the trajectories are arranged by the order of XYZ
+Trajectories: the trajectories are arranged by the order of XYZ  
 Script: [SBeA_step_3.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_3.m)  
   
 Input:  
@@ -82,7 +82,7 @@ Output:
 *.mat: single-animal trajectories
 *.avi: corresponding videos of single-animal trajectories  
 ### 5. Group analysis (optional)
-The third step is to segment social behavior.  
+The fifth step is to analyze the fractions of each social behavior modules.  
 Demo results:  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/demo_step1.png)  
 Notes:  

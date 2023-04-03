@@ -103,9 +103,9 @@ Input:
 *data_sample_cell.mat: all of the segmentation data of social_struct used for clustering  
   
 Output:  
-*fractions_little.mat: the social behavior module fractions of each group with lower boundary of clustering
-*fractions_much.mat: the social behavior module fractions of each group with upper boundary of clustering 
-*sort_group_names.mat: name information of social groups
+*fractions_little.mat: the social behavior module fractions of each group with lower boundary of clustering  
+*fractions_much.mat: the social behavior module fractions of each group with upper boundary of clustering   
+*sort_group_names.mat: name information of social groups  
 *LDE.mat: phenotype space of different groups
 
  

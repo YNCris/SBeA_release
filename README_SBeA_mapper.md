@@ -8,6 +8,7 @@ CPU: i9-12900K
 RAM: 128GB  
 ROM: 10TB  
 Operating system: Windows 11  
+Software: MATLAB R2022b
 
 Case data: [fig2_data\pose tracking](https://figshare.com/projects/Social_behavior_atlas/162718) 
 ## Run
@@ -38,12 +39,11 @@ Demo results:
 Script: [SBeA_step_2_mice.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_2_mice.m)  
   
 Input:  
-*id3d.mat: multi-animal trajectories with identities  
-*-camera-0.avi: one camera view video
-  
-Output:
 *.mat: single-animal trajectories  
-*.avi: corresponding videos of single-animal trajectories
+*.avi: corresponding videos of single-animal trajectories  
+  
+Output:  
+*_struct.mat:  BeA struct of single animal
  
 ### 3. 
 Script: [SBeA_step_1.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_1.m)  

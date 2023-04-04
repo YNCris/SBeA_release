@@ -6,7 +6,8 @@ from SocialBehaviorAtlas.train_utils.yolact.layers.box_utils import jaccard, cen
 from SocialBehaviorAtlas.train_utils.yolact.utils import timer
 from SocialBehaviorAtlas.train_utils.yolact.utils.functions import SavePath
 from SocialBehaviorAtlas.train_utils.yolact.layers.output_utils import postprocess, undo_image_transformation
-import pycocotools
+from ..vistr import pycocotools
+# import pycocotools
 
 from SocialBehaviorAtlas.train_utils.yolact.data import cfg, set_cfg, set_dataset
 

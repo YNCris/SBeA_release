@@ -98,7 +98,7 @@ class YTVOSeval:
                 if len(l)==0:
                   ann['avg_area'] = 0
                 else:
-                  ann['avg_area'] = np.array(l).mean() 
+                  ann['avg_area'] = np.array(l).mean()
         p = self.params
         if p.useCats:
             gts=self.cocoGt.loadAnns(self.cocoGt.getAnnIds(vidIds=p.vidIds, catIds=p.catIds))
@@ -159,8 +159,8 @@ class YTVOSeval:
 
         evaluateVid = self.evaluateVid
         maxDet = p.maxDets[-1]
-        
-        
+
+
         self.evalImgs = [evaluateVid(vidId, catId, areaRng, maxDet)
                  for catId in catIds
                  for areaRng in p.areaRng
@@ -532,8 +532,8 @@ class Params:
         self.vidIds = []
         self.catIds = []
         # np.arange causes trouble.  the data point on arange is slightly larger than the true value
-        self.iouThrs = np.linspace(.5, 0.95, np.round((0.95 - .5) / .05) + 1, endpoint=True)
-        self.recThrs = np.linspace(.0, 1.00, np.round((1.00 - .0) / .01) + 1, endpoint=True)
+        self.iouThrs = np.linspace(.5, 0.95, int(np.round((0.95 - .5) / .05)) + 1, endpoint=True)
+        self.recThrs = np.linspace(.0, 1.00, int(np.round((1.00 - .0) / .01)) + 1, endpoint=True)
         self.maxDets = [1, 10, 100]
         self.areaRng = [[0 ** 2, 1e5 ** 2], [0 ** 2, 128 ** 2], [ 128 ** 2, 256 ** 2], [256 ** 2, 1e5 ** 2]]
         self.areaRngLbl = ['all', 'small', 'medium', 'large']
@@ -543,8 +543,8 @@ class Params:
         self.vidIds = []
         self.catIds = []
         # np.arange causes trouble.  the data point on arange is slightly larger than the true value
-        self.iouThrs = np.linspace(.5, 0.95, np.round((0.95 - .5) / .05) + 1, endpoint=True)
-        self.recThrs = np.linspace(.0, 1.00, np.round((1.00 - .0) / .01) + 1, endpoint=True)
+        self.iouThrs = np.linspace(.5, 0.95, int(np.round((0.95 - .5) / .05)) + 1, endpoint=True)
+        self.recThrs = np.linspace(.0, 1.00, int(np.round((1.00 - .0) / .01)) + 1, endpoint=True)
         self.maxDets = [20]
         self.areaRng = [[0 ** 2, 1e5 ** 2], [32 ** 2, 96 ** 2], [96 ** 2, 1e5 ** 2]]
         self.areaRngLbl = ['all', 'medium', 'large']

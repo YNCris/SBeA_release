@@ -11,9 +11,9 @@ import copy
 import numpy as np
 import torch
 
-from pycocotools.cocoeval import COCOeval
-from pycocotools.coco import COCO
-import pycocotools.mask as mask_util
+from ..pycocotools.cocoeval import COCOeval
+from ..pycocotools.coco import COCO
+from ..pycocotools import mask as mask_util
 
 from SocialBehaviorAtlas.train_utils.vistr.util.misc import all_gather
 

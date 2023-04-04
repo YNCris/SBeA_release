@@ -1,4 +1,0 @@
-# ninja log v5
-0	14046	1636114857527436031	/home/dltest/Social-Behavior-Atlas-Linux/SocialBehaviorAtlas/train_utils/vistr/models/dcn/build/temp.linux-x86_64-3.7/deformable/deform_conv_cuda_kernel.o	5dde743b5f9c8ac8
-0	16703	1636114860183499167	/home/dltest/Social-Behavior-Atlas-Linux/SocialBehaviorAtlas/train_utils/vistr/models/dcn/build/temp.linux-x86_64-3.7/deformable/deform_conv_cuda.o	d66515a14c826aaa
-0	18314	1636114861787537284	/home/dltest/Social-Behavior-Atlas-Linux/SocialBehaviorAtlas/train_utils/vistr/models/dcn/build/temp.linux-x86_64-3.7/deformable/deform_conv.o	30b956ec75c47b7

@@ -60,7 +60,7 @@ Notes:
 *-camera-#.avi: the multi-view videos of number # camera  
 Fields F1-F2-F3:  
 F1: the recording serial number  
-F2: the animal name such as A1 (animal one) and A2 (animal two)  
+F2: the single animal name such as A1 (animal one)
 F3: the date
   
 Demo results:

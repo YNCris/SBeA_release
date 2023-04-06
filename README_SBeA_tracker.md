@@ -8,11 +8,11 @@ ROM: 10TB
 Operating system: Windows 11  
 Software: [Anaconda](https://www.anaconda.com/) and [Visual Studio](https://visualstudio.microsoft.com/)
 ## Installation  
-(1) The SBeA_tracker is developed in Conda using Python. You need to prepare [Conda environment](https://www.anaconda.com/) first. 
-(2) Switch to the [environment.yml](https://github.com/YNCris/SBeA_release/blob/main/SBeA_tracker/SBeA-Windows-main/environment.yml) path in Anaconda Prompt, and run   
+(1) Switch to the [environment.yml](https://github.com/YNCris/SBeA_release/blob/main/SBeA_tracker/SBeA-Windows-main/environment.yml) path in Anaconda Prompt, and run   
 `conda env -create -f environment.yml` to install virtual environment.   
 You can change the environmental name in [environment.yml](https://github.com/YNCris/SBeA_release/blob/main/SBeA_tracker/SBeA-Windows-main/environment.yml).  
-(3) Run `conda activate [your environment]`.  
+(2) Run `conda activate [your environment]`.  
+(3) Run `python setup.py install` to install the [DCN](https://github.com/CharlesShang/DCNv2/tree/pytorch_1.0) module.   
 
 
 

@@ -39,17 +39,19 @@ Create A New 'configfile.yaml'. Select a path and define a name to save your pro
 Output:  
 The workspace of your project.
 
-### 1. Create/load project  
-SBeA_tracker is managed in a project folder. The first step is to create or load a project.  
-Demo results:  
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/create_project.png)  
+### 2. Set configurations
+The second step is to set the configurations for training.  
+  
+Your data need to be organized like:  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/data_format.png)  
 Notes:  
 datasets folder: save datasets  
 evals folder: save model evaluation results  
 models folder: save deep learning models  
 configfile.yaml: the configuration of SBeA_tracker 
   
-GUI: ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/tracker_gui.png)   
+Demo results:
+GUI: ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/config_gui.png)   
   
 Input:  
 Create A New 'configfile.yaml'. Select a path and define a name to save your project (workspace). 

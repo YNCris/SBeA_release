@@ -13,7 +13,9 @@ Software: [Anaconda](https://www.anaconda.com/) and [Visual Studio](https://visu
 You can change the environmental name in [environment.yml](https://github.com/YNCris/SBeA_release/blob/main/SBeA_tracker/SBeA-Windows-main/environment.yml).  
 (2) Run `conda activate [your environment]`.  
 (3) Run `python setup.py install` to install the [DCN](https://github.com/CharlesShang/DCNv2/tree/pytorch_1.0) module.   
-(4) Switch to `.\gui` path, and run `python main.py` to launch the GUI of SBeA_tracker.   
+(4) Switch to `.\gui` path, and run `python main.py` to launch the GUI of SBeA_tracker.  
+Here is the start interface of SBeA_tracker:  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/tracker_gui.png)  
 
 
 

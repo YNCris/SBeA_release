@@ -45,10 +45,12 @@ The second step is to set the configurations for training.
 Your data need to be organized like:  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/data_format.png)  
 Notes:  
-datasets folder: save datasets  
-evals folder: save model evaluation results  
-models folder: save deep learning models  
-configfile.yaml: the configuration of SBeA_tracker 
+*-caliParas.mat: the calibration file  
+*-camera-#.avi: the multi-view videos of number # camera  
+Fields F1-F2-F3:  
+F1: the recording serial number  
+F2: the animal name such as A1 (animal one) and A2 (animal two)  
+F3: the date
   
 Demo results:
 GUI: ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/config_gui.png)   

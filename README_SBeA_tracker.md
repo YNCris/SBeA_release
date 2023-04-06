@@ -74,31 +74,43 @@ Output:
 Changed configfile.yaml. 
 
 ### 3. Load data
-The second step is to set the configurations for training.  
-  
-Your data need to be organized like:  
-Social data:  
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/data_format.png)  
-Notes:  
-*-caliParas.mat: the calibration file  
-*-camera-#.avi: the multi-view videos of number # camera  
-Fields F1-F2-F3:  
-F1: the recording serial number  
-F2: the animal name such as A1 (animal one) and A2 (animal two)  
-F3: the date
-  
-ID data:  
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/data_format_id.png)  
-Notes:  
-*-caliParas.mat: the calibration file  
-*-camera-#.avi: the multi-view videos of number # camera  
-Fields F1-F2-F3:  
-F1: the recording serial number  
-F2: the single animal name such as A1 (animal one)
-F3: the date
+The third step is to load data according to configfile.yaml. If the train and ID data are not in the path in step 2, this part is going to copy them in these folders. Additionally, the raw frames, trajectories, backgrounds, and frames for labeling are extracted in this step. If the train and ID data are existing in these folders, you only need to run load train videos without filling any testbox. 
 
+Demo results:  
+The raw frames in .\datasets\raw_video_images  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/raw_video_images.png)  
+Notes:  
+datasets folder: save datasets  
+evals folder: save model evaluation results  
+models folder: save deep learning models  
+configfile.yaml: the configuration of SBeA_tracker 
+   
+The raw frames in .\datasets\video_backgrounds  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/background.png)  
+Notes:  
+datasets folder: save datasets  
+evals folder: save model evaluation results  
+models folder: save deep learning models  
+configfile.yaml: the configuration of SBeA_tracker 
+  
+The raw frames in .\datasets\video_trajectories  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/trajectories.png)  
+Notes:  
+datasets folder: save datasets  
+evals folder: save model evaluation results  
+models folder: save deep learning models  
+configfile.yaml: the configuration of SBeA_tracker 
+  
+The raw frames in .\datasets\manual_labels  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/manual_label_data.png)  
+Notes:  
+datasets folder: save datasets  
+evals folder: save model evaluation results  
+models folder: save deep learning models  
+configfile.yaml: the configuration of SBeA_tracker 
+  
 GUI:   
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/config_gui.png)   
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/load_gui.png)   
   
 Input:  
 Your path of social and ID data.

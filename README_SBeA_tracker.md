@@ -26,16 +26,33 @@ SBeA_tracker is managed in a project folder. The first step is to create or load
 Demo results:  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/create_project.png)  
 Notes:  
-Green line: the trajectories of animal 1  
-Orange line: the trajectories of animal 2  
-Trajectories: the trajectories are arranged by the order of XYZ
+datasets folder: save datasets  
+evals folder: save model evaluation results  
+models folder: save deep learning models  
+configfile.yaml: the configuration of SBeA_tracker 
   
 GUI: ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/tracker_gui.png)   
   
 Input:  
-*id3d.mat: multi-animal trajectories with identities  
-*-camera-0.avi: one camera view video  
+Create A New 'configfile.yaml'. Select a path and define a name to save your project (workspace).
   
 Output:  
-*.mat: single-animal trajectories  
-*.avi: corresponding videos of single-animal trajectories  
+The workspace of your project.
+
+### 1. Create/load project  
+SBeA_tracker is managed in a project folder. The first step is to create or load a project.  
+Demo results:  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/create_project.png)  
+Notes:  
+datasets folder: save datasets  
+evals folder: save model evaluation results  
+models folder: save deep learning models  
+configfile.yaml: the configuration of SBeA_tracker 
+  
+GUI: ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/tracker_gui.png)   
+  
+Input:  
+Create A New 'configfile.yaml'. Select a path and define a name to save your project (workspace).
+  
+Output:  
+The workspace of your project.

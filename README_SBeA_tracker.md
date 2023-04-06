@@ -19,7 +19,9 @@ Here is the start interface of SBeA_tracker:
 
 
 
-Case data: [fig2_data\pose tracking](https://figshare.com/projects/Social_behavior_atlas/162718) 
+Case data:  
+[fig2_data\pose tracking](https://figshare.com/projects/Social_behavior_atlas/162718) 
+[fig3_data\identification\oft_50cm_id](https://figshare.com/projects/Social_behavior_atlas/162718) 
 ## Run
 ### 1. Create/load project  
 SBeA_tracker is managed in a project folder. The first step is to create or load a project.  

@@ -7,7 +7,8 @@ import torch.nn.functional as F
 import cv2
 import numpy as np
 from .config import cfg
-from pycocotools import mask as maskUtils
+# from pycocotools import mask as maskUtils
+# from ...vistr.pycocotools import mask as maskUtils
 import random
 
 def get_label_map():
@@ -65,7 +66,7 @@ class COCODetection(data.Dataset):
                  target_transform=None,
                  dataset_name='MS COCO', has_gt=True):
         # Do this here because we have too many things named COCO
-        from pycocotools.coco import COCO
+        from ...vistr.pycocotools.coco import COCO
         
         if target_transform is None:
             target_transform = COCOAnnotationTransform()

@@ -8,7 +8,7 @@ from pathlib import Path
 import torch
 import torch.utils.data
 import torchvision
-from pycocotools import mask as coco_mask
+from ..pycocotools import mask as coco_mask
 
 import SocialBehaviorAtlas.train_utils.vistr.datasets.transforms as T
 

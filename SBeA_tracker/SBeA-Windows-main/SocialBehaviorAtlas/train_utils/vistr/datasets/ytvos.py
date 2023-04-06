@@ -6,10 +6,11 @@ from pathlib import Path
 import torch
 import torch.utils.data
 import torchvision
-from pycocotools import ytvos
+from ..pycocotools import ytvos
+# from pycocotools import ytvos
 # from pycocotools.ytvoseval import YTVOSeval
 import SocialBehaviorAtlas.train_utils.vistr.datasets.transforms as T
-from pycocotools import mask as coco_mask
+from ..pycocotools import mask as coco_mask
 import os
 from PIL import Image
 from random import randint

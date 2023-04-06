@@ -43,7 +43,18 @@ The workspace of your project.
 The second step is to set the configurations for training.  
   
 Your data need to be organized like:  
+Social data:  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/data_format.png)  
+Notes:  
+*-caliParas.mat: the calibration file  
+*-camera-#.avi: the multi-view videos of number # camera  
+Fields F1-F2-F3:  
+F1: the recording serial number  
+F2: the animal name such as A1 (animal one) and A2 (animal two)  
+F3: the date
+  
+ID data:  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/data_format_id.png)  
 Notes:  
 *-caliParas.mat: the calibration file  
 *-camera-#.avi: the multi-view videos of number # camera  

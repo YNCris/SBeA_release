@@ -34,7 +34,7 @@ configfile.yaml: the configuration of SBeA_tracker
 GUI: ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/tracker_gui.png)   
   
 Input:  
-Create A New 'configfile.yaml'. Select a path and define a name to save your project (workspace).
+Create A New 'configfile.yaml'. Select a path and define a name to save your project (workspace). Or load existing 'configfile.yaml' in the first textbox.
   
 Output:  
 The workspace of your project.
@@ -52,7 +52,7 @@ configfile.yaml: the configuration of SBeA_tracker
 GUI: ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/tracker_gui.png)   
   
 Input:  
-Create A New 'configfile.yaml'. Select a path and define a name to save your project (workspace). Or load existing 'configfile.yaml' in the first textbox.
+Create A New 'configfile.yaml'. Select a path and define a name to save your project (workspace). 
   
 Output:  
 The workspace of your project.

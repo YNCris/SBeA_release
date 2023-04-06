@@ -104,8 +104,8 @@ The preprocessed data.
 The fourth step is to label frames and train models. In this part, you can label frames and train models in parallel, which save the running time.
 
 Demo results:  
-The raw frames in .\datasets\raw_video_images  
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/raw_video_images.png)  
+Label mask frames based on [labelme](https://github.com/wkentaro/labelme):  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/label_frames.png)  
    
 The backgrounds in .\datasets\video_backgrounds  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/background.png)  

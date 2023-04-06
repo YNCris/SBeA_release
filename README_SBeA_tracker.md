@@ -21,16 +21,16 @@ Here is the start interface of SBeA_tracker:
 
 Case data: [fig2_data\pose tracking](https://figshare.com/projects/Social_behavior_atlas/162718) 
 ## Run
-### 1. Seperate multi-animal to single-animal trajectories  
-The first step is a preparation of later steps.  
+### 1. Create/load project  
+SBeA_tracker is managed in a project folder. The first step is to create or load a project.  
 Demo results:  
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/demo_step1.png)  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/create_project.png)  
 Notes:  
 Green line: the trajectories of animal 1  
 Orange line: the trajectories of animal 2  
 Trajectories: the trajectories are arranged by the order of XYZ
   
-Script: [SBeA_step_1.m](https://github.com/YNCris/SBeA_release/blob/main/SBeA_mapper/SBeA_step_1.m)  
+GUI: ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/tracker_gui.png)   
   
 Input:  
 *id3d.mat: multi-animal trajectories with identities  

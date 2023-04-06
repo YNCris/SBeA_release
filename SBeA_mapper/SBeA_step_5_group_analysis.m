@@ -20,17 +20,17 @@ tempsplname = cellfun(@(x) split(x,'_'),unique_data_name,...
     'UniformOutput',false);
 %
 mice_names = {'Your animal name like below'};
-mice_names = {...
-    'A1','G1';
-    'A2','G2';
-    'A3','G3';
-    'A4','G4';
-    'A5','G5';
-    'A6','G6';
-    'A7','G7';
-    'A8','G8';
-    'A9','G9';
-    'A10','G10';};
+% mice_names = {...
+%     'A1','G1';
+%     'A2','G2';
+%     'A3','G3';
+%     'A4','G4';
+%     'A5','G5';
+%     'A6','G6';
+%     'A7','G7';
+%     'A8','G8';
+%     'A9','G9';
+%     'A10','G10';};
 % mice_names = {...
 %     'M1','KO';
 %     'M2','KO';

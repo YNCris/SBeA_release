@@ -79,41 +79,46 @@ The third step is to load data according to configfile.yaml. If the train and ID
 Demo results:  
 The raw frames in .\datasets\raw_video_images  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/raw_video_images.png)  
-Notes:  
-datasets folder: save datasets  
-evals folder: save model evaluation results  
-models folder: save deep learning models  
-configfile.yaml: the configuration of SBeA_tracker 
    
-The raw frames in .\datasets\video_backgrounds  
+The backgrounds in .\datasets\video_backgrounds  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/background.png)  
-Notes:  
-datasets folder: save datasets  
-evals folder: save model evaluation results  
-models folder: save deep learning models  
-configfile.yaml: the configuration of SBeA_tracker 
   
-The raw frames in .\datasets\video_trajectories  
+The trajectories in .\datasets\video_trajectories  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/trajectories.png)  
-Notes:  
-datasets folder: save datasets  
-evals folder: save model evaluation results  
-models folder: save deep learning models  
-configfile.yaml: the configuration of SBeA_tracker 
   
-The raw frames in .\datasets\manual_labels  
+The manual label frames in .\datasets\manual_labels  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/manual_label_data.png)  
-Notes:  
-datasets folder: save datasets  
-evals folder: save model evaluation results  
-models folder: save deep learning models  
-configfile.yaml: the configuration of SBeA_tracker 
   
 GUI:   
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/load_gui.png)   
   
 Input:  
-Your path of social and ID data.
+Social and ID data.
   
 Output:  
-Changed configfile.yaml.
+The preprocessed data.
+
+### 4. Label and train
+The fourth step is to label frames and train models. In this part, you can label frames and train models in parallel, which save the running time.
+
+Demo results:  
+The raw frames in .\datasets\raw_video_images  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/raw_video_images.png)  
+   
+The backgrounds in .\datasets\video_backgrounds  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/background.png)  
+  
+The trajectories in .\datasets\video_trajectories  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/trajectories.png)  
+  
+The manual label frames in .\datasets\manual_labels  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/manual_label_data.png)  
+  
+GUI:   
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/labeltrain_gui.png)   
+  
+Input:  
+Social and ID data.
+  
+Output:  
+The preprocessed data.

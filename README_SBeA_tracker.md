@@ -31,7 +31,8 @@ evals folder: save model evaluation results
 models folder: save deep learning models  
 configfile.yaml: the configuration of SBeA_tracker 
   
-GUI: ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/tracker_gui.png)   
+GUI:  
+ ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/tracker_gui.png)   
   
 Input:  
 Create A New 'configfile.yaml'. Select a path and define a name to save your project (workspace). Or load existing 'configfile.yaml' in the first textbox.
@@ -62,12 +63,45 @@ Fields F1-F2-F3:
 F1: the recording serial number  
 F2: the single animal name such as A1 (animal one)
 F3: the date
-  
-Demo results:
-GUI: ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/config_gui.png)   
+
+GUI:   
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/config_gui.png)   
   
 Input:  
-Create A New 'configfile.yaml'. Select a path and define a name to save your project (workspace). 
+Your path of social and ID data.
   
 Output:  
-The workspace of your project.
+Changed configfile.yaml. 
+
+### 3. Load data
+The second step is to set the configurations for training.  
+  
+Your data need to be organized like:  
+Social data:  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/data_format.png)  
+Notes:  
+*-caliParas.mat: the calibration file  
+*-camera-#.avi: the multi-view videos of number # camera  
+Fields F1-F2-F3:  
+F1: the recording serial number  
+F2: the animal name such as A1 (animal one) and A2 (animal two)  
+F3: the date
+  
+ID data:  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/data_format_id.png)  
+Notes:  
+*-caliParas.mat: the calibration file  
+*-camera-#.avi: the multi-view videos of number # camera  
+Fields F1-F2-F3:  
+F1: the recording serial number  
+F2: the single animal name such as A1 (animal one)
+F3: the date
+
+GUI:   
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/config_gui.png)   
+  
+Input:  
+Your path of social and ID data.
+  
+Output:  
+Changed configfile.yaml.

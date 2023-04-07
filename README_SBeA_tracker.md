@@ -104,23 +104,21 @@ The preprocessed data.
 The fourth step is to label frames and train models. In this part, you can label frames and train models in parallel, which save the running time.
 
 Demo results:  
-Label mask frames based on [labelme](https://github.com/wkentaro/labelme):  
+Label mask frames calling [labelme](https://github.com/wkentaro/labelme):  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/label_frames.png)  
+
+Label pose frames calling [DeepLabCut](https://github.com/DeepLabCut/DeepLabCut):  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/label_poses.png) 
+
+Training data generation based on [YOLACT++](https://github.com/dbolya/yolact):  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/virtual_data.png) 
    
-The backgrounds in .\datasets\video_backgrounds  
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/background.png)  
-  
-The trajectories in .\datasets\video_trajectories  
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/trajectories.png)  
-  
-The manual label frames in .\datasets\manual_labels  
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/manual_label_data.png)  
-  
 GUI:   
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/labeltrain_gui.png)   
   
 Input:  
-Social and ID data.
+The frame data extracted by step 2 for mask label.
+The identity data 
   
 Output:  
 The preprocessed data.

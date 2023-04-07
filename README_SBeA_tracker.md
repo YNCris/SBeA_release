@@ -124,3 +124,55 @@ The label frame data, backgrounds and trajectories for training data generation.
 Output:  
 Well-trained video instance segmentation model based on [VisTR](https://github.com/Epiphqny/VisTR).  
 Well-trained single animal pose estimation model. 
+Well-trained animal identification model based on [EfficientNet](https://github.com/lukemelas/EfficientNet-PyTorch). 
+
+### 4. Evaluation (Optional)
+The fourth step is to label frames and train models. In this part, you can label frames and train models in parallel, which save the running time.
+
+Demo results:  
+Label mask frames calling [labelme](https://github.com/wkentaro/labelme):  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/label_frames.png)  
+
+Label pose frames calling [DeepLabCut](https://github.com/DeepLabCut/DeepLabCut):  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/label_poses.png) 
+
+Training data generation based on [YOLACT++](https://github.com/dbolya/yolact):  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/virtual_data.png) 
+   
+GUI:   
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/labeltrain_gui.png)   
+  
+Input:  
+The frame data extracted by step 2 for mask label.  
+The identity data for pose annotation and identification model training.  
+The label frame data, backgrounds and trajectories for training data generation.
+  
+Output:  
+Well-trained video instance segmentation model based on [VisTR](https://github.com/Epiphqny/VisTR).  
+Well-trained single animal pose estimation model. 
+Well-trained animal identification model based on [EfficientNet](https://github.com/lukemelas/EfficientNet-PyTorch). 
+
+### 5. Predict
+The fifth step is to predict 3D poses with identities of new videos.
+
+Demo results:  
+Output files:  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/final_output.png)  
+Notes:  
+datasets folder: save datasets  
+evals folder: save model evaluation results  
+models folder: save deep learning models  
+configfile.yaml: the configuration of SBeA_tracker 
+   
+GUI:   
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/prediction_gui.png)   
+  
+Input:  
+The frame data extracted by step 2 for mask label.  
+The identity data for pose annotation and identification model training.  
+The label frame data, backgrounds and trajectories for training data generation.
+  
+Output:  
+Well-trained video instance segmentation model based on [VisTR](https://github.com/Epiphqny/VisTR).  
+Well-trained single animal pose estimation model. 
+Well-trained animal identification model based on [EfficientNet](https://github.com/lukemelas/EfficientNet-PyTorch). 

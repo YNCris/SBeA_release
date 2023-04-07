@@ -159,11 +159,14 @@ Demo results:
 Output files:  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/final_output.png)  
 Notes:  
-datasets folder: save datasets  
-evals folder: save model evaluation results  
-models folder: save deep learning models  
-configfile.yaml: the configuration of SBeA_tracker 
-   
+*-rawresult.json: raw results of video instance segmentation  
+*-correctedresult.json: corrected results of video instance segmentation by interframe continuity  
+*-predid.csv: raw file of identities predicted by SBeA  
+*-corrpredid.csv: corrected ID file by continuity  
+*-raw3d.mat: raw 3D skeletons of two animals without identities  
+*-rot3d.mat: 3D skeletons rotated to ground (world coordinate system) without identities  
+*-id3d.mat: 3D skeletons rotated to ground with identities  
+
 GUI:   
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/prediction_gui.png)   
   

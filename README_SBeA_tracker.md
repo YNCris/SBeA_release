@@ -155,8 +155,13 @@ Well-trained animal identification model based on [EfficientNet](https://github.
 ### 5. Predict
 The fifth step is to predict 3D poses with identities of new videos.
 
-Demo results:  
-Output files:  
+GUI:   
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/prediction_gui.png)   
+  
+Input:  
+New videos and calibration files like step 1.
+  
+Output:  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/final_output.png)  
 Notes:  
 *-rawresult.json: raw results of video instance segmentation  
@@ -167,15 +172,4 @@ Notes:
 *-rot3d.mat: 3D skeletons rotated to ground (world coordinate system) without identities  
 *-id3d.mat: 3D skeletons rotated to ground with identities  
 
-GUI:   
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/prediction_gui.png)   
-  
-Input:  
-The frame data extracted by step 2 for mask label.  
-The identity data for pose annotation and identification model training.  
-The label frame data, backgrounds and trajectories for training data generation.
-  
-Output:  
-Well-trained video instance segmentation model based on [VisTR](https://github.com/Epiphqny/VisTR).  
-Well-trained single animal pose estimation model. 
-Well-trained animal identification model based on [EfficientNet](https://github.com/lukemelas/EfficientNet-PyTorch). 
+The result visualization can be find in [README.md](https://github.com/YNCris/SBeA_release/blob/main/README.md)

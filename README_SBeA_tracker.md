@@ -117,8 +117,10 @@ GUI:
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/labeltrain_gui.png)   
   
 Input:  
-The frame data extracted by step 2 for mask label.
-The identity data 
+The frame data extracted by step 2 for mask label.  
+The identity data for pose annotation.  
+The label frame data, backgrounds and trajectories for training data generation.
   
 Output:  
-The preprocessed data.
+Well-trained video instance segmentation model based on [VisTR](https://github.com/Epiphqny/VisTR).  
+Well-trained single animal pose estimation model. 

@@ -164,16 +164,13 @@ eval.json: the performance of VIS model include IST (identity swap time), IST_P 
 The evaluation of ID model:  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/feature.png)   
 Notes:  
-result.json: raw results of video instance segmentation for evaluation data  
-corrected_result.json: corrected results of video instance segmentation by interframe continuity  
-*.avi: visualization of each evaluation video
+cam folder: folder saves LayerCAM results.   
+confusion_matrix.jpg: confusion matrix of identities  
+pca_representations.jpg: PCA to visualize the feature representation of ID models  
+tsne_representations.jpg: t-SNE to visualize the feature representation of ID models  
   
 The evaluation of ID features using [LayerCAM](https://github.com/ZhugeKongan/TorchCAM):  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/cam.png)   
-Notes:  
-result.json: raw results of video instance segmentation for evaluation data  
-corrected_result.json: corrected results of video instance segmentation by interframe continuity  
-*.avi: visualization of each evaluation video
   
 ### 5. Predict
 The fifth step is to predict 3D poses with identities of new videos.

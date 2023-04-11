@@ -15,7 +15,7 @@ You can change the environmental name in [environment.yml](https://github.com/YN
 (3) Run `python setup.py install` to install the [DCN](https://github.com/CharlesShang/DCNv2/tree/pytorch_1.0) module.   
 (4) Switch to `.\gui` path, and run `python main.py` to launch the GUI of SBeA_tracker.  
 Here is the start interface of SBeA_tracker:  
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/tracker_gui.png)  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/start_gui.png)  
 
 
 
@@ -27,7 +27,7 @@ Case data:
 SBeA_tracker is managed in a project folder. The first step is to create or load a project.  
 
 GUI:  
- ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/tracker_gui.png)   
+ ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/start_gui.png)   
   
 Input:  
 Create A New 'configfile.yaml'. Select a path and define a name to save your project (workspace). Or load existing 'configfile.yaml' in the first textbox.
@@ -48,7 +48,7 @@ configfile.yaml: the configuration of SBeA_tracker
 The second step is to set the configurations for training.  
 
 GUI:   
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/config_gui.png)   
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/configure_gui.png)   
   
 Input:  
 Your path of social and ID data.
@@ -77,11 +77,11 @@ F1: the recording serial number
 F2: the single animal name such as A1 (animal one)
 F3: the date
 
-### 3. Load data
+### 3. Load, label, and train
 The third step is to load data according to configfile.yaml. If the train and ID data are not in the path in step 2, this part is going to copy them in these folders. Additionally, the raw frames, trajectories, backgrounds, and frames for labeling are extracted in this step. If the train and ID data are existing in these folders, you only need to run load train videos without filling any testbox. 
 
 GUI:   
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/load_gui.png)   
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/load_label_train_gui.png)   
   
 Input:  
 Social and ID data.

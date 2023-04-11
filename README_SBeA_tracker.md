@@ -158,7 +158,7 @@ The evaluation of VIS model with ground truth:
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/eval_gt.png)  
 Notes:  
 result.json: raw results of video instance segmentation for evaluation data  
-eval.json: the performance of VIS model include IST (identity swap time), IST_P (identity swap time percentage), IOU_NID (Intersection Over Union without considering ID), IOU_ID (Intersection Over Union considering ID), AP_NID/ID_50/70/90 (mean average precision with/without considering ID with IOU larger than 50/70/90)
+eval.json: the performance of VIS model include IST (identity swap time), IST_P (identity swap time percentage), IOU_NID (Intersection Over Union without considering ID), IOU_ID (Intersection Over Union considering ID), AP_NID/ID_50/70/90 (mean average precision with/without considering ID with IOU larger than 50/70/90)  
 *.avi: visualization of each evaluation video
   
 The evaluation of ID model:  

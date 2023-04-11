@@ -109,7 +109,8 @@ Label mask frames calling [labelme](https://github.com/wkentaro/labelme):
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/label_frames.png)  
   
 Train model:  
-The well-trained model in .\models\vistr
+The well-trained data generation model in .\models\yolact
+The well-trained video instance segmentation model in .\models\vistr
 Training data generation based on [YOLACT++](https://github.com/dbolya/yolact):  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/virtual_data.png) 
 
@@ -129,30 +130,32 @@ The well-trained model in .\models\reid
 Well-trained animal identification model based on [EfficientNet](https://github.com/lukemelas/EfficientNet-PyTorch). 
 
 ### 4. Evaluation (Optional)
-The fourth step is to evaluate the models trained in step 3. 
+The fourth step is to evaluate the models trained in step 3. This step includes the options to evaluate VIS models and ID models. 
 
 GUI:   
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/eval_gui.png)   
   
 Input:  
-The frame data extracted by step 2 for mask label.  
-The identity data for pose annotation and identification model training.  
-The label frame data, backgrounds and trajectories for training data generation.
+The well-trained model in .\models\vistr
+The well-trained model in .\models\reid
+Optional:
+The ground truth video isntance segmentation data to evaluate model by GT.
+The config.yaml file of pose estimation to evaluate the feature of identification.
   
 Output:  
-Well-trained video instance segmentation model based on [VisTR](https://github.com/Epiphqny/VisTR).  
-Well-trained single animal pose estimation model. 
-Well-trained animal identification model based on [EfficientNet](https://github.com/lukemelas/EfficientNet-PyTorch). 
+The evaluation results of VIS model in .\evals\checkpoint*
+The evaluation results of ID model in .\evals\reidmodel*
 
 Demo results:  
-Label mask frames calling [labelme](https://github.com/wkentaro/labelme):  
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/label_frames.png)  
+The evaluation of VIS model:  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/eval_no_gt.png)   
+The evaluation of VIS model with ground truth:  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/eval_gt.png)  
+The evaluation of ID model:  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/feature.png)   
+The evaluation of ID features using [LayerCAM](https://github.com/ZhugeKongan/TorchCAM):  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/cam.png)   
 
-Label pose frames calling [DeepLabCut](https://github.com/DeepLabCut/DeepLabCut):  
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/label_poses.png) 
-
-Training data generation based on [YOLACT++](https://github.com/dbolya/yolact):  
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/virtual_data.png) 
    
 
 ### 5. Predict

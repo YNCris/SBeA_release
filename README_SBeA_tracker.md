@@ -120,6 +120,9 @@ Load pose videos, label pose frames, and train pose estimation models calling [D
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/label_poses.png) 
 
 ID box:  
+Load data:  
+Cascaded identity images in .\datasets\id_images  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/id_img.png)  
 
 ### 4. Label and train
 The fourth step is to label frames and train models. In this part, you can label frames and train models in parallel, which save the running time.  

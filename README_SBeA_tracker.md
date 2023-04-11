@@ -122,14 +122,14 @@ Load pose videos, label pose frames, and train pose estimation models calling [D
 ID box:  
 Load data:  
 Cascaded identity images in .\datasets\id_images  
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/id_img.png)  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/id_img_50.png)  
 
 Train model:  
 The well-trained model in .\models\reid
 Well-trained animal identification model based on [EfficientNet](https://github.com/lukemelas/EfficientNet-PyTorch). 
 
 ### 4. Evaluation (Optional)
-The fourth step is to label frames and train models. In this part, you can label frames and train models in parallel, which save the running time.  
+The fourth step is to evaluate the models trained in step 3. 
 
 GUI:   
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/eval_gui.png)   

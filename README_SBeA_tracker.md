@@ -78,18 +78,20 @@ F2: the single animal name such as A1 (animal one)
 F3: the date
 
 ### 3. Load, label, and train
-The third step is to load data according to configfile.yaml. If the train and ID data are not in the path in step 2, this part is going to copy them in these folders. Additionally, the raw frames, trajectories, backgrounds, and frames for labeling are extracted in this step. If the train and ID data are existing in these folders, you only need to run load train videos without filling any testbox. 
+The third step is to load data, label data, and train models according to configfile.yaml. In order to reduce the waiting time, we design the program to label data and train models in parallel. The training of models would not block the process of loading and labeling data. 
 
 GUI:   
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/load_label_train_gui.png)   
   
 Input:  
-Social and ID data.
+The previous configurations. 
   
 Output:  
 The preprocessed data.  
 
 Demo results:  
+Mask box:  
+Load data:  
 The raw frames in .\datasets\raw_video_images  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/raw_video_images.png)  
    
@@ -102,6 +104,22 @@ The trajectories in .\datasets\video_trajectories
 The manual label frames in .\datasets\manual_labels  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/manual_label_data.png)  
   
+Label data:  
+Label mask frames calling [labelme](https://github.com/wkentaro/labelme):  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/label_frames.png)  
+  
+Train model:  
+The well-trained model in .\datasets\manual_labels  
+Training data generation based on [YOLACT++](https://github.com/dbolya/yolact):  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/virtual_data.png) 
+
+Well-trained video instance segmentation model based on [VisTR](https://github.com/Epiphqny/VisTR).  
+
+Pose box:  
+Load pose videos, label pose frames, and train pose estimation models calling [DeepLabCut](https://github.com/DeepLabCut/DeepLabCut):  
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/label_poses.png) 
+
+ID box:  
 
 ### 4. Label and train
 The fourth step is to label frames and train models. In this part, you can label frames and train models in parallel, which save the running time.  
@@ -115,19 +133,16 @@ The identity data for pose annotation.
 The label frame data, backgrounds and trajectories for training data generation.
   
 Output:  
-Well-trained video instance segmentation model based on [VisTR](https://github.com/Epiphqny/VisTR).  
+
 Well-trained single animal pose estimation model. 
 Well-trained animal identification model based on [EfficientNet](https://github.com/lukemelas/EfficientNet-PyTorch). 
 
 Demo results:  
-Label mask frames calling [labelme](https://github.com/wkentaro/labelme):  
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/label_frames.png)  
 
-Label pose frames calling [DeepLabCut](https://github.com/DeepLabCut/DeepLabCut):  
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/label_poses.png) 
 
-Training data generation based on [YOLACT++](https://github.com/dbolya/yolact):  
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/virtual_data.png) 
+
+
+
    
 
 ### 4. Evaluation (Optional)

@@ -109,7 +109,7 @@ Label mask frames calling [labelme](https://github.com/wkentaro/labelme):
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/label_frames.png)  
   
 Train model:  
-The well-trained model in .\datasets\manual_labels  
+The well-trained model in .\models\vistr
 Training data generation based on [YOLACT++](https://github.com/dbolya/yolact):  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/virtual_data.png) 
 
@@ -124,29 +124,9 @@ Load data:
 Cascaded identity images in .\datasets\id_images  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/id_img.png)  
 
-### 4. Label and train
-The fourth step is to label frames and train models. In this part, you can label frames and train models in parallel, which save the running time.  
-
-GUI:   
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/labeltrain_gui.png)   
-  
-Input:  
-The frame data extracted by step 2 for mask label.  
-The identity data for pose annotation.  
-The label frame data, backgrounds and trajectories for training data generation.
-  
-Output:  
-
-Well-trained single animal pose estimation model. 
+Train model:  
+The well-trained model in .\models\reid
 Well-trained animal identification model based on [EfficientNet](https://github.com/lukemelas/EfficientNet-PyTorch). 
-
-Demo results:  
-
-
-
-
-
-   
 
 ### 4. Evaluation (Optional)
 The fourth step is to label frames and train models. In this part, you can label frames and train models in parallel, which save the running time.  

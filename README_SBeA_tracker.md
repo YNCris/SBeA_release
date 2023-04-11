@@ -43,7 +43,6 @@ evals folder: save model evaluation results
 models folder: save deep learning models  
 configfile.yaml: the configuration of SBeA_tracker 
   
-
 ### 2. Set configurations
 The second step is to set the configurations for training.  
 
@@ -74,9 +73,11 @@ Notes:
 *-camera-#.avi: the multi-view videos of number # camera  
 Fields F1-F2-F3:  
 F1: the recording serial number  
-F2: the single animal name such as A1 (animal one)
+F2: the single animal name such as A1 (animal one)  
 F3: the date
 
+Tips:  
+The changes of configurations in user interface would update to configfile.yaml automatically. If the configfile.yaml is changed manually, the program would load it in first priority.
 ### 3. Load, label, and train
 The third step is to load data, label data, and train models according to configfile.yaml. In order to reduce the waiting time, we design the program to label data and train models in parallel. The training of models would not block the process of loading and labeling data. 
 
@@ -126,7 +127,7 @@ Cascaded identity images in .\datasets\id_images
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/id_img_50.png)  
 
 Train model:  
-The well-trained model in .\models\reid
+The well-trained model in .\models\reid  
 Well-trained animal identification model based on [EfficientNet](https://github.com/lukemelas/EfficientNet-PyTorch). 
 
 ### 4. Evaluation (Optional)
@@ -136,8 +137,8 @@ GUI:
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/eval_gui.png)   
   
 Input:  
-The well-trained model in .\models\vistr
-The well-trained model in .\models\reid
+The well-trained video instance segmentation model in .\models\vistr  
+The well-trained ID model in .\models\reid  
 Optional:
 The ground truth video isntance segmentation data to evaluate model by GT.
 The config.yaml file of pose estimation to evaluate the feature of identification.
@@ -158,7 +159,7 @@ The evaluation of VIS model with ground truth:
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/eval_gt.png)  
 Notes:  
 result.json: raw results of video instance segmentation for evaluation data  
-eval.json: the performance of VIS model include IST (identity swap time), IST_P (identity swap time percentage), IOU_NID (Intersection Over Union without considering ID), IOU_ID (Intersection Over Union considering ID), AP_NID/ID_50/70/90 (mean average precision with/without considering ID with IOU larger than 50/70/90)  
+eval.json: the performance of VIS model include IST (identity swap time), IST_P (identity swap time percentage), IOU_NID (Intersection over Union without considering ID), IOU_ID (Intersection over Union considering ID), AP_NID/ID_50/70/90 (mean average precision with/without considering ID with IOU larger than 50/70/90)  
 *.avi: visualization of each evaluation video
   
 The evaluation of ID model:  
@@ -169,7 +170,7 @@ confusion_matrix.jpg: confusion matrix of identities
 pca_representations.jpg: PCA to visualize the feature representation of ID models  
 tsne_representations.jpg: t-SNE to visualize the feature representation of ID models  
   
-The evaluation of ID features using [LayerCAM](https://github.com/ZhugeKongan/TorchCAM):  
+The evaluation of ID features using [LayerCAM](https://github.com/PengtaoJiang/LayerCAM-jittor):  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/cam.png)   
   
 ### 5. Predict

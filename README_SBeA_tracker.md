@@ -110,8 +110,8 @@ Label mask frames calling [labelme](https://github.com/wkentaro/labelme):
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/label_frames.png)  
   
 Train model:  
-The well-trained data generation model in .\models\yolact
-The well-trained video instance segmentation model in .\models\vistr
+The well-trained data generation model in .\models\yolact  
+The well-trained video instance segmentation model in .\models\vistr  
 Training data generation based on [YOLACT++](https://github.com/dbolya/yolact):  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/virtual_data.png) 
 

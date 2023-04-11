@@ -132,7 +132,7 @@ Well-trained animal identification model based on [EfficientNet](https://github.
 The fourth step is to label frames and train models. In this part, you can label frames and train models in parallel, which save the running time.  
 
 GUI:   
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/labeltrain_gui.png)   
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/eval_gui.png)   
   
 Input:  
 The frame data extracted by step 2 for mask label.  
@@ -159,7 +159,7 @@ Training data generation based on [YOLACT++](https://github.com/dbolya/yolact):
 The fifth step is to predict 3D poses with identities of new videos.
 
 GUI:   
-![image](https://github.com/YNCris/SBeA_release/blob/main/demo/prediction_gui.png)   
+![image](https://github.com/YNCris/SBeA_release/blob/main/demo/pred_gui.png)   
   
 Input:  
 New videos and calibration files like step 1.

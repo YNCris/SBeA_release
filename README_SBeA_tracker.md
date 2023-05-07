@@ -9,7 +9,7 @@ Operating system: Windows 11
 Software: [Anaconda](https://www.anaconda.com/) and [Visual Studio](https://visualstudio.microsoft.com/)
 ## Installation  
 (1) Switch to the [environment.yml](https://github.com/YNCris/SBeA_release/blob/main/SBeA_tracker/SBeA-Windows-main/environment.yml) path in Anaconda Prompt, and run   
-`conda env -create -f environment.yml` to install virtual environment.   
+`conda env create -f environment.yml` to install virtual environment.   
 You can change the environmental name in [environment.yml](https://github.com/YNCris/SBeA_release/blob/main/SBeA_tracker/SBeA-Windows-main/environment.yml).  
 (2) Run `conda activate [your environment]`.  
 (3) Run `python setup.py install` to install the [DCN](https://github.com/CharlesShang/DCNv2/tree/pytorch_1.0) module.   

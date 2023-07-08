@@ -132,7 +132,7 @@ Cascaded identity images in .\datasets\id_images
 
 Train model:  
 The well-trained model in .\models\reid  
-Well-trained animal identification model based on [EfficientNet](https://github.com/lukemelas/EfficientNet-PyTorch). 
+Well-trained animal identification model based on [EfficientNet](https://github.com/lukemelas/EfficientNet-PyTorch).   
 Typical time: 2 days in parallel  
 
 ### 4. Evaluation (Optional)

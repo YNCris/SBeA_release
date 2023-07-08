@@ -79,7 +79,7 @@ F2: the single animal name such as A1 (animal one)
 F3: the date
 
 Tips:  
-The changes of configurations in user interface would update to configfile.yaml automatically. If the configfile.yaml is changed manually, the program would load it in first priority.
+The changes of configurations in user interface would update to configfile.yaml automatically. If the configfile.yaml is changed manually, the program would load it in first priority.  
 Typical time: ~30 min  
 
 ### 3. Load, label, and train

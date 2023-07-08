@@ -177,7 +177,7 @@ tsne_representations.jpg: t-SNE to visualize the feature representation of ID mo
   
 The evaluation of ID features using [LayerCAM](https://github.com/PengtaoJiang/LayerCAM-jittor):  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/cam.png)   
-Typical time: the same as your video timel length  
+Typical time: the same as your video time length  
   
 ### 5. Predict
 The fifth step is to predict 3D poses with identities of new videos.
@@ -198,6 +198,6 @@ Notes:
 *-raw3d.mat: raw 3D skeletons of two animals without identities  
 *-rot3d.mat: 3D skeletons rotated to ground (world coordinate system) without identities  
 *-id3d.mat: 3D skeletons rotated to ground with identities  
-Typical time: the same as your video timel length  
+Typical time: the same as your video time length  
 
 The result visualization can be find in [README.md](https://github.com/YNCris/SBeA_release/blob/main/README.md)

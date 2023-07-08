@@ -30,6 +30,7 @@ Input:
 Output:  
 *.mat: single-animal trajectories  
 *.avi: corresponding videos of single-animal trajectories  
+Typical time: ~10 seconds per data  
 
 ### 2. Single animal behavior segmentation by Behavior Atlas (BeA)  
 The second step is to decompose the behvior of single animal.  
@@ -46,7 +47,8 @@ Input:
 *.avi: corresponding videos of single-animal trajectories  
   
 Output:  
-*_struct.mat:  BeA struct of single animal
+*_struct.mat:  BeA struct of single animal  
+Typical time: ~10 minutes per data  
  
 ### 3. Multiple animal social behavior segmentation
 The third step is to segment social behavior.  
@@ -67,7 +69,8 @@ Input:
 *_struct.mat:  BeA struct of single animal
   
 Output:  
-*_social_struct.mat:  SBeA struct of social behaviors
+*_social_struct.mat:  SBeA struct of social behaviors  
+Typical time: ~30 minutes per data  
 
 ### 4. Social behavior clustering
 The fourth step is to map and cluster all the social behavior modules across different videos under the same metric in the same low dimensional space.  
@@ -86,7 +89,8 @@ Input:
 Output:  
 *data_sample_cell.mat: all of the segmentation data of social_struct used for clustering  
 *dist_mat_all.mat: the feature matrix  
-*wc_struct.mat: the adaptive watershed clustering results 
+*wc_struct.mat: the adaptive watershed clustering results  
+Typical time: ~10 hours 
 
 ### 5. Group analysis (optional)
 The fifth step is to analyze the fractions of each social behavior modules.  

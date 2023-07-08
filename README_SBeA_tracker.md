@@ -16,6 +16,7 @@ You can change the environmental name in [environment.yml](https://github.com/YN
 (4) Switch to `.\gui` path, and run `python main.py` to launch the GUI of SBeA_tracker.  
 Here is the start interface of SBeA_tracker:  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/start_gui.png)  
+Typical time: ~1 hour  
 
 
 
@@ -42,6 +43,7 @@ datasets folder: save datasets
 evals folder: save model evaluation results  
 models folder: save deep learning models  
 configfile.yaml: the configuration of SBeA_tracker 
+Typical time: ~1 min 
   
 ### 2. Set configurations
 The second step is to set the configurations for training.  
@@ -78,6 +80,8 @@ F3: the date
 
 Tips:  
 The changes of configurations in user interface would update to configfile.yaml automatically. If the configfile.yaml is changed manually, the program would load it in first priority.
+Typical time: ~30 min  
+
 ### 3. Load, label, and train
 The third step is to load data, label data, and train models according to configfile.yaml. In order to reduce the waiting time, we design the program to label data and train models in parallel. The training of models would not block the process of loading and labeling data. 
 
@@ -129,6 +133,7 @@ Cascaded identity images in .\datasets\id_images
 Train model:  
 The well-trained model in .\models\reid  
 Well-trained animal identification model based on [EfficientNet](https://github.com/lukemelas/EfficientNet-PyTorch). 
+Typical time: 2 days in parallel  
 
 ### 4. Evaluation (Optional)
 The fourth step is to evaluate the models trained in step 3. This step includes the options to evaluate VIS models and ID models. 
@@ -172,6 +177,7 @@ tsne_representations.jpg: t-SNE to visualize the feature representation of ID mo
   
 The evaluation of ID features using [LayerCAM](https://github.com/PengtaoJiang/LayerCAM-jittor):  
 ![image](https://github.com/YNCris/SBeA_release/blob/main/demo/cam.png)   
+Typical time: the same as your video timel length  
   
 ### 5. Predict
 The fifth step is to predict 3D poses with identities of new videos.
@@ -192,5 +198,6 @@ Notes:
 *-raw3d.mat: raw 3D skeletons of two animals without identities  
 *-rot3d.mat: 3D skeletons rotated to ground (world coordinate system) without identities  
 *-id3d.mat: 3D skeletons rotated to ground with identities  
+Typical time: the same as your video timel length  
 
 The result visualization can be find in [README.md](https://github.com/YNCris/SBeA_release/blob/main/README.md)

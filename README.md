@@ -1,6 +1,6 @@
 # SBeA_release
 The release version of SBeA.  
-Linked paper: [Social Behavior Atlas: A computational framework for tracking and mapping 3D close interactions of free-moving animals](https://www.biorxiv.org/content/10.1101/2023.03.05.531235v1)  
+Linked paper: [Multi-animal 3D social pose estimation, identification and behaviour embedding with a few-shot learning framework](https://www.nature.com/articles/s42256-023-00776-5)  
 ## 1. The demo of SBeA 
 ### Multi-animal tracking cross species
 #### Tracking mice

@@ -200,4 +200,9 @@ Notes:
 *-id3d.mat: 3D skeletons rotated to ground with identities  
 Typical time: the same as your video time length  
 
-The result visualization can be find in [README.md](https://github.com/YNCris/SBeA_release/blob/main/README.md)
+The result visualization can be found in [README.md](https://github.com/YNCris/SBeA_release/blob/main/README.md)  
+
+## The list of common bugs and the way to fix them
+### 1. ModuleNotFoundError: No module named 'SocialBehaviorAtlas.train_utils.yolact.sbea_train'
+It is a bug from GitHub. The file synchronization appears to be the problem. We still have not found a way to fix it. So we prepared an offline version of SBeA. The link is "https://drive.google.com/file/d/1B7BWCUgwUnZdWeP4_rv_2byKJ22qZ4tY/view?usp=sharing".
+

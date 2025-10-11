@@ -33,7 +33,7 @@ Trace: previous social behavior modules last 100 frames
 [SBeA_mapper](https://github.com/YNCris/SBeA_release/blob/main/README_SBeA_mapper.md)
 
 ### 3. Related data of SBeA
-(1) Shank3B and WT mice social interaction  
+(1) Shank3B and WT mice social interaction videos  
 Baidu Netdisk  
 Link: https://pan.baidu.com/s/1H1a4oXHWQV0SThgId_4yBA?pwd=2iyk  
 Extraction code: 2iyk  

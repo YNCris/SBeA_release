@@ -34,6 +34,9 @@ Trace: previous social behavior modules last 100 frames
 
 ## 3. Related data of SBeA
 (1) Shank3B and WT mice social interaction videos  
-Baidu Netdisk  
+Baidu Netdisk:  
 Link: https://pan.baidu.com/s/1H1a4oXHWQV0SThgId_4yBA?pwd=2iyk  
 Extraction code: 2iyk  
+figShare:
+social videos: https://figshare.com/articles/dataset/shank3b_wt_social_videos/30338929
+id videos: https://figshare.com/articles/dataset/shank3b_wt_id_videos/30338953

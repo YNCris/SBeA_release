@@ -3,6 +3,10 @@ The release version of SBeA.
 Linked paper: [Multi-animal 3D social pose estimation, identification and behaviour embedding with a few-shot learning framework](https://www.nature.com/articles/s42256-023-00776-5)  
 
 For the single animal usage, please jump to [Behavior Atlas](https://github.com/huangkang314/Behavior-Atlas), and the related paper is [A hierarchical 3D-motion learning framework for animal spontaneous behavior mapping](https://www.nature.com/articles/s41467-021-22970-y)    
+## Highlight: commercial versions of SBeA  
+1. [3D-AI social-pro, from Bayone Scientific](https://mp.weixin.qq.com/s/Pmxfi4j_4U-xEhz2ICYdSQ)  
+
+
 ## 1. The demo of SBeA 
 ### Multi-animal tracking cross species
 #### Tracking mice
